@@ -1,0 +1,15 @@
+<svg id="icon-stacked_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <path class="c1" d="M26.4,43.2v16.5h77.3V43.2H26.4z M102.3,58.4H71.4v-14h30.9V58.4z"/>
+    <path class="c1" d="M26.4,70.3v16.5h50.7V70.3H26.4z M75.7,85.4H52.3V71.7h23.4V85.4z"/>
+  </g>
+</svg>

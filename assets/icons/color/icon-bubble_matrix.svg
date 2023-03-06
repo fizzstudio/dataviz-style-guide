@@ -1,0 +1,26 @@
+<svg id="icon-bubble_matrix" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <path class="c1" d="M27.4,27.4v75.5h75.5V27.4H27.4z M102.4,52.4H77.9V27.9h24.5V52.4z M52.9,77.4V52.9h24.5v24.5H52.9z
+      		 M77.4,77.9v24.5H52.9V77.9H77.4z M52.4,77.4H27.9V52.9h24.5V77.4z M52.9,52.4V27.9h24.5v24.5H52.9z M77.9,52.9h24.5v24.5H77.9
+      		V52.9z M52.4,27.9v24.5H27.9V27.9H52.4z M27.9,77.9h24.5v24.5H27.9V77.9z M77.9,102.4V77.9h24.5v24.5H77.9z"/>
+    <circle class="c1" cx="65.4" cy="65.2" r="8.1"/>
+    <ellipse class="c1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -52.0418 54.923)" cx="40.3" cy="90.3" rx="6.5" ry="6.5"/>
+    <circle class="c1" cx="65.4" cy="90.1" r="9.6"/>
+    <circle class="c1" cx="40.3" cy="65.2" r="5.3"/>
+    <path class="c1" d="M90.2,86.1c-2.3,0-4.2,1.9-4.2,4.2c0,2.3,1.9,4.2,4.2,4.2c2.3,0,4.2-1.9,4.2-4.2C94.4,88,92.5,86.1,90.2,86.1z
+      		"/>
+    <ellipse class="c1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.6864 40.2784)" cx="40.3" cy="40.3" rx="8.2" ry="8.2"/>
+    <ellipse class="c1" transform="matrix(0.9732 -0.2298 0.2298 0.9732 -6.8557 21.8064)" cx="90.2" cy="40.3" rx="9.1" ry="9.1"/>
+    <ellipse class="c1" transform="matrix(0.3827 -0.9239 0.9239 0.3827 -4.5061 123.5703)" cx="90.2" cy="65.2" rx="6.2" ry="6.2"/>
+    <circle class="c1" cx="65.2" cy="40.1" r="11.4"/>
+  </g>
+</svg>

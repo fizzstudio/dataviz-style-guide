@@ -1,0 +1,40 @@
+<svg id="icon-parallel_sets" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      opacity: 0.6;
+    }
+    .c3 {
+      opacity: 0.4;
+    }
+    .c4 {
+      opacity: 0.25;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="31.229" y="29.333" width="67.542" height="3"/>
+    <rect class="c1" x="31.229" y="63.109" width="67.542" height="3"/>
+    <rect class="c1" x="31.229" y="96.886" width="67.542" height="3"/>
+  </g>
+  
+  <rect class="c1 c2" x="31.229" y="30.833" width="13.624" height="33.776"/>
+  <rect class="c1 c4" x="80.809" y="31.143" width="17.963" height="33.776"/>
+  <rect class="c1 c4" x="93.979" y="65.074" width="4.793" height="33.777"/>
+  <rect class="c1 c2" x="31.229" y="65.54" width="9.286" height="33.776"/>
+  <polygon class="c1 c3" points="56.318,31.452 44.853,63.75 68.402,64.299
+    	80.488,32.382 "/>
+  <polygon class="c1 c3" points="45.164,65.469 40.515,96.836 49.191,97.146 54.15,65.85
+    	"/>
+  <polygon class="c1 c3" points="76.46,97.766 67.783,65.469 54.15,65.85 62.206,98.386
+    	"/>
+  <polygon class="c1 c4" points="80.645,66.312 75.996,96.836 83.277,96.992
+    	87.615,66.159 "/>
+  <polygon class="c1 c4" points="87.615,66.159 86.376,97.301 91.334,97.301
+  	93.968,65.693 "/>
+</svg>

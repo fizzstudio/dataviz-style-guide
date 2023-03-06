@@ -1,0 +1,46 @@
+<svg id="icon-non_ribbon_chord_diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 1px;
+      opacity: 0.5;
+    }
+  </style>
+  <circle class="bg" cx="64.959" cy="65" r="64"/>
+  <g>
+    <g id="edges">
+      <path class="c2" d="M44.377,32.763
+              		c4.832,28.1,49.373,56.988,49.373,56.988"/>
+      <path class="c2" d="M85.769,32.763c0,0-0.56,35.601-31.81,68.351"/>
+      <path class="c2" d="M65.083,30.5c0,0-8.875,36.613,11.125,71.863"/>
+      <path class="c2" d="M64.5,26.583c0,0,1.152,37.598,29,63.584"/>
+      <path class="c2" d="M64.667,27.333c0,0,5.847,22.013-26.25,60.75"/>
+      <path class="c2" d="M65.083,30.083c0,0-4.25,14.75-35.12,19.329"/>
+      <path class="c2" d="M29.709,48.612
+              		c27.5,24.751,73.127,22.159,73.127,22.159"/>
+      <path class="c2" d="M98.25,50.583c0,0-20.707,15.46-71.624,20.188"/>
+      <path class="c2" d="M98.334,50.333c0,0-27.404,26.902-60.751,37.75"/>
+    </g>
+    <g id="nodes">
+      <circle class="c1" cx="65.032" cy="26.519" r="4.364"/>
+      <circle class="c1" cx="44.219" cy="32.853" r="4.364"/>
+      <circle class="c1" cx="30.223" cy="48.826" r="4.364"/>
+      <circle class="c1" cx="27.047" cy="70.553" r="4.363"/>
+      <circle class="c1" cx="36.038" cy="90.01" r="4.363"/>
+      <circle class="c1" cx="53.88" cy="101.557" r="4.363"/>
+      <circle class="c1" cx="76" cy="101.568" r="4.363"/>
+      <circle class="c1" cx="93.854" cy="90.039" r="4.363"/>
+      <circle class="c1" cx="102.865" cy="70.592" r="4.364"/>
+      <circle class="c1" cx="99.746" cy="48.811" r="4.363"/>
+      <circle class="c1" cx="85.848" cy="32.803" r="4.364"/>
+      <circle class="c1" cx="65.032" cy="26.518" r="4.364"/>
+    </g>
+  </g>
+</svg>

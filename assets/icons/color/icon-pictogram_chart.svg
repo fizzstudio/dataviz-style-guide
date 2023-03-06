@@ -1,0 +1,22 @@
+<svg id="icon-pictogram_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+	<circle class="bg" cx="65" cy="65" r="64"/>
+	<g>
+		<circle class="c1" cx="37.438" cy="40.641" r="7.095"/>
+		<circle class="c1" cx="37.438" cy="64.077" r="7.095"/>
+		<circle class="c1" cx="37.438" cy="87.514" r="7.095"/>
+		<circle class="c1" cx="57.791" cy="40.641" r="7.095"/>
+		<circle class="c1" cx="57.791" cy="64.077" r="7.095"/>
+		<circle class="c1" cx="57.791" cy="87.514" r="7.095"/>
+		<circle class="c1" cx="78.145" cy="64.077" r="7.095"/>
+		<circle class="c1" cx="78.145" cy="87.514" r="7.095"/>
+		<circle class="c1" cx="98.5" cy="64.077" r="7.095"/>
+	</g>
+</svg>

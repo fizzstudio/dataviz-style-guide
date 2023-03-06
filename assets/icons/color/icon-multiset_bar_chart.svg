@@ -1,0 +1,23 @@
+<svg id="icon-multiset_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <g>
+    <circle class="bg" cx="65" cy="65" r="64"/>
+    <g>
+      <g>
+        <path class="c1" d="M40.093,90.38H24.654V58.961h15.439V90.38z M26.654,88.38h11.439V60.961H26.654V88.38z"/>
+        <rect class="c1" x="43.702" y="30.472" width="13.917" height="60.131"/>
+      </g>
+      <g>
+        <path class="c1" d="M87.088,90.379H71.65V46.982h15.438V90.379z M73.65,88.379h11.438V48.982H73.65V88.379z"/>
+        <rect class="c1" x="90.698" y="52.588" width="13.915" height="38.018"/>
+      </g>
+    </g>
+  </g>
+</svg>

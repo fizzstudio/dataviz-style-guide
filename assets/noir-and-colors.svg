@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 700 450">
+  <title>NOIR and Colors</title>
+
+  <style type="text/css">
+    text {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 15px;
+    }
+
+    text.heading {
+      font-size: 25px;
+      text-anchor: start;
+    }
+
+    .lead {
+      font-size: 18px;
+    }
+
+    .initial {
+      font-size: 45px;
+      font-weight: normal;
+      fill: hsl(0, 0%, 10%);
+      stroke: hsl(0, 0%, 10%);
+    }
+
+    text.list {
+      font-size: 12px;
+    }
+
+    .listbox {
+      fill: hsl(300, 100%, 95%);
+    }
+
+    .bracket_label {
+      font-size: 17px;
+    }
+
+    .bracket {
+      stroke: purple; 
+      stroke-width: 5px; 
+      fill: none;
+    }
+
+    .swatch {
+      filter: drop-shadow( 0px 0px 3px rgba(0, 0, 0, 0.3));
+    }
+
+
+    .center {
+      text-anchor: middle;
+    }
+
+    .description {
+      text-anchor: middle;
+      font-size: 10px;
+    }
+    
+  </style>
+
+  <rect id="bg" x="-1000" y="-1000" width="3000" height="3000" fill="white"/>
+
+  <text id="head" x="10" y="1.5em" class="heading">NOIR and Colors</text>
+  <g id="content" font-size="27">
+    <g transform="translate(100,120)">
+      <g transform="translate(0,0)">
+        <text x="0" y="0" class="lead"><tspan class="initial">N</tspan>ominal</text>
+        <g transform="translate(100,-45)">
+          <rect x="0" y="0" width="100" height="60" class="listbox"/>
+          <text x="0" y="0" class="list" transform="translate(5,15)">
+            <tspan x="0">named</tspan>        
+          </text>
+        </g>
+      </g>
+      <g transform="translate(0,75)">
+        <text x="0" y="0" class="lead"><tspan class="initial">O</tspan>rdinal</text>
+        <g transform="translate(100,-45)">
+          <rect x="0" y="0" width="100" height="60" class="listbox"/>
+          <text x="0" y="0" class="list" transform="translate(5,15)">
+            <tspan x="0">named</tspan>      
+            <tspan x="0" dy="1em">natural order</tspan>         
+          </text>
+        </g>
+      </g>
+      <g transform="translate(0,150)">
+        <text x="6" y="0" class="lead"><tspan class="initial">I</tspan>nterval</text>
+        <g transform="translate(100,-45)">
+          <rect x="0" y="0" width="100" height="60" class="listbox"/>
+          <text x="0" y="0" class="list" transform="translate(5,15)">
+            <tspan x="0">named</tspan>      
+            <tspan x="0" dy="1em">natural order</tspan>      
+            <tspan x="0" dy="1em">equal interval</tspan>      
+          </text>
+        </g>
+      </g>
+      <g transform="translate(0,225)">
+        <text x="0" y="0" class="lead"><tspan class="initial">R</tspan>atio</text>
+        <g transform="translate(100,-45)">
+          <rect x="0" y="0" width="100" height="60" class="listbox"/>
+          <text x="0" y="0" class="list" transform="translate(5,15)">
+            <tspan x="0">named</tspan>      
+            <tspan x="0" dy="1em">natural order</tspan>      
+            <tspan x="0" dy="1em">equal interval</tspan>      
+            <tspan x="0" dy="1em">true zero</tspan>      
+          </text>
+        </g>
+      </g>
+    </g>
+
+    <g transform="translate(100,120)">
+      <g transform="translate(150,64.5)">
+        <text x="100" y="-30" class="bracket_label">categorical</text>
+        <path class="bracket" d="M50,-105 V20" />
+      </g>
+
+      <g transform="translate(400,25)">
+        <text class="center" x="50" y="-20" fill="black">discrete</text>
+        <text class="description" x="50" y="26">qualitative: no perceived order</text>
+
+        <circle class="swatch" fill="#d01c8b" cx="0" cy="0" r="10"/>
+        <circle class="swatch" fill="rgb(55,126,184)" cx="25" cy="0" r="10"/>
+        <circle class="swatch" fill="rgb(77,175,74)" cx="50" cy="0" r="10"/>
+        <circle class="swatch" fill="rgb(152,78,163)" cx="75" cy="0" r="10"/>
+        <circle class="swatch" fill="rgb(255,127,0)" cx="100" cy="0" r="10"/>
+      </g>
+    </g>
+
+    <g transform="translate(100,270)">
+      <g transform="translate(150,64.5)">
+        <text x="100" y="-30" class="bracket_label">numeric</text>
+        <path class="bracket" d="M50,-105 V20" />
+      </g>
+
+      <g transform="translate(400,-10)">
+        <text class="center" x="50" y="-20" fill="black">sequential</text>
+        <text class="description" x="50" y="26">quantitative: perceived order, uniform steps</text>
+
+        <circle class="swatch" fill="#fdd49e" cx="0" cy="0" r="10"/>
+        <circle class="swatch" fill="#fdbb84" cx="25" cy="0" r="10"/>
+        <circle class="swatch" fill="#fc8d59" cx="50" cy="0" r="10"/>
+        <circle class="swatch" fill="#e34a33" cx="75" cy="0" r="10"/>
+        <circle class="swatch" fill="#b30000" cx="100" cy="0" r="10"/>
+      </g>
+
+      <g transform="translate(400,70)">
+        <text class="center" x="50" y="-20" fill="black">diverging</text>
+        <text class="description" x="50" y="26">bipolar: two ranges of sequential colors</text>
+
+        <circle class="swatch" fill="#d01c8b" cx="0" cy="0" r="10"/>
+        <circle class="swatch" fill="#f1b6da" cx="25" cy="0" r="10"/>
+        <circle class="swatch" fill="#f7f7f7" cx="50" cy="0" r="10"/>
+        <circle class="swatch" fill="#b8e186" cx="75" cy="0" r="10"/>
+        <circle class="swatch" fill="#4dac26" cx="100" cy="0" r="10"/>
+      </g>    
+    </g>
+
+
+    <text class="center" x="350" y="410">Use a chart type and color scheme that matches your level of measurement</text>
+
+  </g>
+
+</svg>

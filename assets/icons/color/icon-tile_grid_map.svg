@@ -1,0 +1,60 @@
+<svg id="icon-tile_grid_map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="22.5" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="22.5" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="22.5" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="30.3" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="30.3" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="30.3" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="30.3" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="38.1" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="38.1" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="38.1" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="38.1" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="88.4" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="80.5" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="46" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="53.9" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="53.9" y="80.5" width="6.6" height="6.6"/>
+    <rect class="c1" x="53.9" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="53.9" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="53.9" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="61.7" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="61.7" y="80.5" width="6.6" height="6.6"/>
+    <rect class="c1" x="61.7" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="61.7" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="61.7" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="69.5" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="69.5" y="80.5" width="6.6" height="6.6"/>
+    <rect class="c1" x="69.5" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="69.5" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="69.5" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="77.3" y="80.5" width="6.6" height="6.6"/>
+    <rect class="c1" x="77.3" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="77.3" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="77.3" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="85.2" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="85.2" y="88.4" width="6.6" height="6.6"/>
+    <rect class="c1" x="85.2" y="72.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="85.2" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="85.2" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="93.1" y="48.9" width="6.6" height="6.6"/>
+    <rect class="c1" x="93.1" y="64.6" width="6.6" height="6.6"/>
+    <rect class="c1" x="93.1" y="56.7" width="6.6" height="6.6"/>
+    <rect class="c1" x="93.1" y="41" width="6.6" height="6.6"/>
+    <rect class="c1" x="100.9" y="56.8" width="6.6" height="6.6"/>
+    <rect class="c1" x="100.9" y="41.1" width="6.5" height="6.5"/>
+  </g>
+</svg>

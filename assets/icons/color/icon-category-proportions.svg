@@ -1,0 +1,15 @@
+<svg id="icon-proportions" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g>
+    <rect class="c1" x="29.5" y="56" width="59.5" height="59.5" rx="2" ry="2"/>
+    <rect class="c1" x="98" y="56" width="42" height="42" rx="2" ry="2"/>
+  </g>
+</svg>

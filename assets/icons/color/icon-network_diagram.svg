@@ -1,0 +1,47 @@
+<svg id="icon-network_diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 1px;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <line class="c2" x1="28.402" y1="55.542" x2="27.627" y2="74.655"/>
+      <line class="c2" x1="59.398" y1="50.634" x2="27.627" y2="74.655"/>
+      <line class="c2" x1="46.741" y1="77.497" x2="27.627" y2="74.655"/>
+      <line class="c2" x1="67.921" y1="76.206" x2="46.741" y2="77.497"/>
+      <line class="c2" x1="55.782" y1="90.153" x2="46.741" y2="77.497"/>
+      <line class="c2" x1="59.398" y1="50.634" x2="43.642" y2="41.593"/>
+      <line class="c2" x1="59.398" y1="50.634" x2="66.63" y2="36.428"/>
+      <line class="c2" x1="59.398" y1="50.634" x2="88.585" y2="80.597"/>
+      <line class="c2" x1="88.585" y1="80.597" x2="105.893" y2="76.206"/>
+      <line class="c2" x1="88.585" y1="80.597" x2="91.426" y2="53.475"/>
+      <line class="c2" x1="91.426" y1="53.475" x2="81.354" y2="62.515"/>
+      <line class="c2" x1="91.426" y1="53.475" x2="82.128" y2="44.951"/>
+    </g>
+    <g>
+      <circle class="c1" cx="27.627" cy="74.655" r="4.908"/>
+      <circle class="c1" cx="59.398" cy="50.634" r="6.974"/>
+      <circle class="c1" cx="88.585" cy="80.597" r="5.683"/>
+      <circle class="c1" cx="91.426" cy="53.475" r="3.616"/>
+      <circle class="c1" cx="46.741" cy="77.497" r="3.616"/>
+      <circle class="c1" cx="28.402" cy="55.542" r="3.1"/>
+      <circle class="c1" cx="66.63" cy="36.428" r="3.615"/>
+      <circle class="c1" cx="67.921" cy="76.206" r="2.583"/>
+      <circle class="c1" cx="105.893" cy="76.206" r="3.615"/>
+      <circle class="c1" cx="81.354" cy="62.515" r="2.583"/>
+      <circle class="c1" cx="55.782" cy="90.153" r="2.583"/>
+      <circle class="c1" cx="82.128" cy="44.951" r="1.572"/>
+      <circle class="c1" cx="43.642" cy="41.593" r="1.808"/>
+    </g>
+  </g>
+</svg>

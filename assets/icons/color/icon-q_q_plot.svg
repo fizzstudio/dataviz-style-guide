@@ -1,0 +1,36 @@
+<svg id="icon-q_q_plot" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+    .c2 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <polyline class="c1" points="32.5,33 32.5,98 97.5,98"/>
+    <circle class="c2" cx="40.4" cy="91.6" r="2.5"/>
+    <circle class="c2" cx="43.9" cy="87.4" r="2.5"/>
+    <circle class="c2" cx="47.3" cy="82" r="2.5"/>
+    <circle class="c2" cx="51.9" cy="76.5" r="2.5"/>
+    <circle class="c2" cx="57.7" cy="72.9" r="2.5"/>
+    <circle class="c2" cx="63.2" cy="70.3" r="2.5"/>
+    <circle class="c2" cx="68.4" cy="67.2" r="2.5"/>
+    <circle class="c2" cx="74.7" cy="62.9" r="2.5"/>
+    <circle class="c2" cx="79.9" cy="58.2" r="2.5"/>
+    <circle class="c2" cx="83.4" cy="54.7" r="2.5"/>
+    <circle class="c2" cx="86.2" cy="51.6" r="2.5"/>
+    <circle class="c2" cx="88.8" cy="45.6" r="2.5"/>
+    <circle class="c2" cx="91.3" cy="40" r="2.5"/>
+    <circle class="c2" cx="92.9" cy="34.5" r="2.5"/>
+  </g>
+</svg>

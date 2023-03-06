@@ -1,0 +1,29 @@
+<svg id="icon-concepts" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      opacity: 0.5;
+    }
+    .c3 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g class="c2">
+    <rect class="c1" x="48" y="90" width="10" height="30"/>
+    <rect class="c1" x="80" y="70" width="10" height="50"/>
+    <rect class="c1" x="108" y="50" width="10" height="70"/>
+  </g>
+  <g>
+    <path class="c3" d="M30,95 L53,75 L85,85 L113,60 L140,55"/>
+  </g>
+</svg>

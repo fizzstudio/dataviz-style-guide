@@ -1,0 +1,22 @@
+<svg id="icon-noir_nominal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+      font-family: Verdana, sans-serif;
+      font-size: 16px;
+    }
+    .c2 {
+      opacity: 0.3;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <text class="c1" x="33" y="30">nominal</text>
+    <text class="c1 c2" x="33" y="56">ordinal</text>
+    <text class="c1 c2" x="33" y="82">interval</text>
+    <text class="c1 c2" x="33" y="108">ratio</text>
+  </g>
+</svg>

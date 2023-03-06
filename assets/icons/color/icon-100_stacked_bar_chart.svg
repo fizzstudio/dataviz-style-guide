@@ -1,0 +1,35 @@
+<svg id="icon-100_stacked_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      opacity: 0.5;
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: #FFFFFF;
+    }
+    .c3 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+
+  <g>
+    <g>
+      <rect class="c1" x="40.8" y="34.8" width="13.2" height="41.6"/>
+      <rect class="c2" x="78.5" y="62.9" width="13.2" height="29.1"/>
+      <rect class="c1" x="78.5" y="34.8" width="13.2" height="28.1"/>
+      <rect class="c1" x="59.7" y="34.8" width="13.2" height="15.9"/>
+      <rect class="c2" x="40.8" y="76.5" width="13.2" height="15.5"/>
+      <rect class="c2" x="59.7" y="50.7" width="13.2" height="41.3"/>
+    </g>
+    <polyline class="c3" points="32.5,32.5 32.5,97.5 97.5,97.5"/>
+  </g>
+</svg>

@@ -1,0 +1,468 @@
+<svg id="pearson-color-palette" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 380">
+  <title>Pearson Brand Colors Palette</title>
+  <style>
+    :root {
+      --accessible_styleguide_brand: hsl(280, 84%, 31%);
+      --bright_orange: hsl(42, 100%, 55%);
+      --lime_green: hsl(63, 88%, 46%);
+      --sky_blue: hsl(182, 67%, 75%);
+      --coral_pink: hsl(358, 100%, 73%);
+      --fresh_green: hsl(78, 100%, 37%);
+      --marine_turquoise: hsl(176, 82%, 38%);
+      --royal_purple: hsl(312, 100%, 31%);
+      --grass_green: hsl(145, 100%, 26%);
+      --midnight_blue: hsl(207, 100%, 17%);
+      --chalk_white: hsl(0, 0%, 100%);
+      --ink_black: hsl(0, 0%, 0%);
+      --mist_grey: hsl(180, 3%, 88%);
+      --graphite_grey: hsl(193, 5%, 33%);
+    }
+
+    text {
+      font-family: "Open Sans Light", "Open Sans", "Open Sans Regular", Arial, sans-serif;
+      font-size: 11px;
+    }
+
+    text.heading {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    text.tone {
+      text-anchor: end;
+    }
+
+    .accessible_styleguide_brand {
+      fill: var(--accessible_styleguide_brand);
+    }
+
+    .chalk_white {
+      fill: var(--chalk_white);
+      stroke: var(--ink_black);
+      stroke-width: 0.3px;
+    }
+
+    .mist_grey {
+      fill: var(--mist_grey);
+    }
+
+    .graphite_grey {
+      fill: var(--graphite_grey);
+    }
+
+    .ink_black {
+      fill: var(--ink_black);
+    }
+
+
+    .grayscales_0 {
+      fill: #c8c8c8;
+    }
+
+    .grayscales_1 {
+      fill: #898989;
+    }
+
+    .grayscales_2 {
+      fill: #666665;
+    }
+
+    .grayscales_3 {
+      fill: #2f2f2f;
+    }
+
+    .grayscales_4 {
+      fill: #151515;
+    }
+
+    .light_reds {
+      fill: var(--bright_orange);
+    }
+
+      .light_reds_0 {
+        fill: #ffeecc;
+      }
+
+      .light_reds_1 {
+        fill: #ffda92;
+      }
+
+      .light_reds_2 {
+        fill: var(--bright_orange);
+      }
+
+      .light_reds_3 {
+        fill: #c8931e;
+      }
+
+      .light_reds_4 {
+        fill: #8a661b;
+      }
+
+    .light_greens {
+      fill: var(--lime_green);
+    }
+
+      .light_greens_0 {
+        fill: #f9f6ce;
+      }
+
+      .light_greens_1 {
+        fill: #efec97;
+      }
+
+      .light_greens_2 {
+        fill: var(--lime_green);
+      }
+
+      .light_greens_3 {
+        fill: #a6ac18;
+      }
+
+      .light_greens_4 {
+        fill: #73761a;
+      }
+
+    .light_blues {
+      fill: var(--sky_blue);
+    }
+
+      .light_blues_0 {
+        fill: #dbf7f7;
+      }
+
+      .light_blues_1 {
+        fill: #b1edef;
+      }
+
+      .light_blues_2 {
+        fill: var(--sky_blue);
+      }
+
+      .light_blues_3 {
+        fill: #76b5b8;
+      }
+
+      .light_blues_4 {
+        fill: #537d7e;
+      }
+
+    .midtone_reds {
+      fill: var(--coral_pink);
+    }
+
+      .midtone_reds_0 {
+        fill: #ffd3d2;
+      }
+
+      .midtone_reds_1 {
+        fill: #ffacab;
+      }
+
+      .midtone_reds_2 {
+        fill: var(--coral_pink);
+      }
+
+      .midtone_reds_3 {
+        fill: #c85e61;
+      }
+
+      .midtone_reds_4 {
+        fill: #803f40;
+      }
+
+    .midtone_greens {
+      fill: var(--fresh_green);
+    }
+
+      .midtone_greens_0 {
+        fill: #dceab9;
+      }
+
+      .midtone_greens_1 {
+        fill: #bbd87c;
+      }
+
+      .midtone_greens_2 {
+        fill: var(--fresh_green);
+      }
+
+      .midtone_greens_3 {
+        fill: #6a9510;
+      }
+
+      .midtone_greens_4 {
+        fill: #496414;
+      }
+
+    .midtone_blues {
+      fill: var(--marine_turquoise);
+    }
+
+      .midtone_blues_0 {
+        fill: #c3e7e2;
+      }
+
+      .midtone_blues_1 {
+        fill: #88d0c7;
+      }
+
+      .midtone_blues_2 {
+        fill: var(--marine_turquoise);
+      }
+
+      .midtone_blues_3 {
+        fill: #1d8b81;
+      }
+
+      .midtone_blues_4 {
+        fill: #1d5650;
+      }
+
+    .dark_reds {
+      fill: var(--royal_purple);
+    }
+
+      .dark_reds_0 {
+        fill: #d38ebc;
+      }
+
+      .dark_reds_1 {
+        fill: #b44a96;
+      }
+
+      .dark_reds_2 {
+        fill: var(--royal_purple);
+      }
+
+      .dark_reds_3 {
+        fill: #641350;
+      }
+
+      .dark_reds_4 {
+        fill: #3a132f;
+      }
+
+    .dark_greens {
+      fill: var(--grass_green);
+    }
+
+      .dark_greens_0 {
+        fill: #aed2b2;
+      }
+
+      .dark_greens_1 {
+        fill: #56a364;
+      }
+
+      .dark_greens_2 {
+        fill: var(--grass_green);
+      }
+
+      .dark_greens_3 {
+        fill: #12632c;
+      }
+
+      .dark_greens_4 {
+        fill: #132f18;
+      }
+
+    .dark_blues {
+      fill: var(--midnight_blue);
+    }
+
+      .dark_blues_0 {
+        fill: #74819c;
+      }
+
+      .dark_blues_1 {
+        fill: #3d5376;
+      }
+
+      .dark_blues_2 {
+        fill: var(--midnight_blue);
+      }
+
+      .dark_blues_3 {
+        fill: #0a2744;
+        stroke: crimson;
+      }
+
+      .dark_blues_4 {
+        fill: #0e1724;
+        stroke: crimson;
+      }
+
+    .bg {
+      fill: white;
+      /* stroke: crimson; */
+    }  
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+
+  <g id="achromatic" transform="translate(5,10)">
+    <text class="heading" x="80" y="15">achromatic (grayscale) colors</text>
+    <g id="backgrounds" transform="translate(0,30)">
+      <text class="tone" x="70" y="65">backgrounds</text>
+      <g transform="translate(80,0)">
+        <text y="10">Chalk White</text>
+        <rect class="chalk_white" y="15" width="100" height="50" />
+      </g>
+      <g transform="translate(200,0)">
+        <text y="10">Ink Black</text>
+        <rect class="ink_black" y="15" width="100" height="50" />
+      </g>
+    </g>
+
+    <g id="neutrals" transform="translate(0,120)">
+      <text class="tone" x="70" y="65">neutrals</text>
+      <g transform="translate(80,0)">
+        <text y="10">Mist Grey</text>
+        <rect class="mist_grey" y="15" width="100" height="50" />
+      </g>
+      <g transform="translate(200,0)">
+        <text y="10">Graphite Grey</text>
+        <rect class="graphite_grey" y="15" width="100" height="50" />
+      </g>
+    </g>
+
+    <g id="grayscale" transform="translate(0,205)">
+      <text class="tone" x="70" y="30">grayscale</text>
+      <g transform="translate(80,0)">
+        <g id="chalk_white" transform="translate(0,0)">
+          <rect class="grayscales_0" x="0" y="15" width="16" height="16" />
+          <rect class="grayscales_1" x="21" y="15" width="16" height="16" />
+          <rect class="grayscales_2" x="42" y="15" width="16" height="16" />
+          <rect class="grayscales_3" x="63" y="15" width="16" height="16" />
+          <rect class="grayscales_4" x="84" y="15" width="16" height="16" /> 
+        </g> 
+      </g>
+    </g>
+
+  </g>  
+
+  <g id="logo" transform="translate(5,290)">
+    <text class="heading" x="80" y="10">Pearson Brand</text>
+    <g id="pearson" transform="translate(0,10)">
+      <text class="tone" x="70" y="65">logo</text>
+      <g transform="translate(80,0)">
+        <rect class="accessible_styleguide_brand" y="15" width="100" height="50" />
+      </g>
+    </g>
+  </g>  
+
+  <g id="chromatic" transform="translate(370,10)">
+    <text class="heading" x="60" y="15">chromatic colors</text>
+    <g id="lights" transform="translate(10,30)">
+      <text class="tone" x="40" y="65">lights</text>
+      <g transform="translate(50,0)">
+        <text y="10">Bright Orange</text>
+        <rect class="light_reds" y="15" width="100" height="50" />
+        <g id="light_reds" transform="translate(0,55)">
+          <rect class="light_reds_0" x="0" y="15" width="16" height="16" />
+          <rect class="light_reds_1" x="21" y="15" width="16" height="16" />
+          <rect class="light_reds_2" x="42" y="15" width="16" height="16" />
+          <rect class="light_reds_3" x="63" y="15" width="16" height="16" />
+          <rect class="light_reds_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(170,0)">
+        <text y="10">Lime Green</text>
+        <rect class="light_greens" y="15" width="100" height="50" />
+        <g id="light_greens" transform="translate(0,55)">
+          <rect class="light_greens_0" x="0" y="15" width="16" height="16" />
+          <rect class="light_greens_1" x="21" y="15" width="16" height="16" />
+          <rect class="light_greens_2" x="42" y="15" width="16" height="16" />
+          <rect class="light_greens_3" x="63" y="15" width="16" height="16" />
+          <rect class="light_greens_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(290,0)">
+        <text y="10">Sky Blue</text>
+        <rect class="light_blues" y="15" width="100" height="50" />
+        <g id="light_blues" transform="translate(0,55)">
+          <rect class="light_blues_0" x="0" y="15" width="16" height="16" />
+          <rect class="light_blues_1" x="21" y="15" width="16" height="16" />
+          <rect class="light_blues_2" x="42" y="15" width="16" height="16" />
+          <rect class="light_blues_3" x="63" y="15" width="16" height="16" />
+          <rect class="light_blues_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+    </g>
+
+    <g id="midtones" transform="translate(10,150)">
+      <text class="tone" x="40" y="65">midtones</text>
+      <g transform="translate(50,0)">
+        <text y="10">Coral Pink</text>
+        <rect class="midtone_reds" y="15" width="100" height="50" />
+        <g id="midtone_reds" transform="translate(0,55)">
+          <rect class="midtone_reds_0" x="0" y="15" width="16" height="16" />
+          <rect class="midtone_reds_1" x="21" y="15" width="16" height="16" />
+          <rect class="midtone_reds_2" x="42" y="15" width="16" height="16" />
+          <rect class="midtone_reds_3" x="63" y="15" width="16" height="16" />
+          <rect class="midtone_reds_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(170,0)">
+        <text y="10">Fresh Green</text>
+        <rect class="midtone_greens" y="15" width="100" height="50" />
+        <g id="midtone_greens" transform="translate(0,55)">
+          <rect class="midtone_greens_0" x="0" y="15" width="16" height="16" />
+          <rect class="midtone_greens_1" x="21" y="15" width="16" height="16" />
+          <rect class="midtone_greens_2" x="42" y="15" width="16" height="16" />
+          <rect class="midtone_greens_3" x="63" y="15" width="16" height="16" />
+          <rect class="midtone_greens_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(290,0)">
+        <text y="10">Marine Turquoise</text>
+        <rect class="midtone_blues" y="15" width="100" height="50" />
+        <g id="midtone_blues" transform="translate(0,55)">
+          <rect class="midtone_blues_0" x="0" y="15" width="16" height="16" />
+          <rect class="midtone_blues_1" x="21" y="15" width="16" height="16" />
+          <rect class="midtone_blues_2" x="42" y="15" width="16" height="16" />
+          <rect class="midtone_blues_3" x="63" y="15" width="16" height="16" />
+          <rect class="midtone_blues_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+    </g>
+
+    <g id="darks" transform="translate(10,270)">
+      <text class="tone" x="40" y="65">darks</text>
+      <g transform="translate(50,0)">
+        <text y="10">Royal Purple</text>
+        <rect class="dark_reds" y="15" width="100" height="50" />
+        <g id="dark_reds" transform="translate(0,55)">
+          <rect class="dark_reds_0" x="0" y="15" width="16" height="16" />
+          <rect class="dark_reds_1" x="21" y="15" width="16" height="16" />
+          <rect class="dark_reds_2" x="42" y="15" width="16" height="16" />
+          <rect class="dark_reds_3" x="63" y="15" width="16" height="16" />
+          <rect class="dark_reds_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(170,0)">
+        <text y="10">Grass Green</text>
+        <rect class="dark_greens" y="15" width="100" height="50" />
+        <g id="dark_greens" transform="translate(0,55)">
+          <rect class="dark_greens_0" x="0" y="15" width="16" height="16" />
+          <rect class="dark_greens_1" x="21" y="15" width="16" height="16" />
+          <rect class="dark_greens_2" x="42" y="15" width="16" height="16" />
+          <rect class="dark_greens_3" x="63" y="15" width="16" height="16" />
+          <rect class="dark_greens_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+      <g transform="translate(290,0)">
+        <text y="10">Midnight Blue</text>
+        <rect class="dark_blues" y="15" width="100" height="50" />
+        <g id="dark_blues" transform="translate(0,55)">
+          <rect class="dark_blues_0" x="0" y="15" width="16" height="16" />
+          <rect class="dark_blues_1" x="21" y="15" width="16" height="16" />
+          <rect class="dark_blues_2" x="42" y="15" width="16" height="16" />
+          <rect class="dark_blues_3" x="63" y="15" width="16" height="16" />
+          <rect class="dark_blues_4" x="84" y="15" width="16" height="16" /> 
+        </g>
+      </g>
+    </g>
+  </g>  
+
+</svg>

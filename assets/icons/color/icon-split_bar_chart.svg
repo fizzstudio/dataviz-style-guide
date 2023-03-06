@@ -1,0 +1,20 @@
+<svg id="icon-split_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="64" y="22.6" width="2" height="85"/>
+    <rect class="c1" x="70.4" y="56.7" width="40" height="16"/>
+    <path class="c1" d="M57.6,58.8v11.9h-9.5V58.8H57.6 M59.7,56.7H46.1v16h13.7L59.7,56.7L59.7,56.7z"/>
+    <rect class="c1" x="70.4" y="35.7" width="22.8" height="16"/>
+    <path class="c1" d="M57.6,37.7v11.9H28.1V37.7H57.6 M59.7,35.7H25.9v16h33.7V35.7L59.7,35.7z"/>
+    <rect class="c1" x="70.4" y="77.8" width="16" height="16"/>
+    <path class="c1" d="M57.6,79.9v11.9H34.4V79.9H57.6 M59.7,77.8H32.4v16h27.3V77.8L59.7,77.8z"/>
+  </g>
+</svg>

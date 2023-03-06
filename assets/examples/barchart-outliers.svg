@@ -1,0 +1,273 @@
+<svg id="chart-bar" xmlns="http://www.w3.org/2000/svg" tabindex="0"
+  viewBox="0 0 500 500">
+  <title />
+  <rect id="fizz_chart_frame" fill="none" pointer-events="all" x="0" y="0" width="500" height="486" />
+  <g tabindex="0"><text class="chart_title" transform="translate(250.00,29.40)">Student Enrollment per Subject by Semester</text>
+    <g id="x-axis" data-axistype="category" tabindex="-1" transform="translate(69.60,446.00)">
+      <path id="x_Semester_line" class="x_axis_line" d="M-10,0 H415.4" />
+      <title class="axis_label" style="font-size:15px" transform="translate(206,39)">Semester</title>
+      <g transform="translate(72,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Fall</text></g>
+      <g transform="translate(208,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Spring</text></g>
+      <g transform="translate(343,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Summer</text></g>
+    </g>
+    <g id="y-axis" data-axistype="numeric" tabindex="-1" transform="translate(69.60,43.00)">
+      <path id="y_Science_Math_Arts_line" class="y_axis_line" d="M0,403 V0" />
+      <g transform="translate(0,403.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">0</text>
+        <use href="#x_Semester_line" class="tickmark_y_0" />
+      </g>
+      <g transform="translate(0,345.43)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">10</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,287.86)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">20</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,230.29)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">30</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,172.71)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">40</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,115.14)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">50</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,57.57)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">60</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,0.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">70</text>
+        <use href="#x_Semester_line" class="tickmark_y" />
+      </g><text class="axis_label" style="font-size:15px" transform="translate(-36.6,201.5) rotate(-90)">Student Enrollment</text>
+    </g>
+
+    <g role="dataset" transform="translate(69.6,43)">
+      <g id="datapoint-x_Fall">
+        <g tabindex="0" class="datapoint bar series_0 science" transform="translate(72.23,0)">
+          <path d="M-66,390 V402 H66 V390 Z" />
+          <text class="datapoint_label" y="12" transform="translate(0,390)">2</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_1 math" transform="translate(72.23,0)">
+          <path d="M-66,384 V402 H66 V384 Z" transform="translate(0,-11.47)" />
+          <text class="datapoint_label" y="13" transform="translate(0,384) translate(0,-11.47)">3</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_2 arts" transform="translate(72.23,0)">
+          <path d="M-66,92 V402 H66 V92 Z" transform="translate(0,-29)" />
+          <text class="datapoint_label" y="20" transform="translate(0,92) translate(0,-29)">54</text>
+        </g>
+      </g>
+      <g id="datapoint-x_Spring">
+        <g tabindex="0" class="datapoint bar series_0 science" transform="translate(207.70,0)">
+          <path d="M-66,23 V402 H66 V23 Z" />
+          <text class="datapoint_label" y="20" transform="translate(0,23)">66</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_1 math" transform="translate(207.70,0)">
+          <path d="M-66,402 V402 H66 V402 Z" transform="translate(0,-378.56)" />
+          <text class="datapoint_label" y="20" transform="translate(0,402) translate(0,-378.56)" visibility="hidden">0</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_2 arts" transform="translate(207.70,0)">
+          <path d="M-66,390 V396 H66 V390 Z" transform="translate(0,-372.56)" />
+          <g transform="translate(0,390) translate(0,-372.56)">
+            <circle cx="0" cy="3" r="9" class="arts" />
+            <text class="datapoint_label" y="8">1</text>
+          </g>
+        </g>
+      </g>
+      <g id="datapoint-x_Summer">
+        <g tabindex="0" class="datapoint bar series_0 science" transform="translate(343.17,0)">
+          <path d="M-66,402 V402 H66 V402 Z" />
+          <text class="datapoint_label" y="20" transform="translate(0,402)" visibility="hidden">0</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_1 math" transform="translate(343.17,0)">
+          <path d="M-66,132 V402 H66 V132 Z" />
+          <text class="datapoint_label" y="20" transform="translate(0,132) translate(0,0)">47</text>
+        </g>
+        <g tabindex="0" class="datapoint bar series_2 arts" transform="translate(343.17,0)">
+          <path d="M-66,281 V402 H66 V281 Z" transform="translate(0,-269.58)" />
+          <text class="datapoint_label" y="20" transform="translate(0,281) translate(0,-269.58)">21</text>
+        </g>
+      </g>
+    </g>
+
+    <use href="#x_Semester_line" transform="translate(69.60,446.00)"/>
+ 
+    <g id="legend" transform="translate(120,485)">
+      <g id="legend-science" transform="translate(50,0)">
+        <rect class="science" x="-7.5" y="-7.5" width="15" height="15" />
+        <text class="legend_label" x="10" y="5">science</text>    
+      </g>
+      <g id="legend-math" transform="translate(150,0)">
+        <rect class="math" x="-7.5" y="-7.5" width="15" height="15" />
+        <text class="legend_label" x="10" y="5">math</text>    
+      </g>
+      <g id="legend-arts" transform="translate(250,0)">
+        <rect class="arts" x="-7.5" y="-7.5" width="15" height="15" />
+        <text class="legend_label" x="10" y="5">arts</text>    
+      </g>  
+    </g>   
+  </g>
+  <style xmlns="http://www.w3.org/1999/xhtml">
+    svg {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 15px
+    }
+
+    #fizz_chart_frame {
+      fill: none;
+      stroke: none
+    }
+
+    .legend_label {
+      font-size: 15px;
+      text-anchor: start;
+      fill: hsl(0, 0%, 0%);
+      stroke: none;
+    }
+
+    .y_axis_line {
+      fill: none;
+      stroke: hsl(0, 0%, 0%);
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .x_axis_line {
+      fill: none;
+      stroke: hsl(0, 0%, 0%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .axis_label {
+      text-anchor: middle;
+      fill: hsl(0, 0%, 0%);
+      stroke: none
+    }
+
+    .axis_label_y {
+      text-anchor: end;
+      fill: hsl(0, 0%, 0%);
+      stroke: none
+    }
+
+    .tickmark_y {
+      opacity: 0.2
+    }
+
+    .tickmark_y_0 {
+      fill: hsl(270, 50%, 50%);
+      stroke: hsl(270, 50%, 50%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .tick_group_y:hover,
+    .tick_group_y:hover .tickmark_y {
+      font-weight: bold;
+      opacity: 1
+    }
+
+    .tickmark_x {
+      opacity: 0.2
+    }
+
+    .tickmark_x_0 {
+      fill: hsl(270, 50%, 50%);
+      stroke: hsl(270, 50%, 50%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .radial_label_right {
+      text-anchor: start
+    }
+
+    .radial_label_left {
+      text-anchor: end
+    }
+
+    .datapoint_label {
+      font-size: 15px;
+      fill: white;
+      stroke: none;
+      pointer-events: none;
+      text-anchor: middle;
+    }
+
+    .datapoint_background {
+      fill: none;
+      stroke: none;
+      pointer-events: all;
+      outline: none
+    }
+
+    .data_line {
+      fill: none;
+      stroke: hsl(270, 50%, 50%);
+      stroke-width: 3px;
+      stroke-linecap: round
+    }
+
+    .data_area {
+      stroke: hsl(270, 50%, 50%);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      fill: none
+    }
+
+    .data_area_background {
+      stroke: none;
+      fill: hsl(270, 50%, 50%);
+      fill-opacity: 0.8
+    }
+
+    .trendline {
+      stroke: red;
+      stroke-width: 3px;
+      fill: none
+    }
+
+    .center_label tspan.subtext {
+      font-size: 2rem;
+      text-anchor: middle
+    }
+
+    .chart_title {
+      font-size: 18px;
+      text-anchor: middle;
+      fill: black;
+    }
+
+    .science {
+      fill: hsl(12, 69%, 35%);
+      stroke: white;
+    }
+
+    .math {
+      fill: hsl(75, 43%, 45%);
+      stroke: white;
+    }
+
+    .arts {
+      fill: hsl(225, 30%, 52%);
+      stroke: white;
+    }
+/* 
+    circle.arts {
+      fill: hsl(225, 30%, 52%);
+      stroke: hsl(225, 30%, 52%);
+    } */
+
+  </style>
+</svg>

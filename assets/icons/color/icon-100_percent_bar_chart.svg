@@ -1,0 +1,21 @@
+<svg id="icon-100_percent_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+      fill-opacity: 0.5;
+    }
+    .c2 {
+      fill: #FFFFFF;
+      stroke: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="22" y="56" width="86" height="18"/>
+    <rect class="c2" x="22" y="56" width="56" height="18"/>
+  </g>
+</svg>

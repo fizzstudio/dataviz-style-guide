@@ -1,0 +1,40 @@
+<svg id="icon-gantt_chart_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-miterlimit: 10;
+    }
+  </style>
+  <g>
+   <circle class="bg" cx="65" cy="65" r="64"/>
+  </g>
+  <g>
+    <g>
+      <rect class="c1" x="75.1" y="55.8" width="1" height="40.7"/>
+    </g>
+    <line class="c2" x1="75.6" y1="33.6" x2="75.6" y2="47.2"/>
+    <g>
+      <rect class="c1" x="97" y="33.6" width="1" height="62.9"/>
+    </g>
+    <g>
+      <rect class="c1" x="53.7" y="33.6" width="1" height="62.9"/>
+    </g>
+    <g>
+      <rect class="c1" x="32" y="33.6" width="1" height="62.9"/>
+    </g>
+    <g>
+      <rect class="c1" x="32.5" y="33.6" width="15.3" height="8.6"/>
+      <rect class="c1" x="80.5" y="74.3" width="7.4" height="8.6"/>
+      <path class="c1" d="M79.5,47.2H41.8v8.6h37.6V47.2z M77.7,53.8H62.4V49h15.3V53.8z"/>
+      <path class="c1" d="M86.1,60.7H62v8.6h24.1V60.7z M84.2,67.4h-6.5v-4.8h6.5V67.4z"/>
+      <path class="c1" d="M86.1,87.8v8.6H97v-8.6H86.1z M95.3,94.5h-7v-4.8h7V94.5z"/>
+    </g>
+  </g>
+</svg>

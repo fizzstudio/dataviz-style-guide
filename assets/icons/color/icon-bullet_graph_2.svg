@@ -1,0 +1,21 @@
+<svg id="icon-bullet_graph_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <g>
+   <circle class="bg" cx="65" cy="65" r="64"/>
+  </g>
+  <g>
+    <path class="c1" d="M32.5,34.8V51h65V34.8H32.5z M96.5,50H33.5v-5.6h16.4v-3.1H33.5v-5.6h63.1V50z"/>
+    <rect class="c1" x="65.5" y="38" width="2.3" height="9.8"/>
+    <path class="c1" d="M32.5,95.2h65V79h-65V95.2z M96.5,80v14.3H33.5v-5.6h31.3v-3.1H33.5V80H96.5z"/>
+    <rect class="c1" x="71.6" y="82.2" width="2.3" height="9.8"/>
+    <path class="c1" d="M32.5,73h65V56.9h-65V73z M96.5,57.8v14.3H33.5v-5.6h44.7v-3.1H33.5v-5.6H96.5z"/>
+    <rect class="c1" x="87.8" y="60" width="2.3" height="9.8"/>
+  </g>
+</svg>

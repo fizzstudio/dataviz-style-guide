@@ -1,0 +1,21 @@
+<svg id="icon-tally_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 4px;
+      stroke-linecap: round;
+    }
+  </style>
+    <circle class="bg" cx="65" cy="65" r="64"/>
+    <g>
+      <line class="c1" x1="39.762" y1="86.309" x2="39.532" y2="45.013"/>
+      <line class="c1" x1="54.734" y1="85.004" x2="54.504" y2="43.708"/>
+      <line class="c1" x1="70.688" y1="85.494" x2="70.459" y2="44.198"/>
+      <line class="c1" x1="88.316" y1="85.301" x2="88.087" y2="44.006"/>
+      <line class="c1" x1="27.146" y1="77.98" x2="101.377" y2="49.551"/>
+    </g>
+</svg>

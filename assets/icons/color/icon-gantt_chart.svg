@@ -1,0 +1,42 @@
+<svg id="icon-gantt_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      stroke: #FFFFFF;
+      stroke-width: 0.25px;
+    }  
+    .c3 {
+      fill: none;
+      opacity: 0.3;
+      stroke: #FFFFFF;
+      stroke-width: 0.5px;
+    }  
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <line class="c3" x1="31.234" y1="33.177" x2="31.234" y2="96.965"/>
+    <line class="c3" x1="39.675" y1="33.177" x2="39.675" y2="96.965"/>
+    <line class="c3" x1="48.116" y1="33.177" x2="48.116" y2="96.965"/>
+    <line class="c3" x1="56.559" y1="33.177" x2="56.559" y2="96.965"/>
+    <line class="c3" x1="65" y1="33.177" x2="65" y2="96.965"/>
+    <line class="c3" x1="73.441" y1="33.034" x2="73.441" y2="96.822"/>
+    <line class="c3" x1="81.885" y1="33.034" x2="81.885" y2="96.822"/>
+    <line class="c3" x1="90.325" y1="33.034" x2="90.325" y2="96.822"/>
+    <line class="c3" x1="98.768" y1="33.034" x2="98.768" y2="96.822"/>
+    <rect class="bg c2" x="49.64" y="52.871" width="11.623" height="4.975"/>
+    <rect class="bg c2" x="69.105" y="91.841" width="18.377" height="4.974"/>
+    <rect class="bg c2" x="41.296" y="33.318" width="4.868" height="4.975"/>
+    <rect class="c1" x="31.145" y="33.18" width="11.129" height="5.252"/>
+    <rect class="c1" x="40.002" y="42.958" width="13.854" height="5.252"/>
+    <rect class="c1" x="42.047" y="52.732" width="8.09" height="5.252"/>
+    <rect class="c1" x="52.269" y="62.422" width="23.081" height="5.252"/>
+    <rect class="c1" x="74.074" y="81.889" width="22.058" height="5.254"/>
+    <rect class="c1" x="80.889" y="91.702" width="17.969" height="5.251"/>
+    <rect class="c1" x="68.279" y="72.156" width="16.949" height="5.25"/>
+  </g>
+</svg>

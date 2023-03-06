@@ -1,0 +1,200 @@
+<svg id="chart-bar" xmlns="http://www.w3.org/2000/svg" tabindex="0" viewBox="0 0 500 486">
+  <title />
+  <rect id="fizz_chart_frame" fill="none" pointer-events="all" x="0" y="0" width="500" height="486" />
+  <style xmlns="http://www.w3.org/1999/xhtml">
+    :root {
+      --accessible_styleguide_brand: hsl(280, 84%, 31%);
+      --bright_orange: hsl(42, 100%, 55%);
+      --lime_green: hsl(63, 88%, 46%);
+      --sky_blue: hsl(182, 67%, 75%);
+      --coral_pink: hsl(358, 100%, 73%);
+      --fresh_green: hsl(78, 100%, 37%);
+      --marine_turquoise: hsl(176, 82%, 38%);
+      --royal_purple: hsl(312, 100%, 31%);
+      --grass_green: hsl(145, 100%, 26%);
+      --midnight_blue: hsl(207, 100%, 17%);
+      --chalk_white: hsl(0, 0%, 100%);
+      --faded_white: hsl(193, 100%, 60%);
+      --ink_black: hsl(0, 0%, 0%);
+      --mist_grey: hsl(180, 3%, 88%);
+      --graphite_grey: hsl(193, 5%, 33%);
+    }
+      
+    svg {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 15px
+    }
+
+    #fizz_chart_frame {
+      fill: none;
+      stroke: none
+    }
+
+    .y_axis_line {
+      fill: none;
+      stroke: var(--ink_black);
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .x_axis_line {
+      fill: none;
+      stroke: var(--ink_black);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .axis_label {
+      text-anchor: middle;
+      fill: var(--ink_black);
+      stroke: none
+    }
+
+    .axis_label_y {
+      text-anchor: end;
+      fill: var(--ink_black);
+      stroke: none
+    }
+
+    .tickmark_y {
+      opacity: 0.2
+    }
+
+    .tickmark_y_0 {
+      fill: var(--ink_black);
+      stroke: var(--ink_black);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .tick_group_y:hover,
+    .tick_group_y:hover .tickmark_y {
+      font-weight: bold;
+      opacity: 1
+    }
+
+    .tickmark_x {
+      opacity: 0.2
+    }
+
+    .tickmark_x_0 {
+      fill: var(--ink_black);
+      stroke: var(--ink_black);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .radial_label_right {
+      text-anchor: start
+    }
+
+    .radial_label_left {
+      text-anchor: end
+    }
+
+    .datapoint_background {
+      fill: none;
+      stroke: none;
+      pointer-events: all;
+      outline: none
+    }
+
+    .trendline {
+      stroke: red;
+      stroke-width: 3px;
+      fill: none
+    }
+
+    tspan.subtext {
+      font-size: 2rem;
+      text-anchor: middle
+    }
+
+    .chart_title {
+      font-size: 18px;
+      text-anchor: middle;
+      fill: black;
+    }
+
+    .Section_1 {
+      fill: var(--accessible_styleguide_brand);
+      stroke: var(--accessible_styleguide_brand);
+    }
+
+
+    .axis_label {
+      display: none;
+    }
+  </style>
+  <g tabindex="0"><text class="chart_title" transform="translate(250.00,29.40)">Test Grade by Student</text>
+    <g id="x-axis" data-axistype="category" tabindex="-1" transform="translate(61.80,446.00)">
+      <path id="x_Student_line-5" class="x_axis_line" d="M-10,0 H423.2" />
+      <title class="axis_label" style="font-size:15px" transform="translate(210,39)">Student</title>
+      <g transform="translate(56,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Adrian Abdullah</text></g>
+      <g transform="translate(160,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Bex Beil</text></g>
+      <g transform="translate(263,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Cameron Cho</text></g>
+      <g transform="translate(367,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Drew Doan</text></g>
+    </g>
+    <g id="y-axis" data-axistype="numeric" tabindex="-1" transform="translate(61.80,43.00)">
+      <path id="y_Section_1_line-1" class="y_axis_line" d="M0,403 V0" />
+      <g transform="translate(0,403.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px" display="none">0</text>
+        <use href="#x_Student_line-5" class="tickmark_y_0" />
+      </g>
+      <g transform="translate(0,335.83)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">U</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,268.67)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">F</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,201.50)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">D</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,134.33)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">C</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,67.17)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">B</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,0.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">A</text>
+        <use href="#x_Student_line-5" class="tickmark_y" />
+      </g>
+      <text class="axis_label" style="font-size:15px" transform="translate(-28.8,201.5) rotate(-90)">Test Grade </text>
+    </g>
+    <g role="dataset" transform="translate(61.8,43)">
+      <g id="datapoint-x_Adrian_Abdullah-5">
+        <g tabindex="0" class="datapoint bar series_0 Section_1" transform="translate(56.28,0)">
+          <path d="M-50,201 V402 H50 V201 Z" />
+        </g>
+      </g>
+      <g id="datapoint-x_Bex_Beil-5">
+        <g tabindex="0" class="datapoint bar series_0 Section_1" transform="translate(159.83,0)">
+          <path d="M-50,0 V402 H50 V0 Z" />
+        </g>
+      </g>
+      <g id="datapoint-x_Cameron_Cho-5">
+        <g tabindex="0" class="datapoint bar series_0 Section_1" transform="translate(263.38,0)">
+          <path d="M-50,134 V402 H50 V134 Z" />
+        </g>
+      </g>
+      <g id="datapoint-x_Drew_Doan-5">
+        <g tabindex="0" class="datapoint bar series_0 Section_1" transform="translate(366.92,0)">
+          <path d="M-50,268 V402 H50 V268 Z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg id="icon-bar_graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65.084" cy="64.917" r="64"/>
+  <g>
+    <rect class="c1" x="28.741" y="60.375" width="14.708" height="32.949"/>
+    <rect class="c1" x="86.721" y="67.037" width="14.706" height="26.287"/>
+    <rect class="c1" x="67.395" y="49.194" width="14.707" height="44.13"/>
+    <rect class="c1" x="48.066" y="29.777" width="14.708" height="63.547"/>
+  </g>
+</svg>

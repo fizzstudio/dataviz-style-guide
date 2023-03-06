@@ -1,0 +1,17 @@
+<svg id="icon-venn_diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 3px;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <circle class="c1" cx="47" cy="65" r="24.5"/>
+    <circle class="c1" cx="83" cy="65" r="24.5"/>
+  </g>
+</svg>

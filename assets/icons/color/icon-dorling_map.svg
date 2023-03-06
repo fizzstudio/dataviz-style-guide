@@ -1,0 +1,23 @@
+<svg id="icon-dorling_map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <g>
+   <circle class="bg" cx="65" cy="65" r="64"/>
+    <g>
+      <circle class="c1" cx="35.7" cy="63.7" r="18.6"/>
+      <circle class="c1" cx="66.5" cy="59.7" r="10.5"/>
+      <circle class="c1" cx="62.1" cy="80.7" r="9.2"/>
+      <circle class="c1" cx="91.8" cy="59.5" r="12.8"/>
+      <circle class="c1" cx="81" cy="79.4" r="7.9"/>
+      <circle class="c1" cx="46" cy="88.1" r="5.6"/>
+      <circle class="c1" cx="90.1" cy="91.4" r="4"/>
+      <circle class="c1" cx="103.2" cy="44.1" r="4.6"/>
+    </g>
+  </g>
+</svg>
