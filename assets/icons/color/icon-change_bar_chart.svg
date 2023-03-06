@@ -1,0 +1,27 @@
+<svg id="icon-change_bar_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+<style>
+	.bg{fill:hsl(280, 84%, 31%);}
+	.c1{fill:#FFFFFF;}
+</style>
+<g>
+	<path class="bg" d="M65,1c35.3,0,64,28.7,64,64c0,35.3-28.7,64-64,64S1,100.3,1,65C1,29.7,29.7,1,65,1z"/>
+</g>
+<g>
+	<g>
+		<rect class="c1" x="75.1" y="32.9" width="0.8" height="64.3"/>
+	</g>
+	<g>
+		<rect class="c1" x="96.8" y="32.9" width="0.8" height="64.3"/>
+	</g>
+	<g>
+		<rect class="c1" x="53.8" y="32.9" width="0.8" height="64.3"/>
+	</g>
+	<g>
+		<rect class="c1" x="32.3" y="32.9" width="0.8" height="64.3"/>
+	</g>
+	<g>
+		<polygon class="c1" points="97.7,74.9 49.4,74.9 49.4,70.3 41.3,80 49.4,89.7 49.4,85.2 97.7,85.2 "/>
+		<polygon class="c1" points="66.8,58.9 74.9,49.2 66.8,39.5 66.8,44 41.3,44 41.3,54.3 66.8,54.3 "/>
+	</g>
+</g>
+</svg>

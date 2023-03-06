@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📉</text></svg>">
+
+  <title>Pearson Data Visualization Style Guide, v0.0.6</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="./script/old-toc.js"></script>
+</head>
+
+<body>
+  <heading>
+    <h1 id="pearson-dataviz-style-guide">Pearson Data Visualization Style Guide, v0.0.6</h1>
+    <p><em>This document is a work in progress. Questions and feedback are welcome! Please send comments to <a
+          href="mailto:dataviz@pearson.com">dataviz@pearson.com</a></em>.</p>
+  </heading>
+  <div id="content_container">
+    <aside id="toc" class="toc"></aside>
+    <main>
+
+
+      <article>
+        <h2>Select your chart types</h2>
+        <p>Pick a chart type. If you're mixing two or more chart types in the same chart (like a combined line and bart
+          chart), select both.</p>
+        <label for="chart-type-select">Choose a chart type:</label>
+        <select name="chart-type-select" id="chart-type-select" multiple>
+          <option value="line">Line</option>
+          <option value="bar">Bar</option>
+          <option value="pie">Pie and Donut</option>
+          <option value="gauge">Gauges</option>
+          <option value="hundred-percent">Hundred-percent bar</option>
+          <option value="scatterplot">Scatterplot</option>
+          <option value="table">Table</option>
+        </select>
+
+        <aside>
+          <p><b>TODO:</b> Replace this with a custom ARIA select list with icons.</p>
+        </aside>
+      </article>
+
+      <div class="transferred">
+
+      <article id="chart-line">
+        <h2>Line</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-category_color.svg" alt="Line chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-line">Accessibility considerations:</h3>
+        <p></p>
+
+        <h3 id="variations-line">Variations</h3>
+
+        <section>
+          <h4 id="stacked-line">Stacked line</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Stacked line chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-line">Grouped line</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Stacked line chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-line">Vertical line</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Stacked line chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+        <article id="chart-bar">
+          <h2>Bar</h2>
+
+          <div>
+            <p>A bar chart uses rectangular bars to show discrete, numerical comparisons across categories. The height (or length) of the bar indicated the numerical value. One axis of the chart shows the specific categories being compared (the independent variable), and the other axis represents a discrete value scale (the dependent variable).</p>
+
+            <p>In a vertical bar chart, also called a column chart, the categories are on the x-axis, and the value being measured is on the y-axis.</p>
+            
+            <p>In a horizontal bar chart, the value being measured is on the x-axis, and the categories are on the y-axis.</p>
+
+            <figure>
+              <img src="./assets/barchart-category_color.svg" alt="Bar chart with single color for same category">
+              <figcaption><span class="lead">Do:</span> single color for same category</figcaption>
+            </figure>
+
+          </div>
+          
+          <h3>Best used for</h3>
+          <ul>
+            <li>numerical comparisons</li>
+            <li>trend over time</li>
+          </ul>
+        
+        <h3 id="a11y-bar">Accessibility considerations:</h3>
+        <h4>Labels</h4>
+        <p>Labels should be clearly associated with their indicated bar. Bars should be placed relative to their axis labels, and value labels for the bar should be directly positioned with the bar (show diagrams with options).</p>
+        <p>Labels should be of sufficient size to be easily legible (quote WCAG here)</p>
+        <p>With a large number of bars, labels may be too small to read, may overlap each other, or may otherwise not be legible. If label space becomes an issue, consider using a horizontal bar chart, or use a smaller number of bars, either by aggregating data, splitting the chart into multiple bar charts, each with its own facet.</p>
+
+        <h3 id="variations-bar">Variations</h3>
+
+        <section>
+          <h4 id="stacked-bar">Stacked bar</h4>
+          <p>This is for data with multiple series.</p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-bar">Grouped bar</h4>
+          <p>This is for data with multiple series.</p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="horizontal-bar">Horizontal bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-bar">Vertical bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-pie">
+        <h2>Pie</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-category_color.svg" alt="Pie chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-pie">Accessibility considerations:</h3>
+
+        <h3 id="variations-pie">Variations</h3>
+
+        <section>
+          <h4 id="stacked-pie">Stacked pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-pie">Grouped pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-pie">Vertical pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-gauge">
+        <h2>Gauge</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-category_color.svg" alt="Gauge chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-gauge">Accessibility considerations:</h3>
+
+        <h3 id="variations-gauge">Variations</h3>
+
+        <section>
+          <h4 id="stacked-gauge">Stacked gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-gauge">Grouped gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-gauge">Vertical gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-hundred-percent bar">
+        <h2>Hundred-percent bar</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-category_color.svg"
+              alt="Hundred-percent bar chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-hundred-percent-bar">Accessibility considerations:</h3>
+
+        <h3 id="variations-hundred-percent-bar">Variations</h3>
+
+        <section>
+          <h4 id="stacked-hundred-percent-bar">Stacked hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-hundred-percent-bar">Grouped hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-hundred-percent-bar">Vertical hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-scatterplot">
+        <h2>Scatterplot</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-category_color.svg"
+              alt="Scatterplot chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-scatterplot">Accessibility considerations:</h3>
+
+        <h3 id="variations-scatterplot">Variations</h3>
+
+        <section>
+          <h4 id="stacked-scatterplot">Stacked scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-scatterplot">Grouped scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-scatterplot">Vertical scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+
+      <article id="chart-table">
+        <h2>Table</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-category_color.svg" alt="Table chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-table">Accessibility considerations:</h3>
+
+        <h3 id="variations-table">Variations</h3>
+
+        <section>
+          <h4 id="stacked-table">Stacked table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-table">Grouped table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-table">Vertical table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+      <h2 id="colors">Colors</h2>
+      <p>Best Practices for use of color for accessibility.</p>
+      <h3 id="chromatic-multiple-colors">Chromatic: multiple colors</h3>
+
+      <h4 id="qualitative-categories">Qualitative Categories</h4>
+      <p>Qualitative data values are different categories or classes. This is often called <i>nominal</i> data, meaning
+        that each value represents a <i>named thing</i>, rather than an ordered or numerical progression. For
+        qualitative data, use a different hue for each item.)</p>
+      <p><i><b>TODO:</b> list common qualitative / categorical value type examples widely used in Pearson</i></p>
+
+      <p><b>Examples of categorical data:</b> courses, learning topics, schools, etc.</p>
+
+      <p><i><b>TODO:</b> ask if there is or should be consistent color-coding for different topic areas (e.g math =
+          orange, science = red, social studies = blue) and sub-colors within those categories. Could be good for
+          symbology</i></p>
+
+
+      <p>Do not use different hues to represent elements of the same category. This may confuse or distract people with
+        some cognitive disabilities, by implying a pattern or categorization that doesn't exist, thus increasing their
+        cognitive load and even frustration in trying to understand this non-existent pattern.</p>
+
+      <p>Misuse of multiple colors also distracts from the message of the data visualization, and increases visual
+        clutter.</p>
+
+      <h5 id="criteria-for-qualitative-color-values">Criteria for qualitative color values</h5>
+      <p>Color may used to distinguish discrete items or related groups of items which do not have an intrinsic order,
+        such as different courses of study, or different schools school systems within a district or countries on a map
+        (when not ranking them by another criteria). For this purpose, a color palette (or set of specific colors)
+        should follow perceptual guidelines: <i><b>TODO:</b> simplify this paragraph</i></p>
+      <ul>
+        <li>Each color in the palette should look clearly distinct from the others, following the color contrast ratio
+          of at least 3:1 relative luminance (per the <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">WCAG 2.1
+            Success Criterion 1.4.11 Non-text Contrast</a>)</li>
+        <li>Each color in the palette should be perceptually uniform, such as different hues with a saturation and
+          lightness equivalent to the other colors in the palette</li>
+        <li>No single color in the palette should stand out as <em>stronger</em> or <em>weaker</em> relative to the
+          other colors, including mixing chromatic and grayscale colors</li>
+        <li>Collectively, there should be no perceived ordering or ranking among the colors of the palette, which may
+          give the impression of an apparent order among the represented items.</li>
+      </ul>
+
+      <p>Note that the Pearson branding color palette is not ideal for use with data visualization, because it isn't
+        perceptually uniform. But if it's going to be used for qualitative charts, it should be consistent</p>
+
+      <h4 id="sequential-palette">Sequential</h4>
+      <p>Sequential data values are items that have ordered, numerical values, such as performance metrics.</p>
+
+      <p><b>Examples of sequential data:</b> test scores, grades, rankings, performance times, class size, etc.</p>
+
+
+      <p><i><b>TODO:</b> describe perceptual uniformity</i></p>
+      <p><i><b>TODO:</b> describe sequential colors as shown in modified palette above</i></p>
+      <p><i><b>TODO:</b> list common sequential value type examples widely used in Pearson</i></p>
+
+
+      <h5 id="criteria-for-sequential-color-values">Criteria for sequential color values</h5>
+      <p>When color is used to represent an ordered sequence of data values, the color palette (or set of specific
+        colors) should follow these perceptual guidelines:</p>
+      <ul>
+        <li>The sequence of colors in the palette should clearly indicate which values are larger and which values are
+          smaller (in general, darker colors are perceived as larger and lighter colors as smaller)</li>
+        <li>Each color in the palette should clearly and consistently represent how distant it is from other values</li>
+        <li>The colors scale should be perceptually uniform across the color scale, such as the same hue with different
+          saturation or lightness, or multi-hued across a familiar set of colors (e.g. natural world colors)</li>
+        <li>The extremes of the color scale should be clearly labeled, by axis or legend, with at least one interval
+          value labeled as well (e.g the midpoint)</li>
+        <li>Both stepped and smooth gradations are acceptable, but the usage should be clear</li>
+      </ul>
+
+      <p><i><b>TODO:</b> show and explain RAG color palette</i></p>
+
+
+      <img class="palette" src="./assets/sequential-colors.svg" alt="Five colors of same green hue, from light to dark">
+
+      <h4 id="diverging">Diverging</h4>
+      <p>Diverging data values represent the deviation of the value in along a linear axis relative to a neutral
+        midpoint. This midpoint may be zero, where the two poles are positive and negative, or some arbitrary average
+        such as test scores, where the two poles may indicate how well or poorly a student performed. There may be an
+        implied range of acceptable thresholds within the two poles, where the extremes are outside the acceptable
+        range.</p>
+
+      <p><b>Examples of diverging data:</b> individual test scores relative to the average, etc.</p>
+      <p><i><b>TODO:</b> list common diverging value type examples widely used in Pearson</i></p>
+
+
+      <h5 id="criteria-for-diverging-color-values">Criteria for diverging color values</h5>
+      <p>When color is used to represent an diverging set of data values, the color palette (or set of specific colors)
+        should follow these perceptual guidelines:</p>
+      <ul>
+        <li>The midpoint should typically be a light color when the value is neutral, or a dark color when the midpoint
+          is the implied ideal</li>
+        <li>Each side of the color scale should follow the criterial for sequential colors, with the difference in color
+          from the midpoint growing strongest at each end (e.g. for light midpoints, the lighter colors meaning less
+          different to the midpoint and the darker colors meaning more different than the midpoint)</li>
+        <li>Both sides should be balanced by using a shared uniform scale, so that values at the same distance from the
+          midpoint are perceived as equivalent</li>
+        <li>Distinct colors should be used so the reader understands both the direction and the magnitude of the
+          distance from the midpoint</li>
+      </ul>
+
+      <img class="palette" src="./assets/diverging-colors.svg"
+        alt="Five colors interpolated between a red hue and a green hue">
+
+      <h4 id="mixed-data-values">Mixed data values</h4>
+      <p>Sometimes more than one data type is being represented in the same chart. For example, a bar chart might
+        represent schools by the size of student population (the length of the bar), and also by region (the color of
+        the bar). This is common, and can be used effectively. However, care must be taken to explain both signals: the
+        sequential (the dependent variable axis labels) and the categorical (a color-coded legend), with a textual
+        explanation in the title or caption.</p>
+
+
+      <h5 id="sequential-palette-for-qualitative-data">Sequential palette for qualitative data</h5>
+      <p>Normally, you should reserve a <a href="#sequential-palette">sequential palette</a> for quantitative (not
+        qualitative) values. However, when presenting qualitative data in a manner ordered by decreasing quantity value,
+        it can be effective to use variations on the same hue for the categories. This also works well for people with
+        decreased color vision and for printing in grayscale. <strong>Note:</strong> when combining darker and lighter
+        colors, darker colors are typically associated with larger values, while lighter colors are associated with
+        smaller values. Reversing or mixing the sequence of colors may cause confusion or misunderstanding in readers.
+      </p>
+
+      <img class="palette" src="./assets/qualitative-colors.svg" alt="Nine colors of different distinct hues">
+
+      <article>
+        <h5 id="examples-of-qualitative-color-palette">Examples of Qualitative Color Palette</h5>
+
+        <section class="examples">
+          <figure>
+            <img src="./assets/barchart-category_color.svg" alt="Bar chart with single color for same category">
+            <figcaption><span class="lead">Do:</span> single color for same category</figcaption>
+          </figure>
+
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+            <figcaption><span class="lead">Do:</span> multiple colors for different categories</figcaption>
+          </figure>
+
+          <figure class="avoid">
+            <img src="./assets/barchart-category_mixed_color.svg"
+              alt="Bar chart with multiple colors for same category">
+            <figcaption><span class="lead">Don't:</span> multiple colors for same category</figcaption>
+          </figure>
+        </section>
+
+        <section class="examples">
+          <figure>
+            <img src="./assets/donutchart-categories.svg"
+              alt="Donut chart with multiple colors for different categories">
+            <figcaption><span class="lead">Do:</span> multiple colors for different categories</figcaption>
+          </figure>
+
+          <figure>
+            <img src="./assets/donutchart-categories_sequential.svg" alt="Donut chart with multiple shades of green">
+            <figcaption><span class="lead">Do:</span> multiple shades of same hue for different categories</figcaption>
+          </figure>
+
+          <figure class="avoid">
+            <img src="./assets/donutchart-categories_sequential_misordered.svg"
+              alt="Donut chart with multiple shades of green">
+            <figcaption><span class="lead">Don't:</span> misorder multiple shades of same hue for different categories
+            </figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <h3 id="achromatic-grayscale">Achromatic grayscale</h3>
+      <p>Uses for grayscale colors include display in media or devices without chromatic colors (e.g. print or e-ink
+        devices), and de-emphasis of data points to contrast with accentuated data points.</p>
+
+      <h4 id="print-and-grayscale-displays">Print and Grayscale Displays</h4>
+      <p>For small nunbers of qualitative or sequential data, you can substitute grayscale colors on a white background
+        for the chromatic colors. Normal human vision cannot reliably differentiate between more than a few shades of
+        gray, so limit the palette to five colors, if possible.</p>
+
+      <p>Do not distinguish items by color alone, especially with the limited differentiation by achromatic colors.
+        Consider using supplementary patterns or symbols where possible. Note that diverging data do not work well with
+        a grayscale palette, so use of patterns or symbols may be necessary for visualizations of diverging data.</p>
+
+      <p>It is a good practice to assume that your data visualization may be printed on a grayscale printer, and to
+        limit your use of color even for chromatic charts.</p>
+
+      <img class="palette" src="./assets/grayscale-colors.svg" alt="Five colors of grays, from light to dark">
+
+      <p><strong>Note:</strong> For use in print, it is sometimes possible to use technologies such as SVG and CSS to
+        specify special print colors, such as grayscale colors, that are selected specifically for grayscale print
+        (rather than chromatic colors printed with only saturation and lightness, and no hue). Where possible, specify
+        CSS print media rules for grayscale color palettes.</p>
+
+
+      <h4 id="grayscale-for-de-emphasis">Grayscale for de-emphasis</h4>
+      <p>Often, it is good to reduce visual clutter and draw emphasis to key sections or data points by using lighter or
+        heavily desaturated achromatic or chromatic colors for all other elements of a design.</p>
+
+      <p>Because of the convention that light grays denote a de-emphasized element, you should not use achromatic colors
+        in combination with chromatic colors as part of qualitative or sequential palette. This may cause confusion to
+        readers, including those with some cognitive disabilities, and it may be insufficient contrast for some readers
+        with color blindness.</p>
+
+      <h4 id="avoid-similar-shades-of-chromatic and grayscale colors">Avoid similar shades of chromatic and grayscale
+        colors</h4>
+      <p>When using grayscale to de-emphasize elements, ensure that the grayscale and chromatic colors have distinct
+        saturation and lightness (e.g. shades). Elements of the same or similar shades will be indistinguishable to
+        people with decreased color vision, and when printed in grayscale.</p>
+
+
+      <section class="examples">
+        <figure>
+          <img src="./assets/barchart-deemphasis.svg" alt="Bar chart with single blue bar and 3 light gray bars">
+          <figcaption><span class="lead">Do:</span> use a single color for emphasis, and a single distinct grayscale
+            shade for de-emphasis</figcaption>
+        </figure>
+
+        <figure class="avoid">
+          <img src="./assets/barchart-deemphasis_same_shade.svg"
+            alt="Bar chart with single green bar and 3 gray bars of the same shade">
+          <figcaption><span class="lead">Don't:</span> use similar shades of chromatic and grayscale colors to
+            differentiate data points</figcaption>
+        </figure>
+      </section>
+
+      <section class="examples">
+        <figure>
+          <img src="./assets/donutchart-categories_grayscale.svg" alt="Donut chart with multiple grayscale shades">
+          <figcaption><span class="lead">Do:</span> multiple grayscale shades for different categories</figcaption>
+        </figure>
+
+        <figure>
+          <img src="./assets/donutchart-deemphasis.svg" alt="Donut chart with multiple grayscale shades">
+          <figcaption><span class="lead">Do:</span> use a single color for emphasis, and a single distinct grayscale
+            shade for de-emphasis</figcaption>
+        </figure>
+
+        <figure class="avoid">
+          <img src="./assets/donutchart-categories_mixed_chromatic_grayscale.svg"
+            alt="Donut chart with multiple colors for different categories">
+          <figcaption><span class="lead">Don't:</span> mix chromatic and grayscale colors for different categories
+          </figcaption>
+        </figure>
+      </section>
+
+
+      <!-- 
+  <ul>
+    <li><b>Chromatic:</b> multiple colors 
+      <ul>
+        <li><b>Qualitative:</b> different hues. Use this for data with different categories or classes (<i>nominal data</i>)</li>
+        <li><b>Sequential:</b> multiple shades of the same base hue. Use this for ordered data that progress from low (lighter) to high (darker) values.</li>
+        <li><b>Diverging:</b> multiple shades of two base hues. Use this for ordered data that progress between two contrasting extremes, with the neutral color as the midpoint
+
+        </li>
+      </ul>    
+    </li>
+    <li><b>Achromatic:</b> grayscale
+      <ul>
+        <li><b>Print:</b> Use this for printing with grayscale inks</li>
+        <li><b>Deemphasis:</b> Use this to contrast with accentuated data points</li>
+        <li><b>Note:</b> Do not use achromatic colors in combination with chromatic colors as part of qualitative palette (See cognitive, color blindness</li>
+      </ul>
+    </li>
+  </ul> 
+-->
+
+
+      <p><i><b>TODO:</b> more color examples</i></p>
+
+      <h3 id="color-semantics">Color Semantics</h3>
+      <p><i><b>TODO:</b> describe the semantics or meanings of colors, such as for RAG status charts (e.g. don't use
+          reds to mean positive or go conditions)</i></p>
+
+
+      <article>
+        <h2 id="measurement-levels">Levels of Measurement</h2>
+        <object data="./assets/noir-and-colors.svg" type="image/svg+xml"
+          title="Use of color schemes with the different levels of measurement: categorical (nominal and ordinal), and numeric (interval, and ratio)"></object>
+        <h2 id="use-of-color">Use of Color</h2>
+        <object data="./assets/pearson_color_palette.svg" type="image/svg+xml" title="Pearson's color pallete"></object>
+      </article>
+
+
+      <article>
+        <h2 id="direct-labeling">Direct labeling</h2>
+        <p>TODO</p>
+        <section class="examples">
+          <figure>
+            <img src="./assets/linechart-direct-labeling.svg" alt="Line chart with direct labeling">
+            <figcaption><span class="lead">Do:</span> add a direct label to each line of a line chart</figcaption>
+          </figure>
+          <figure class="warning">
+            <img src="./assets/linechart-legend.svg" alt="Line chart with legend">
+            <figcaption><span class="lead">Be cautious:</span> avoid using line charts with only labels in the legend
+            </figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <div class="transferred">
+
+      <article>
+        <h2 id="axes-labeling">Axes and Labeling</h2>
+        <p>For cartesian (X/Y) charts, always display both X and Y axes, with clear labels for numerical axis.</p>
+        <h3 id="visual-clutter">Visual clutter</h3>
+        <p>Visual clutter is disorganization in the collection of elements, or any unneccessary visual elements that
+          don't directly contribute to the reader's ability to understand the information in a document or image. Visual
+          clutter contributes to extraneous cognitive load, and may reduce the reader's task performance.</p>
+        <figure>
+          <blockquote cite="http://web.mit.edu/rruth/www/Papers/RosenholtzEtAlCHI2005Clutter.pdf">
+            <p>Clutter is the state in which excess items, or their representation or organization, lead to a
+              degradation of performance at some task.</p>
+          </blockquote>
+          <figcaption>—Rosenholtz et al., <cite>Feature Congestion: A Measure of Display Clutter</cite>, 2005
+          </figcaption>
+        </figure>
+        <h4 id="axis-guide-lines-optional">Axis guide lines optional</h4>
+        <p>Independent axis (usually Y-axis) guide lines that extend the visual tick mark across the width of the chart
+          may help some readers correlate datapoint position (e.g. bar height) with a specific value. This is especially
+          true for younger readers who may draw an association with graph paper. Other readers may find such guide lines
+          to be distracting visual clutter. Inclusion of guide lines is optional, and both approaches are acceptable.
+        </p>
+        <h4 id="don't-hide-axis lines or labels">Don't hide axis lines or labels</h4>
+        <p>Omitting or hiding axis lines or labels to reduce visual clutter reduces usability for many readers,
+          especially younger readers or those with some cognitive disabilities, and may cause misinterpretation of the
+          data. Always include axis lines, and always include axis labels for numeric axes. Axis labels for categorical
+          axes are optional, if the chart title includes a clear description of what's being measured (i.e. the category
+          type).</p>
+        <section class="examples two">
+          <figure>
+            <img src="./assets/barchart-show_axes.svg" alt="Bar chart with both X and Y axis">
+            <figcaption><span class="lead">Do:</span> display both X and Y axes</figcaption>
+          </figure>
+
+          <figure>
+            <img src="./assets/barchart-reduce_clutter.svg" alt="Bar chart with both X and Y axis">
+            <figcaption><span class="lead">Do:</span> reduce visual clutter</figcaption>
+          </figure>
+
+          <figure class="avoid">
+            <img src="./assets/barchart-hide_axis.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+            <figcaption><span class="lead">Don't:</span> hide one of the axes</figcaption>
+          </figure>
+
+          <figure class="avoid">
+            <img src="./assets/barchart-hide_axis_label.svg" alt="Bar chart with multiple colors for same category">
+            <figcaption><span class="lead">Don't:</span> omit the label for numerical axis</figcaption>
+          </figure>
+        </section>
+      </article>
+
+        <article>
+          <h2 id="avoid-patterns">Avoid patterns</h2>
+          <p>Use solid colors for fill and lines, and avoid patterns such as cross-hatches or dashed lines. Instead, use
+            well-defined color combinations in(cludin grayscale) that are distinguishable by people with color
+            disabilities, use distinct symbols where appropriate (e.g. as data points on line charts or scatter plots), or
+            use different line thicknesses if necessary.</p>
+          <p><strong>Note:</strong> Earlier accessiblity advice sometimes encouraged the use of patterned fills or dashed
+            line patterns in data visualizations. This practice often makes charts more difficult to read, and
+            significantly increases cognitive load or some people with cognitive disabilities. In addition, patterns that
+            cross one another can produce visual effects that distort the data representation.</p>
+          <p><i><b>TODO:</b> provide good and bad examples</i></p>
+          <h3 id="patterns-for-semantics">Patterns for semantics</h3>
+          <p>An exception to this guidance is the limited use of patterned fills or strokes to indicate some qualitative
+            exception, such as missing data, uncertain data, or future projected data. Reserve the use of patterns for
+            this semantic data, rather than as a visual distinction.</p>
+        </article>
+      </div>
+
+
+      <article>
+        <h2 id="font-styles-and-sizes" class="transferred">Font styles and sizes</h2>
+        <h3 id="consistent-font-family" class="transferred">Consistent font family</h3>
+        <p class="transferred">The font family used in charts and diagrams should be consistent with the text on the containing page.
+          Currently, this will typically be the sans serif typeface <strong>Open Sans</strong>, but may also be the
+          serif typeface <strong>Playfair Display</strong>.</p>
+        <h3 id="consistent-font-styles" class="transferred">Consistent font styles</h3>
+        <p class="transferred">Limit the number of colors and styles used for labels in your chart or diagram. Avoid bold or italic text,
+          unless it is intended to emphasize a particular feature. Text color should normally be distinct, contrasting,
+          neutral grayscale colors, such as graphite gray, ink black, or chalk white.</p>
+
+        <div class="transferred">
+          <h3 id="hierarchical-font-sizes">Hierarchical font sizes</h3>
+          <p>As with any document, the size of text within a chart or diagram should reflect the hierarchical level of the
+            label. For example, the title of the chart should be largest, followed by the axis labels, followed by the
+            axis tick labels. At each level of hierarchy, the different labels should have a uniform size. For example,
+            the labels for the X and Y axis should be the same size, and the labels for the axis tick labels values on
+            both the X and Y axis should be the same (smaller) size.</p>
+          <p>Avoiding shrinking longer labels to fit, within the same hierarchical level. Instead, use a consistent font
+            size for that level that fits all labels (or use abbreviations where appropriate).</p>
+          <p>Other labels outside a strict hierarchy, such as value labels, legend labels, or annotations, should match
+            the closest appropriate font size (e.g. value labels should be the same size as axis tick labels).</p>
+          <p>Inconsistent font sizes can make it harder for the reader to construct a mental model of the structure of the
+            chart.</p>
+
+        <h3 id="font-display-size">Font display size</h3>
+        <p>Because images have their own internal font size, and because images can be displayed at arbitrary sizes,
+          care must be taken that the image display size maintains an appropriate minimum font size. The smallest font
+          size <em>as displayed in the chart image</em> should match the minimum font size specified in the Pearson
+          style guide.</p>
+        <section class="examples large">
+          <figure class="readable_font">
+            <img src="./assets/barchart-category_color.svg" alt="Bar chart displayed at a readable font size">
+            <figcaption><span class="lead">Do:</span> specify a display size for the chart image that makes the smallest
+              text readable</figcaption>
+          </figure>
+
+          <figure class="avoid unreadable_font">
+            <img src="./assets/barchart-category_color.svg" alt="Bar chart displayed at an unreadably small font size">
+            <figcaption><span class="lead">Don't:</span> specify a display size for the chart image that makes the text
+              too small</figcaption>
+          </figure>
+        </section>
+        <p><strong>Note:</strong> For the purpose of this document, illustrative examples do not obey this font-size
+          guidance. This is purposeful, to emphasize the salient feature of the chart being described. Where the
+          understandability and perceivability of the data is important, use appropriate font sizes.</p>
+        </div>  
+      </article>
+
+      <div class="transferred">
+
+      <article>
+        <h2 id="text-descriptions-and-summaries">Text descriptions and summaries</h2>
+        <p>All images should have <em>alt-text</em>, that is, text that provides a brief, cogent summary of what the
+          image displays. This is especially important for charts and diagrams.</p>
+        <p>At a minimum, the alt-text should contain:</p>
+        <ul>
+          <li>the <strong>type of the data visualization</strong>, such as "line chart", "bar chart", "pie chart", "flow
+            chart", "map", or "diagram"</li>
+          <li>the <strong>type of the data</strong>, typically what's described on the axis labels</li>
+          <li>the <strong>meaning of the data visualization</strong>, such as the overall trend, the most salient
+            (highest, lowest, average) values, or the manner in which the chart reinforces the content of the containing
+            article</li>
+        </ul>
+        <h3 id="summaries">Summaries</h3>
+        <p>In addition to alt-text, for more complex charts or diagrams, a longer text description should be provided
+          that describes each step or aspect of the visualization, and how it is connected to other steps or aspects</p>
+        <h3 id="explorable-data-or-alternate-forms">Explorable data or alternate forms</h3>
+        <p>If possible, the data itself should be in a structure, such as SVG or HTML, that can be navigated and
+          explored by screen reader users.</p>
+        <p>Ideally, the chart should also include another view of the data, such as a data table, or a link to download
+          the data in a spreadsheet format (such as CSV or Excel).</p>
+        <p>Optionally, the chart should also include citations or sources for the data.</p>
+        <p><i><b>TODO:</b> provide examples for alt text and summaries</i></p>
+      </article>
+
+
+      <article>
+        <h2 id="dashboards">Dashboards</h2>
+        <ul>
+          <li>colors should be consistently used across all different chart types
+            <p><i><b>TODO:</b> show examples of dashboard color usage</i></p>
+          </li>
+        </ul>
+      </article>
+    </div>  
+
+      <article>
+        <h2 id="animation">Animation</h2>
+        <p><i><b>TODO:</b> describe the use and misuse of animation</i></p>
+      </article>
+
+      <article>
+        <h2 id="chart-types">Chart types</h2>
+        <p><i><b>TODO:</b> describe the most common chart types, what they should be used for, and layout guides for
+            each</i></p>
+        <h3 id="bar-chart">Bar Chart</h3>
+        <figure>
+          <img src="./assets/barchart-anatomy.svg" alt="Annotated bar chart">
+          <figcaption>Bar chart annotated with different spacing and sizing rules</figcaption>
+        </figure>
+      </article>
+
+      
+      <section class="draft">
+        <div class="transferred">
+        <h2 id="data">Data</h2>
+        <ul>
+          <li>Keep the data simple: i.e. x, y and 1 set of values. Unless its a key learning point to process a lot of
+            complex data then do not add more information or layers on top of this its too much for people to process
+            and will confuse. If you need to convey more do it by breaking it down into other data formats. This means
+            you may need two charts instead of one for example.</li>
+          <li>As a rule of thumb 7-10 data elements at most are best. Break it down wherever you can and avoiding
+            scrolling or losing headings off the screen.</li>
+          <li>Try to ensure the information is displayed in different or additional ways to enable understanding
+            wherever possible and appropriate (For example, data tables, or a written description of a graph or map, a
+            couple of maps instead of one complex one.)</li>
+        </ul>
+
+
+        <h2 id="layout">Layout</h2>
+        <ul>
+          <li>Give the item a title that appears before the data</li>
+          <li>Left align every text element if you can.</li>
+          <li>Try not to split text data and visual data. Data should be read and then viewed or vice versa rather than
+            splitting the data either side of a graph for example.</li>
+          <li>Try to ensure data can be viewed in a table with lines or equivalent so that the eye can track the row of
+            data more easily across the screen/page rather than having to try and match each piece across a row with
+            white space between.</li>
+          <li>Keep good white space between lines and blocks of data to enable legibility.</li>
+          <li>Use at least a minimum 1pt keyline everywhere, 2pt for patterned lines if possible.</li>
+          <li>Make sure any keylines or data on top of Graph paper contrast enough ie 70% and/or are thicker to be
+            distinguishable.</li>
+        </ul>
+        
+        <h2 id="color">Color</h2>
+        <ul>
+          <li>Colour palette should 1-5 colours ideally, 10 at most if really needed eg for diverse map data. - A finite
+            amount of colours consistently applied enables good colour recognition and decoding.</li>
+            <li>Avoid fatiguing / intense colours and combinations and vibrating colours like red on blue, bright pink on
+              green, red on green, black on red, and green on purple.</li>
+              <li>Do not use red and green in the same document/chart or data visualisation if at all possible.</li>
+              <li>Use contrasting colours to allow for information to be clearly seen.</li>
+              <li>If you need to use tints of the same colour or show a colour range for something like a heat map or
+                temperature chart for example try to make sure there is a 40% difference between them.</li>
+                <li>If using a light colour outline any data or elements that do not contrast well enough with the background,
+                  or choose a darker colour.</li>
+                </ul>
+              </div>
+
+
+        <div class="transferred">
+          <h2 id="pattern">Pattern</h2>
+          <ul>
+            <li>Pattern should be avoided if at all possible - its actually really hard for people to view, causes
+              cognitive overload very quickly and is actually not that easily discernible for a lot of people. This means
+              we need to rely more on contrast and labelling to resolve colour blindness issues.</li>
+            <li>Where pattern is used it should be minimised, contrast well, not be made up of glaring colours or colours
+              opposite each other on the colour wheel. Don’t use large patterns in small areas, or complex or clashing
+              patterns and colours..</li>
+            <li>The space between pattern elements should not be the same as the pattern element. The same goes for
+              patterned lines like dots and dashes. The space between dots or lines should not be the same size as the dot
+              or line. They can actually be hard for a lot of people to see.</li>
+            <li>Two similar patterns or line types should not be used in the same document, its too hard for people to
+              see. eg two dotted or dashed lines or patterns.</li>
+            <li>Keep colour choices and pattern choices, if using, consistent for the same types of data.</li>
+          </ul>
+
+        <h2 id="labelling-and-keys">Labelling and keys</h2>
+        <ul>
+          <li>Keep labelling consistently placed and outside of but close to the data element.</li>
+          <li>Always label everything if functionality allows. Keys are not an alternative, they should be used
+            as an additional tool where necessary.</li>
+          <li>Key items should be in a logical order and big enough to be legible (For example, 44px square minimum or
+            10mm square minimum for colours, patterns and symbols.)</li>
+          <li>If you have to use a key then make use of pattern and symbols. (This is especially critical if using a key
+            with more than two elements of data.)</li>
+        </ul>
+      </div>
+
+        <h2 id="further-guidance" class="transferred">Further guidance</h2>
+        <ul class="transferred">
+          <li><a href="https://neo.pearson.com/docs/DOC-713254">Inclusive writing guidance</a>: UK Schools Accessibility
+          </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-740833">Alternative Text guidance</a>: UK Schools Accessibility
+          </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-758190">Inclusive visual design checklist</a>: UK Schools
+            Accessibility </li>
+          <li><a
+              href="https://support.microsoft.com/en-us/office/create-accessible-office-documents-868ecfcd-4f00-4224-b881-a65537a7c155">Microsoft
+              accessible Office documents</a>: UK Schools Accessibility </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-760954">The Art of Accessible Multimedia</a>: 1hr US
+            Accessibility for school assessment team webinar </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-748495">Universal Design – Color</a>: US Accessibility for
+            school assessment team </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-680379">Art Guidelines relating to Epilepsy</a>: US
+            Accessibility for school assessment team </li>
+          <li><a href="https://neo.pearson.com/docs/DOC-722366">Pearson Online Color Palette</a>: US Accessibility for
+            school assessment team </li>
+        </ul>
+
+        <h2 id="tools-and-technology" class="transferred">Tools and technology</h2>
+        <ul class="transferred">
+          <li><a href="https://neo.pearson.com/docs/DOC-756414">Circle Graph in Illustrator</a>: (pie chart) US
+            Accessibility for school assessment team </li>
+          <li><a href="https://support.apple.com/en-gb/guide/grapher/gcalb3dec608/mac">Grapher for Mac</a></li>
+          <li><a href="https://www.desmos.com/calculator">Graphing Calculator - Desmos</a></li>
+          <li><a href="https://www.desmos.com/geometry">Geometry Tool - Desmos</a></li>
+          <li><a href="https://www.desmos.com/accessibility#overview">Desmos accessibility</a></li>
+        </ul>
+      </section> 
+    </main>
+
+  </div>
+</body>
+
+</html>

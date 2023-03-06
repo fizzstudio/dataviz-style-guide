@@ -1,0 +1,40 @@
+<svg id="icon-waffle_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <g>
+   <circle class="bg" cx="65" cy="65" r="64"/>
+  </g>
+  <g>
+    <path class="c1" d="M41.8,33.6v7.8H34v-7.8H41.8 M43.3,32.1H32.5v10.8h10.8V32.1L43.3,32.1z"/>
+    <path class="c1" d="M41.8,47.3v7.8H34v-7.8H41.8 M43.3,45.8H32.5v10.8h10.8V45.8L43.3,45.8z"/>
+    <rect class="c1" x="32.5" y="59.6" width="10.8" height="10.8"/>
+    <rect class="c1" x="32.5" y="73.3" width="10.8" height="10.8"/>
+    <rect class="c1" x="32.5" y="87.1" width="10.8" height="10.8"/>
+    <path class="c1" d="M55.4,33.6v7.8h-7.8v-7.8H55.4 M56.9,32.1H46v10.8h10.8V32.1L56.9,32.1z"/>
+    <path class="c1" d="M55.4,47.3v7.8h-7.8v-7.8H55.4 M56.9,45.8H46v10.8h10.8V45.8L56.9,45.8z"/>
+    <rect class="c1" x="46" y="59.6" width="10.8" height="10.8"/>
+    <rect class="c1" x="46" y="73.3" width="10.8" height="10.8"/>
+    <rect class="c1" x="46" y="87.1" width="10.8" height="10.8"/>
+    <path class="c1" d="M68.9,33.6v7.8h-7.8v-7.8H68.9 M70.4,32.1H59.6v10.8h10.8V32.1L70.4,32.1z"/>
+    <path class="c1" d="M68.9,47.3v7.8h-7.8v-7.8H68.9 M70.4,45.8H59.6v10.8h10.8V45.8L70.4,45.8z"/>
+    <rect class="c1" x="59.6" y="59.6" width="10.8" height="10.8"/>
+    <rect class="c1" x="59.6" y="73.3" width="10.8" height="10.8"/>
+    <rect class="c1" x="59.6" y="87.1" width="10.8" height="10.8"/>
+    <path class="c1" d="M82.5,33.6v7.8h-7.8v-7.8H82.5 M84,32.1H73.1v10.8H84V32.1L84,32.1z"/>
+    <path class="c1" d="M82.5,47.3v7.8h-7.8v-7.8H82.5 M84,45.8H73.1v10.8H84V45.8L84,45.8z"/>
+    <path class="c1" d="M82.5,61.1v7.8h-7.8v-7.8H82.5 M84,59.6H73.1v10.8H84V59.6L84,59.6z"/>
+    <rect class="c1" x="73.1" y="73.3" width="10.8" height="10.8"/>
+    <rect class="c1" x="73.1" y="87.1" width="10.8" height="10.8"/>
+    <path class="c1" d="M96,33.6v7.8h-7.8v-7.8H96 M97.5,32.1H86.7v10.8h10.8V32.1L97.5,32.1z"/>
+    <path class="c1" d="M96,47.3v7.8h-7.8v-7.8H96 M97.5,45.8H86.7v10.8h10.8V45.8L97.5,45.8z"/>
+    <path class="c1" d="M96,61.1v7.8h-7.8v-7.8H96 M97.5,59.6H86.7v10.8h10.8V59.6L97.5,59.6z"/>
+    <rect class="c1" x="86.7" y="73.3" width="10.8" height="10.8"/>
+    <rect class="c1" x="86.7" y="87.1" width="10.8" height="10.8"/>
+  </g>
+</svg>

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Accessible Data Visualization Style Guide, v2.0.0</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+
+  <link href="style-decider.css" rel="stylesheet">
+  <script src="listbox_component.js"></script>
+</head>
+
+<body>
+  <heading>
+    <h1 id="accessible-dataviz-style-guide">Accessible Data Visualization Style Guide, v2.0.0</h1>
+    <p><em>This document is a work in progress. Questions and feedback are welcome! Please send comments to <a href="mailto:styleguide@fizz.studio">styleguide@fizz.studio</a></em>.</p>
+
+  </heading>
+  <div id="content_container">
+    <!-- <aside id="chart-selector" class="toc"></aside> -->
+    <main>
+
+
+      <article id="filters">
+        <h2 id="chart-option-label">Select your chart types</h2>
+
+        <div id="wizards">
+          <article id="chart-selector">
+            <details>
+              <summary>
+                Select a chart type 
+                <p>View guides for specific chart types, like line charts, bar charts, or dashboards</p>
+                <div class="thumbnail">
+                  <img src="./assets/icons/color/icon-line_graph.svg" alt="line chart">
+                  <img src="./assets/icons/color/icon-bar_graph.svg" alt="bar chart">
+                  <img src="./assets/icons/color/icon-pie_chart.svg" alt="pie and donut chart">
+                  <img src="./assets/icons/color/icon-circular_gauge.svg" alt="gauge">
+                  <img src="./assets/icons/color/icon-100_percent_bar_chart.svg" alt="one-hundred-percent chart">
+                  <img src="./assets/icons/color/icon-scatterplot.svg" alt="scatterplot">
+                  <img src="./assets/icons/color/icon-table.svg" alt="table">
+                </div>
+              </summary>
+
+              <p>Pick a chart type. If you're mixing two or more chart types in the same chart (like a combined line and bar chart), select both.</p>
+
+              <article class="optionSelector chart-selector" tabindex="0" role="listbox" aria-labelledby="chart-option-label"
+              aria-multiselectable="true" data-action="filter" data-action_key="chart_type">
+                <div id="chart_type_line" data-option_chart_type="line" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-line_graph.svg" alt="line chart">
+                  </div>
+                  <div class="option__label">line chart</div>
+                </div>
+      
+                <div id="chart_type_bar" data-option_chart_type="bar" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-bar_graph.svg" alt="bar chart">
+                  </div>
+                  <div class="option__label">bar chart</div>
+                </div>
+      
+                <div id="chart_type_pie_donut" data-option_chart_type="pie_donut" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-pie_chart.svg" alt="pie and donut chart">
+                  </div>
+                  <div class="option__label">pie/donut chart</div>
+                </div>
+      
+                <div id="chart_type_gauge" data-option_chart_type="gauge" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-circular_gauge.svg" alt="gauge">
+                  </div>
+                  <div class="option__label">gauge</div>
+                </div>
+      
+                <div id="chart_type_percent_bar" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-100_percent_bar_chart.svg" alt="one-hundred-percent chart">
+                  </div>
+                  <div class="option__label">100% chart</div>
+                </div>
+      
+                <div id="chart_type_scatterplot" data-option_chart_type="scatterplot" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-scatterplot.svg" alt="scatterplot">
+                  </div>
+                  <div class="option__label">scatterplot</div>
+                </div>
+      
+                <div id="chart_type_table" data-option_chart_type="table" role="option" aria-selected="false">
+                  <div class="option__description">
+                    <img src="./assets/icons/color/icon-table.svg" alt="table">
+                  </div>
+                  <div class="option__label">table</div>
+                </div>
+              </article>
+            </details>
+          </article>
+  
+          <article id="chart-decider">
+            <details>
+              <summary>
+                Decide your chart type
+                <p>Get help to decide which chart type best represents the data you have</p>
+                <div class="thumbnail">
+                  <div>
+                    <img src="./assets/icons/color/icon-series_single.svg" alt="single series option">
+                    <img src="./assets/icons/color/icon-series_multiple.svg" alt="multi series option">          
+                  </div>
+                  <div>
+                    <img src="./assets/icons/color/icon-noir_nominal.svg" alt="">
+                    <img src="./assets/icons/color/icon-noir_ordinal.svg" alt="">
+                    <img src="./assets/icons/color/icon-noir_interval.svg" alt="">
+                    <img src="./assets/icons/color/icon-noir_ratio.svg" alt="">
+                  </div>
+                  <div>
+                    <img src="./assets/icons/color/icon-category-trend_over_time.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-comparisons.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-benchmark.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-part_to_whole.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-proportions.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-relationships.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-hierarchy.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-distribution.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-patterns.svg" alt="">
+                    <img src="./assets/icons/color/icon-category-range.svg" alt="">
+                  </div>     
+                </div>
+              </summary>
+              <p>Select filter options below to match aspects of your dataset</p>
+  
+              <div>
+                <h3 id="series-option-label">Single series versus multi-series</h3>
+                <p>Give examples here, like single subject vs multiple subjects, or single student vs multiple students.</p>
+                <article class="optionSelector series_selector" tabindex="0" role="listbox"   aria-labelledby="series-option-label" aria-multiselectable="false">
+                  <div id="series_type-single_series" data-option_series_type="single" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-series_single.svg" alt="single series option">
+                    </div>
+                    <div class="option__label">single series</div>
+                  </div>
+    
+                  <div id="series_type-multi_series" data-option_series_type="multiple" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-series_multiple.svg" alt="multi series option">
+                    </div>
+                    <div class="option__label">multi-series</div>
+                  </div>
+                </article>
+              </div>
+              <!--
+              <div id="test-options">
+                <h3 id="test-option-label">Test</h3>
+                <p>Groups of cards test</p>
+                <article class="optionSelector" class="chart-selector" tabindex="0" role="listbox" aria-labelledby="test-option-label"
+                aria-multiselectable="false">
+  
+                  <section class="optionGroup">
+                    <span class="option__label">card group 1</span>
+                    <div class="optionContainer">
+  
+                      <div id="card_template_1" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-card_template.svg" alt="card template 1">
+                        </div>
+                        <span class="option__label">card template 1</span>
+                      </div>
+  
+                      <div id="card_template_2" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-card_template.svg" alt="card template 2">
+                        </div>
+                        <span class="option__label">card template 2</span>
+                      </div>
+  
+                    </div>
+                  </section>
+  
+                  <section class="optionGroup">
+                    <span class="option__label">card group 2</span>
+                    <div class="optionContainer">
+  
+                      <div id="card_template_3" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-card_template.svg" alt="card template 3">
+                        </div>
+                        <span class="option__label">card template 3</span>
+                      </div>
+  
+                      <div id="card_template_4" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-card_template.svg" alt="card template 4">
+                        </div>
+                        <span class="option__label">card template 4</span>
+                      </div>
+  
+                    </div>
+                  </section>
+  
+                </article>
+              </div>
+              -->
+  
+              <div id="measurement-level-options">
+                <h3 id="measurement-level-option-label">Level of measurement</h3>
+                <p>Types of data</p>
+                <article class="optionSelector measurement_level_selector" tabindex="0" 
+                  role="listbox" aria-labelledby="measurement-level-option-label" aria-multiselectable="false">
+  
+                  <section class="optionGroup">
+                    <span class="option__label">categorical</span>
+                    <div class="optionContainer">
+  
+                      <div id="card_template_1" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-noir_nominal.svg" alt="">
+                        </div>
+                        <span class="option__label">nominal</span>
+                      </div>
+  
+                      <div id="card_template_2" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-noir_ordinal.svg" alt="">
+                        </div>
+                        <span class="option__label">ordinal</span>
+                      </div>
+  
+                    </div>
+                  </section>
+  
+                  <section class="optionGroup">
+                    <span class="option__label">numeric</span>
+                    <div class="optionContainer">
+  
+                      <div id="card_template_3" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-noir_interval.svg" alt="">
+                        </div>
+                        <span class="option__label">interval</span>
+                      </div>
+  
+                      <div id="card_template_4" data-option_chart_type="percent_bar" role="option" aria-selected="false">
+                        <div class="option__description">
+                          <img src="./assets/icons/color/icon-noir_ratio.svg" alt="">
+                        </div>
+                        <span class="option__label">ratio</span>
+                      </div>
+  
+                    </div>
+                  </section>
+  
+  
+                  
+                </article>
+              </div>
+  
+              <div>
+                <h3 id="task-option-label">Task types</h3>
+                <p>Give definitions and examples here, like comparison, time-series, etc.</p>
+  
+                <!-- TODO: create benchmark icon / category -->
+                <!-- Comparison
+                Proportion
+                Relationship
+                Hierarchy
+                Part-to-Whole
+                Distribution
+                Patterns
+                Range
+                Trend over time -->
+  
+                <!-- 
+                  Concept visualisation
+                Correlation
+                Distribution
+                Geographical data
+                Part to whole
+                Trend over time
+               -->
+                
+                <article class="optionSelector chart_category" tabindex="0" role="listbox" aria-labelledby="task-option-label"
+                aria-multiselectable="true">
+                  <div id="task_type-trend_over_time" data-option_task_type="trend_over_time" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-trend_over_time.svg" alt="">
+                    </div>
+                    <div class="option__label">trend over time</div>
+                  </div>
+                  <div id="task_type-comparisons" data-option_task_type="comparisons" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-comparisons.svg" alt="">
+                    </div>
+                    <div class="option__label">comparisons</div>
+                  </div>
+                  <div id="task_type-benchmark" data-option_task_type="benchmark" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-benchmark.svg" alt="">
+                    </div>
+                    <div class="option__label">benchmark</div>
+                  </div>
+                  <div id="task_type-part_to_whole" data-option_task_type="part_to_whole" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-part_to_whole.svg" alt="">
+                    </div>
+                    <div class="option__label">part to whole</div>
+                  </div>
+                  <div id="task_type-proportions" data-option_task_type="proportions" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-proportions.svg" alt="">
+                    </div>
+                    <div class="option__label">proportions</div>
+                  </div>
+                  <div id="task_type-relationships" data-option_task_type="relationships" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-relationships.svg" alt="">
+                    </div>
+                    <div class="option__label">relationships</div>
+                  </div>
+                  <div id="task_type-hierarchy" data-option_task_type="hierarchy" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-hierarchy.svg" alt="">
+                    </div>
+                    <div class="option__label">hierarchy</div>
+                  </div>
+                  <div id="task_type-distribution" data-option_task_type="distribution" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-distribution.svg" alt="">
+                    </div>
+                    <div class="option__label">distribution</div>
+                  </div>
+                  <div id="task_type-patterns" data-option_task_type="patterns" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-patterns.svg" alt="">
+                    </div>
+                    <div class="option__label">patterns</div>
+                  </div>
+                  <div id="task_type-range" data-option_task_type="range" role="option" aria-selected="false">
+                    <div class="option__description">
+                      <img src="./assets/icons/color/icon-category-range.svg" alt="">
+                    </div>
+                    <div class="option__label">range</div>
+                  </div>
+              </div>
+            </details>
+          </article>
+        </div>
+
+
+      </article>
+
+      
+      <article id="chart-line" class="chart_type" data-chart_type="line">
+        <h2>Line</h2>
+        <div>
+          <p>A line chart shows changes and trends over a sequence of values in a series. Line charts (or line graphs or line plots) use a series of line segments to connect individual record points over a series of changes, usually over time, where the position of each record represents the value. These record points are often represented by a symbol, such as a circle or square, and each series of data should  <a href="#line-color-and-symbol">use a different symbol, as well as a different color</a>, to distinguish it from other series lines.</p>
+          
+          <p>In a horizontal line chart (the most common), each record point's numerical value is measured in its height (the <code>y</code> axis), while its place in the sequence (e.g. the date or time) is shown in its horizontal position (the <code>x</code> axis). Rarely, in a vertical line chart, the axes would be reversed; this is unconventional, and should be avoided.</p> 
+
+          <p>Each record and line segment is ordered. For a time series, each line segment is ordered chronologically.</p>
+
+          <p>Multiple categories can be shown, with each data line in the chart representing the records in the series for that category. Too many lines can obscure the data (see <a href="#spaghetti-chart">"spaghetti charts"</a>).</p>
+            
+          <figure>
+            <img src="./assets/linechart-category_color.svg" alt="Line chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li>Representing a trend in data over intervals of time (a time series), where each line segment is ordered chronologically</li>
+        </ul>
+
+        <h3 id="a11y-line">Accessibility considerations:</h3>
+
+        <details id="lines-direct-labeling">
+          <summary>Favor direct labeling instead of legends</summary>
+          <p>For line charts with more than one line, placing the series label end of the line, or sometimes along the line, reduces the cognitive load in associating each line with its category. Using legends with keys, rather than direct labeling, separates the representation (the line) from its referent, forcing the user to remember the color or symbol, or to actively refer back to the legend.</p>
+          <p class="todo"><b>TODO</b> Show illustration of direct labeling vs. legends.</em> 
+        </details>
+
+        <details id="line-color-and-symbol">
+          <summary>Use a different color and symbol for each line</summary>
+          <p>Each line must be distinguable and identifiable.</p>
+
+          <p><b>Color:</b> One way to differentiate lines is for each line should use a different color in a <a href="color-palette-discrete">discrete color palette (<b class="todo">TODO</b>)</a>. However, to aid people with <a href="disability-low-vision">low vision (<b class="todo">TODO</b>)</a> and <a href="disability-low-vision">color vision deficiency (<b class="todo">TODO</b>)</a>, you cannot use color alone to distinguish between lines  (<b class="cite">cite 1.4.1: Use of Color</b>).</p>
+
+          <p><b>Symbols:</b> One way to differentiate lines in addition to color is to use a different symbol for each line, positioned at each data record point. Common symbols include circles, squares, triangles, diamonds, and crosses; these symbols can be filled or unfilled, or a combination to add more variety (<b class="cite">cite study on effective use of symbols</b>).</p>
+
+          <p id="finial-symbols"><b>Option: Use finial symbols instead of direct labeling:</b> When a legend is necessary, or when symbols at each data record cause visual clutter, you can consider using a single finial symbol at the end (or beginning) of each line.</p>
+
+          <p id="line-chart-grayscale"><b>Grayscale colors for print:</b> .</p>
+
+          <p id="line-chart-tactile"><b>Patterns for tactile print:</b> .</p>
+
+          <p class="todo"><b>TODO</b> Show illustration of colors and symbols.</p>
+          <p class="todo"><b>TODO</b> Create separate section on different disabilities.</p>
+
+        </details>
+
+        <details id="spaghetti-chart">
+          <summary>Avoid "spaghetti charts"</summary>
+          <p>A spaghetti chart is a line chart containing many data lines displayed with equal emphasis. Line charts with 5 or fewer data lines (i.e. categories or series) are most likely to provide clear patterns or trends to the reader, with more than that creating clutter and obscuring trends.</p>
+          <p>Not only are spaghetti charts too visually complex, but they present a challenge to find enough distinct colors and symbols to distinguish one line from another.</p>
+          <p class="todo"><b>TODO</b> Show illustration.</em> 
+        </details>
+
+        <details id="lines-avoid-dash-patterns">
+          <summary>Avoid dash patterns to differentiate lines</summary>
+          <p>In data visualization, dashed lines are normally used categorically to indicate uncertainty, such as projected data, estimated data, or missing data, or to indicate a threshold or reference line. Using them to distinguish between different lines conflicts with this semantic convention.</p>
+          <p>In addition, they create visual clutter (see <a href="#element-interactivity">element interactivity (<b class="todo">TODO</b>)</a>, and more than 2 or 3 dashed patterns are difficult to distinguish or remember.</p>
+
+          <p><b>Avoid symbol patterns to differentiate lines:</b> Similar to dash patterns, </p>
+
+          <p class="todo"><b>TODO</b> Show illustration of proper and improper use of dash patterns.</em> 
+        </details>
+        
+        <details id="line-non-time-series">
+          <summary>Avoid non-time-series data</summary>
+          <p>While different kinds of ordered data can be represened with a line chart, they are so strongly associated with time-series data (i.e. dates or times) that most readers will assume that any line chart is time-seris. Avoid using other data times with line charts, or provide clear instructions or interpreting the line chart.</p>
+          <p class="todo"><b>TODO</b> Show illustration.</em> 
+        </details>
+        
+        <details id="user-control">
+          <summary>Allow user to select and filter series</summary>
+          <p>In some interfaces, the user is provided a way to select from a set of optional data series. This may result in too many lines appearing at once (see <a href="#spaghetti-chart">"spaghetti charts"</a>).</p>
+          <p class="todo"><b>TODO</b> Show illustration.</em> 
+        </details>
+        
+        <details id="tactile-line-chart">
+          <summary>Special considerations</summary>
+          <p>In some interfaces, the user is provided a way to select from a set of optional data series. This may result in too many lines appearing at once (see <a href="#spaghetti-chart">"spaghetti charts"</a>).</p>
+          <p class="todo"><b>TODO</b> Show illustration.</em> 
+        </details>
+
+
+        <h3 id="variations-line">Variations</h3>
+
+        <section>
+          <h4 id="stacked-line">Stacked line</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Stacked line chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+
+        <section>
+          <h4 id="vertical-line">Vertical line</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Stacked line chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <h3 id="related-line">Related chart types</h3>
+
+        <section>
+          <h4 id="area-charts">Area charts</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Area charts with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="scatter-plots">Scatterplots</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/linechart-multi_category_color.svg"
+              alt="Scatterplot with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-bar" class="chart_type" data-chart_type="bar">
+        <h2>Bar</h2>
+        <div>
+          <p>A bar chart uses rectangular bars to show discrete, numerical comparisons across categories. The height (or length) of the bar indicated the numerical value. One axis of the chart shows the specific categories being compared (the independent variable), and the other axis represents a discrete value scale (the dependent variable).</p>
+
+          <p>In a vertical bar chart, also called a column chart, the categories are on the x-axis, and the value being
+            measured is on the y-axis.</p>
+
+          <p>In a horizontal bar chart, the value being measured is on the x-axis, and the categories are on the y-axis.
+          </p>
+
+          <figure>
+            <img src="./assets/barchart-category_color.svg" alt="Bar chart with single color for same category">
+            <figcaption><span class="lead">Do:</span> single color for same category</figcaption>
+          </figure>
+
+          <p>A bar chart is one of the most common types of data visualization, since it is well-known and well-understood by readers, is easy to create and interpret, represents multiple ranges of data accurately, and uses space efficiently.</p> 
+
+          <h3 id="barchart-grouping">Bar chart grouping</h3>
+
+          <p>Bar charts can be used for single-series or multi-series datasets; for multiseries datasets, group each series as <a href="#stacked-bar">stacked bars</a> or <a href="#grouped-bar">grouped bars</a>.</p>
+
+          <h3 id="barchart-ordering">Bar chart ordering</h3>
+          <p>When a bar chart is not being used for time-series trend data, it can aid ease of interpretation to order the bars by value, sorting either ascending or descending. Avoid sorting the order if a bar chart is used in a context where the implicit order is significant, such as when two charts are presented to compare with one another.</p>
+
+          <h3 id="barchart-novelty">Bar chart novelty</h3>
+          <p>Because bar charts are so common, they may seem a more boring, less novel, or less attention-grabbing visualization choice, despite their effectiveness. Effective use of color and emphasis can mitigate this perception. You can reduce visual clutter and add novelty with the <a href="#lollipop">lollipop chart</a> variation.</p>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li>showing the relationship between a numeric and a categoric variable</li>
+          <li>showing trend over time</li>
+        </ul>
+
+        <h3 id="a11y-bar">Accessibility considerations:</h3>
+
+
+        <details id="bar-direct-labeling">
+          <summary>Favor direct labeling instead of legends</summary>
+          <p>For bar charts with more than one bar, placing the series label end of the bar, or sometimes along the bar, reduces the cognitive load in associating each bar with its category. Using legends with keys, rather than direct labeling, separates the representation (the bar) from its referent, forcing the user to remember the color or symbol, or to actively refer back to the legend.</p>
+          <p class="todo"><b>TODO</b> Show illustration of direct labeling vs. legends.</em> 
+        </details>
+
+
+        <div>
+          <h4>Labels</h4>
+          <p>Labels should be clearly associated with their indicated bar. Bars should be placed relative to their axis
+            labels, and value labels for the bar should be directly positioned with the bar (show diagrams with options).
+          </p>
+          <p>Labels should be of sufficient size to be easily legible (quote WCAG here)</p>
+          <p>With a large number of bars, labels may be too small to read, may overlap each other, or may otherwise not be
+            legible. If label space becomes an issue, consider using a horizontal bar chart, or use a smaller number of
+            bars, either by aggregating data, splitting the chart into multiple bar charts, each with its own facet.</p>  
+        </div>
+
+        <div>
+          <h4>Screen readers</h4>
+          <p>For screen reader users, a bar chart must include each value, in the same sequence as the visual rendering, labeled with the category and any group identifier. This can be done either with an accessible chart (possible with SVG) or an equivalent table.</p>
+        </div>
+
+        <div>
+          <h4>Summaries</h4>
+          <p>For screen reader users and people with cognitive disabilities, a bar chart must include a summary,  </p>
+        </div>
+
+        <h3 id="variations-bar">Variations</h3>
+
+        <section>
+          <h4 id="stacked-bar">Stacked bar</h4>
+          <p>This is for data with multiple series.</p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-bar">Grouped bar</h4>
+          <p>This is for data with multiple series.</p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="horizontal-bar">Horizontal bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-bar">Vertical bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/barchart-multi_category_color.svg"
+              alt="Stacked bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="lollipop">Lollipop chart</h4>
+          <p>A lollipop chart uses the same layout, positioning, and measuring conventions as a bar chart, but substitutes a thinner line ending in a dot to indicate the value. This style of chart reduces clutter better than a bar chart, especially with a large number of bars.</p>
+          <figure>
+            <img src="./assets/lollipop-chart.svg"
+              alt="Lollipop chart showing TBD">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-pie_donut" class="chart_type" data-chart_type="pie_donut">
+        <h2>Pie</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-category_color.svg" alt="Pie chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-pie">Accessibility considerations:</h3>
+
+        <h3 id="variations-pie">Variations</h3>
+
+        <section>
+          <h4 id="stacked-pie">Stacked pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-pie">Grouped pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-pie">Vertical pie</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/piechart-multi_category_color.svg"
+              alt="Stacked pie chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-gauge" class="chart_type" data-chart_type="gauge">
+        <h2>Gauge</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-category_color.svg" alt="Gauge chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-gauge">Accessibility considerations:</h3>
+
+        <h3 id="variations-gauge">Variations</h3>
+
+        <section>
+          <h4 id="stacked-gauge">Stacked gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-gauge">Grouped gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-gauge">Vertical gauge</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/gaugechart-multi_category_color.svg"
+              alt="Stacked gauge chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-percent_bar" class="chart_type" data-chart_type="percent_bar">
+        <h2>Hundred-percent bar</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-category_color.svg"
+              alt="Hundred-percent bar chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-hundred-percent-bar">Accessibility considerations:</h3>
+
+        <h3 id="variations-hundred-percent-bar">Variations</h3>
+
+        <section>
+          <h4 id="stacked-hundred-percent-bar">Stacked hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-hundred-percent-bar">Grouped hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-hundred-percent-bar">Vertical hundred-percent bar</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/hundred-percent barchart-multi_category_color.svg"
+              alt="Stacked hundred-percent bar chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-scatterplot" class="chart_type" data-chart_type="scatterplot">
+        <h2>Scatterplot</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-category_color.svg"
+              alt="Scatterplot chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-scatterplot">Accessibility considerations:</h3>
+
+        <h3 id="variations-scatterplot">Variations</h3>
+
+        <section>
+          <h4 id="stacked-scatterplot">Stacked scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-scatterplot">Grouped scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-scatterplot">Vertical scatterplot</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/scatterplotchart-multi_category_color.svg"
+              alt="Stacked scatterplot chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="chart-table" class="chart_type" data-chart_type="table">
+        <h2>Table</h2>
+        <div>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-category_color.svg" alt="Table chart with single color for same category">
+          </figure>
+
+        </div>
+
+        <h3>Best used for</h3>
+        <ul>
+          <li></li>
+        </ul>
+
+        <h3 id="a11y-table">Accessibility considerations:</h3>
+
+        <h3 id="variations-table">Variations</h3>
+
+        <section>
+          <h4 id="stacked-table">Stacked table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="grouped-table">Grouped table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+
+        <section>
+          <h4 id="vertical-table">Vertical table</h4>
+          <p></p>
+          <figure>
+            <img src="./assets/tablechart-multi_category_color.svg"
+              alt="Stacked table chart with multiple colors for different categories">
+          </figure>
+        </section>
+      </article>
+
+      <article id="colors" class="general">
+        <h2>Colors</h2>
+        <p><em>Add general color considerations here.</em></p>
+
+        <section data-chart_type="line">
+          <h4 id="line-chart-colors">Colors in line charts</h4>
+          <p><em>Add line-chart color considerations here.</em></p>
+        </section>
+        <section data-chart_type="bar">
+          <h4 id="bar-chart-colors">Colors in bar charts</h4>
+          <p><em>Add bar-chart color considerations here.</em></p>
+        </section>
+      </article>
+
+      
+    </main>
+
+  </div>
+</body>
+
+</html>

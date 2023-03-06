@@ -1,0 +1,16 @@
+<svg id="icon-hierarchy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g>
+    <polygon class="c1" points="53.791,92.189 116.211,92.189 102.971,66.55 67.029,66.55"/>
+    <polygon class="c1" points="118.275,96.189 51.725,96.189 37.234,124.254 132.768,124.254"/>
+    <polygon class="c1" points="100.904,62.55 85,31.747 69.095,62.55"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg id="icon-population_pyramid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      opacity: 0.6;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="24.356" y="87.863" width="38.017" height="6.422"/>
+    <rect class="c1 c2" x="66.126" y="87.863" width="39.519" height="6.422"/>
+    <rect class="c1" x="29.609" y="78.988" width="32.764" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="78.988" width="35.017" height="6.421"/>
+    <rect class="c1" x="30.859" y="70.114" width="31.514" height="6.421"/>
+    <rect class="c1" x="33.861" y="61.24" width="28.512" height="6.421"/>
+    <rect class="c1" x="39.612" y="52.363" width="22.761" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="70.114" width="31.834" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="61.24" width="26.444" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="52.363" width="25.467" height="6.421"/>
+    <rect class="c1" x="41.614" y="43.489" width="20.759" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="43.489" width="20.813" height="6.421"/>
+    <rect class="c1" x="47.617" y="34.614" width="14.756" height="6.421"/>
+    <rect class="c1 c2" x="66.126" y="34.614" width="16.161" height="6.421"/>
+    <rect class="c1" x="51.869" y="25.74" width="10.504" height="6.42"/>
+    <rect class="c1 c2" x="66.126" y="25.74" width="11.511" height="6.42"/>
+  </g>
+</svg>

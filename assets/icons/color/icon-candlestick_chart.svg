@@ -1,0 +1,44 @@
+<svg id="icon-candlestick_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <rect class="c1" x="28.736" y="35.565" width="1.5" height="14.376"/>
+      <rect class="c1" x="28.736" y="81.171" width="1.5" height="10.413"/>
+      <rect class="c1" x="25.831" y="48.208" width="7.31" height="37.426"/>
+    </g>
+
+    <g>
+      <rect class="c1" x="43.111" y="40.834" width="1.5" height="44.43"/>
+      <rect class="c1" x="40.206" y="62.583" width="7.31" height="8.674"/>
+    </g>
+
+    <g>
+      <rect class="c1" x="57.451" y="52.67" width="1.5" height="6.382"/>
+      <rect class="c1" x="57.451" y="76.525" width="1.5" height="7.808"/>
+      <rect class="c1" x="54.545" y="57.13" width="7.311" height="21.068"/>
+    </g>
+
+    <g>
+      <rect class="c1" x="72.025" y="42.879" width="1.5" height="53.35"/>
+      <rect class="c1" x="69.121" y="47.712" width="7.311" height="12.145"/>
+    </g>
+
+    <g>
+      <rect class="c1" x="86.077" y="33.77" width="1.5" height="61.531"/>
+      <rect class="c1" x="83.171" y="57.13" width="7.312" height="34.948"/>
+    </g>
+
+    <g>
+      <rect class="c1" x="100.371" y="37.86" width="1.5" height="37.736"/>
+      <rect class="c1" x="97.466" y="42.259" width="7.312" height="24.042"/>
+    </g>
+  </g>
+</svg>

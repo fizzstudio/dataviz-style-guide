@@ -1,0 +1,27 @@
+<svg id="icon-flow_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      stroke: #FFFFFF;
+      stroke-width: 2px;
+    }
+    .c3 {
+      fill: none;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <path class="c1" d="M82.906,31.394c0,3.796-3.076,6.872-6.872,6.872H54.958c-3.795,0-6.872-3.076-6.872-6.872v-0.918 c0-3.795,3.077-6.872,6.872-6.872h21.077c3.796,0,6.872,3.077,6.872,6.872L82.906,31.394L82.906,31.394z"/>
+    <line class="c2 c3" x1="65.648" y1="37.355" x2="65.648" y2="56.139"/>
+    <polygon class="bg c2" points="46.711,63.24 65.495,52.542 84.279,63.24 65.495,73.938 "/>
+    <polyline class="c2 c3" points="47,63.24 39.303,63.24 39.303,94.395 50.298,94.395 "/>
+    <rect class="c1" x="48.314" y="86.831" width="34.36" height="15.12"/>
+    <polyline class="c2 c3" points="83,63.24 98,63.24 "/>
+    <circle class="c1" cx="98" cy="63.24" r="5"/>
+  </g>
+</svg>

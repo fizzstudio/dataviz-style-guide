@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Accessible Data Visualization Style Guide</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+
+  <link href="style-guide.css" rel="stylesheet">
+  <script src="./script/listbox_component.js"></script>
+  <script src="./script/toc.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <h1 id="dataviz-style-guide">Accessible Data Visualization Style Guide, v0.3.0</h1>
+    <p><em>This document is a work in progress. Questions and feedback are welcome! Please send comments to <a href="mailto:styleguide@fizz.studio">styleguide@fizz.studio</a></em>.</p>
+  </header>
+  <div id="content_container">
+    <!-- <aside id="chart-selector" class="toc"></aside> -->
+
+    <nav id="toc" class="toc"></nav>
+
+    <main>
+      <div id="chart-types-group-div">
+        <article id="filters">
+          <h2 id="chart-option-label" data-toc_class="heading">Select your chart types</h2>
+
+          <p>Pick a chart type. If you're mixing two or more chart types in the same chart (like a combined line and bar chart), select both.</p>
+
+          <article class="optionSelector chart-selector" tabindex="0" role="listbox" aria-labelledby="chart-option-label"
+          aria-multiselectable="true" data-action="filter" data-action_key="chart_type">
+            <div id="chart_type_line" data-option_chart_type="line" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-line_graph.svg" alt="line chart">
+              </div>
+              <div class="option__label">line</div>
+            </div>
+
+            <div id="chart_type_bar" data-option_chart_type="bar" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-bar_graph.svg" alt="bar chart">
+              </div>
+              <div class="option__label">bar</div>
+            </div>
+
+            <div id="chart_type_pie_donut" data-option_chart_type="pie_donut" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-pie_chart.svg" alt="pie and donut chart">
+              </div>
+              <div class="option__label">pie / donut</div>
+            </div>
+
+            <div id="chart_type_gauge" data-option_chart_type="gauge" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-circular_gauge.svg" alt="gauge">
+              </div>
+              <div class="option__label">gauge</div>
+            </div>
+
+            <div id="chart_type_percentage_bar" data-option_chart_type="percentage_bar" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-100_percent_bar_chart.svg" alt="percentage bar chart">
+              </div>
+              <div class="option__label">percentage</div>
+            </div>
+
+            <div id="chart_type_scatterplot" data-option_chart_type="scatterplot" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-scatterplot.svg" alt="scatterplot">
+              </div>
+              <div class="option__label">scatterplot</div>
+            </div>
+
+            <div id="chart_type_table" data-option_chart_type="table" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-table.svg" alt="table">
+              </div>
+              <div class="option__label">table</div>
+            </div>
+
+            <!-- 
+            <div id="chart_type_dashboard" data-option_chart_type="dashboard" role="option" aria-selected="false">
+              <div class="option__description">
+                <img src="./assets/icons/color/icon-dashboard.svg" alt="dashboard">
+              </div>
+              <div class="option__label">dashboard</div>
+            </div> 
+          -->
+          </article>
+        </article>
+
+
+        <h2 id="chart-types-group" data-toc_class="heading">Chart types</h2>
+
+        
+        <article id="chart-line-article" class="chart_type" data-chart_type="line">
+          <h3 id="chart-line" data-toc_class="collapse">Line charts</h3>
+          <div>
+            <p>A line chart shows changes and trends over a sequence of values in a series. Line charts (or line graphs or line plots) use a series of line segments to connect individual record points over a series of changes, usually over time, where the position of each record represents the value. These record points are often represented by a symbol, such as a circle or square, and each series of data should  <a href="#line-color-and-symbol">use a different symbol, as well as a different color</a>, to distinguish it from other series lines.</p>
+            
+            <p>In a horizontal line chart (the most common), each record point's numerical value is measured in its height (the <code>y</code> axis), while its place in the sequence (e.g. the date or time) is shown in its horizontal position (the <code>x</code> axis). Rarely, in a vertical line chart, the axes would be reversed; this is unconventional, and should be avoided.</p> 
+
+            <p>Each record and line segment is ordered. For a time series, each line segment is ordered chronologically.</p>
+
+            <p>Multiple categories can be shown, with each data line in the chart representing the records in the series for that category. Too many lines can obscure the data (see <a href="#spaghetti-chart">"spaghetti charts"</a>).</p>
+              
+            <p><b>TODO</b></p>
+            <figure>
+              <img src="./assets/examples/linechart-category_color.svg" alt="Line chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-line">Ideal use cases</h4>
+          <ul>
+            <li>Representing a trend in data over intervals of time (a time series), where each line segment is ordered chronologically</li>
+          </ul>
+
+          <h4 id="a11y-line">Accessibility considerations</h4>
+
+          <details id="lines-direct-labeling">
+            <summary>Favor direct labeling instead of legends</summary>
+            <p>For line charts with more than one line, placing the series label end of the line, or sometimes along the line, reduces the cognitive load in associating each line with its category. Using legends with keys, rather than direct labeling, separates the representation (the line) from its referent, forcing the user to remember the color or symbol, or to actively refer back to the legend.</p>
+            <p class="todo"><em><b>TODO</b> Show illustration of direct labeling vs. legends.</em></p>
+          </details>
+
+          <details id="line-color-and-symbol">
+            <summary>Use a different color and symbol for each line</summary>
+            <p>Each line must be distinguable and identifiable.</p>
+
+            <p><b>Color:</b> One way to differentiate lines is for each line should use a different color in a <a href="color-palette-discrete">discrete color palette (<b class="todo">TODO</b>)</a>. However, to aid people with <a href="disability-low-vision">low vision (<b class="todo">TODO</b>)</a> and <a href="disability-low-vision">color vision deficiency (<b class="todo">TODO</b>)</a>, you cannot use color alone to distinguish between lines  (<b class="cite">cite 1.4.1: Use of Color</b>).</p>
+
+            <p><b>Symbols:</b> One way to differentiate lines in addition to color is to use a different symbol for each line, positioned at each data record point. Common symbols include circles, squares, triangles, diamonds, and crosses; these symbols can be filled or unfilled, or a combination to add more variety (<b class="cite">cite study on effective use of symbols</b>).</p>
+
+            <p id="finial-symbols"><b>Option: Use finial symbols instead of direct labeling:</b> When a legend is necessary, or when symbols at each data record cause visual clutter, you can consider using a single finial symbol at the end (or beginning) of each line.</p>
+
+            <p id="line-chart-grayscale"><b>Grayscale colors for print:</b> .</p>
+
+            <p id="line-chart-tactile"><b>Patterns for tactile print:</b> .</p>
+
+            <p class="todo"><b>TODO</b> Show illustration of colors and symbols.</p>
+            <!-- <p class="todo"><b>TODO</b> Create separate section on different disabilities.</p> -->
+
+          </details>
+
+          <details id="spaghetti-chart">
+            <summary>Avoid "spaghetti charts"</summary>
+            <p>A spaghetti chart is a line chart containing many data lines displayed with equal emphasis. Line charts with 5 or fewer data lines (i.e. categories or series) are most likely to provide clear patterns or trends to the reader, with more than that creating clutter and obscuring trends.</p>
+            <p>Not only are spaghetti charts too visually complex, but they present a challenge to find enough distinct colors and symbols to distinguish one line from another.</p>
+            <p class="todo"><em><b>TODO:</b> Show illustration.</em></p> 
+          </details>
+
+          <details id="lines-avoid-dash-patterns">
+            <summary>Avoid dash patterns to differentiate lines</summary>
+            <p>In data visualization, dashed lines are normally used categorically to indicate uncertainty, such as projected data, estimated data, or missing data, or to indicate a threshold or reference line. Using them to distinguish between different lines conflicts with this semantic convention.</p>
+            <p>In addition, they create visual clutter (see <a href="#element-interactivity">element interactivity (<b class="todo">TODO</b>)</a>, and more than 2 or 3 dashed patterns are difficult to distinguish or remember.</p>
+
+            <p><b>Avoid symbol patterns to differentiate lines:</b> Similar to dash patterns, </p>
+
+            <p class="todo"><em><b>TODO:</b> Show illustration of proper and improper use of dash patterns.</em></p> 
+          </details>
+          
+          <!-- 
+          <details id="line-non-time-series">
+            <summary>Avoid non-time-series data</summary>
+            <p>While different kinds of ordered data can be represened with a line chart, they are so strongly associated with time-series data (i.e. dates or times) that most readers will assume that any line chart is time-series. Avoid using other data times with line charts, or provide clear instructions or interpreting the line chart.</p>
+            <p class="todo"><em><b>TODO:</b> Show illustration.</em></p> 
+          </details> 
+          -->
+<!--           
+          <details id="user-control">
+            <summary>Allow user to select and filter series</summary>
+            <p>In some interfaces, the user is provided a way to select from a set of optional data series. This may result in too many lines appearing at once (see <a href="#spaghetti-chart">"spaghetti charts"</a>).</p>
+            <p class="todo"><em><b>TODO:</b> Show illustration.</em></p> 
+          </details>
+           -->
+
+          <!-- <details id="tactile-line-chart">
+            <summary>Special considerations</summary>
+            <p></p>
+            <p class="todo"><em><b>TODO:</b> Show illustration.</em></p> 
+          </details> -->
+
+
+          <h4 id="variations-line">Variations</h4>
+          <p>No common variations.</p>
+
+          <!-- 
+            <section>
+            <h5 id="stacked-line">Stacked line</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/linechart-multi_category_color.svg"
+                alt="Stacked line chart with multiple colors for different categories">
+            </figure>
+          </section> 
+          -->
+
+          <!-- 
+          <section>
+            <h5 id="vertical-line">Vertical line</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/linechart-multi_category_color.svg"
+                alt="Stacked line chart with multiple colors for different categories">
+            </figure>
+          </section> 
+        -->
+
+          <!-- 
+          <h4 id="related-line">Related chart types</h4>
+
+          <section>
+            <h5 id="area-charts">Area charts</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/linechart-multi_category_color.svg"
+                alt="Area charts with multiple colors for different categories">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="scatter-plots">Scatterplots</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/linechart-multi_category_color.svg"
+                alt="Scatterplot with multiple colors for different categories">
+            </figure>
+          </section> 
+          -->
+
+        </article>
+
+        <article id="chart-bar-article" class="chart_type" data-chart_type="bar">
+          <h3 id="chart-bar" data-toc_class="collapse">Bar charts</h3>
+          <div>
+            <p>A bar chart uses rectangular bars to show discrete, numerical comparisons across categories. The height (or length) of the bar indicated the numerical value. One axis of the chart shows the specific categories being compared (the independent variable), and the other axis represents a discrete value scale (the dependent variable).</p>
+
+            <p>In a vertical bar chart, also called a column chart, the categories are on the x-axis, and the value being
+              measured is on the y-axis.</p>
+
+            <p>In a horizontal bar chart, the value being measured is on the x-axis, and the categories are on the y-axis.
+            </p>
+
+            <figure>
+              <img src="./assets/examples/barchart-category_color.svg" alt="Bar chart with single color for same category">
+              <figcaption><span class="lead">Do:</span> single color for same category</figcaption>
+            </figure>
+
+            <p>A bar chart is one of the most common types of data visualization, since it is well-known and well-understood by readers, is easy to create and interpret, represents multiple ranges of data accurately, and uses space efficiently.</p> 
+
+            <h4 id="barchart-grouping">Bar chart grouping</h4>
+
+            <p>Bar charts can be used for single-series or multi-series datasets; for multiseries datasets, group each series as <a href="#stacked-bar">stacked bars</a> or <a href="#grouped-bar">grouped bars</a>.</p>
+
+            <h4 id="barchart-ordering">Bar chart ordering</h4>
+            <p>When a bar chart is not being used for time-series trend data, it can aid ease of interpretation to order the bars by value, sorting either ascending or descending. Avoid sorting the order if a bar chart is used in a context where the implicit order is significant, such as when two charts are presented to compare with one another.</p>
+
+            <!-- <h4 id="barchart-novelty">Bar chart novelty</h4>
+            <p>Because bar charts are so common, they may seem a more boring, less novel, or less attention-grabbing visualization choice, despite their effectiveness. Effective use of color and emphasis can mitigate this perception. You can reduce visual clutter and add novelty with the <a href="#lollipop">lollipop chart</a> variation.</p> -->
+
+          </div>
+
+          <h4 id="ideal-use-cases-bar">Ideal use cases</h4>
+          <ul>
+            <li>showing the relationship between a numeric and a categoric variable</li>
+            <li>showing trend over time</li>
+          </ul>
+
+          <h4 id="a11y-bar">Accessibility considerations</h4>
+
+
+          <details id="bar-direct-labeling">
+            <summary>Favor direct labeling instead of legends</summary>
+            <p>For bar charts with more than one bar, placing the series label end of the bar, or sometimes along the bar, reduces the cognitive load in associating each bar with its category. Using legends with keys, rather than direct labeling, separates the representation (the bar) from its referent, forcing the user to remember the color or symbol, or to actively refer back to the legend.</p>
+            <p class="todo"><em><b>TODO:</b> Show illustration of direct labeling vs. legends.</em></p> 
+          </details>
+
+
+          <div>
+            <h5 id="labels">Labels</h5>
+            <p>Labels should be clearly associated with their indicated bar. Bars should be placed relative to their axis
+              labels, and value labels for the bar should be directly positioned with the bar (show diagrams with options).
+            </p>
+            <p>Labels should be of sufficient size to be easily legible (quote WCAG here)</p>
+            <p>With a large number of bars, labels may be too small to read, may overlap each other, or may otherwise not be
+              legible. If label space becomes an issue, consider using a horizontal bar chart, or use a smaller number of
+              bars, either by aggregating data, splitting the chart into multiple bar charts, each with its own facet.</p>  
+          </div>
+
+          <div>
+            <h5 id="screen-readers-bar">Screen readers</h5>
+            <p>For screen reader users, a bar chart must include each value, in the same sequence as the visual rendering, labeled with the category and any group identifier. This can be done either with an accessible chart (possible with SVG) or an equivalent table.</p>
+          </div>
+
+          <div>
+            <h5 id="summaries-bar">Summaries</h5>
+            <p>For screen reader users and people with cognitive disabilities, a bar chart must include a summary,  </p>
+          </div>
+
+          <h4 id="variations-bar">Variations</h4>
+
+          <section>
+            <h5 id="stacked-bar">Stacked bar</h5>
+            <p>This is for data with multiple series.</p>
+            <figure>
+              <img src="./assets/examples/barchart-multi_category_color.svg"
+                alt="Stacked bar chart with multiple colors for different categories">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="grouped-bar">Grouped bar</h5>
+            <p>This is for data with multiple series.</p>
+            <figure>
+              <img src="./assets/examples/barchart-multi_category_color.svg"
+                alt="Stacked bar chart with multiple colors for different categories">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="horizontal-bar">Horizontal bar</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/barchart-multi_category_color.svg"
+                alt="Stacked bar chart with multiple colors for different categories">
+            </figure>
+          </section>
+
+          <!-- 
+          <section>
+            <h5 id="vertical-bar">Vertical bar</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/barchart-multi_category_color.svg"
+                alt="Stacked bar chart with multiple colors for different categories">
+            </figure>
+          </section> 
+          -->
+
+          <!-- 
+            <section>
+            <h5 id="lollipop">Lollipop chart</h5>
+            <p>A lollipop chart uses the same layout, positioning, and measuring conventions as a bar chart, but substitutes a thinner line ending in a dot to indicate the value. This style of chart reduces clutter better than a bar chart, especially with a large number of bars.</p>
+            <figure>
+              <img src="./assets/examples/lollipop-chart.svg"
+                alt="Lollipop chart showing TBD">
+            </figure>
+          </section> 
+        -->
+        </article>
+
+        <article id="chart-pie_donut-article" class="chart_type" data-chart_type="pie_donut">
+          <h3 id="chart-pie_donut" data-toc_class="collapse">Pie and donut charts</h3>
+          <div>
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with 3 slices">
+                <figcaption>Pie chart</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with 3 segments">
+                <figcaption>Donut chart</figcaption>
+              </figure>
+            </div>
+            
+            <p>A pie chart or donut chart uses proportional sectors (or "slices") of a circle to show proportions and percentages between categories. Each slice represents a category, with its proportion measured by its arc length, with the full circle representing the total sum of all catgories the data, which must total 100%.</p>
+
+            <p>A pie or donut chart is most effective for 2-3 slices, and should not have more than 5 or 6 slices. Very small slices should be aggregated into a single slice, labeled "other" or something similar.</p>
+
+            <p>A pie chart and a donut chart differ only visually. A pie chart uses triangular wedges that extend to the center of the circle, while a donut chart has slices that resemble curved bars with a "hole" in the middle of the circle (an interior radius). The hole in the middle of a donut chart is often used to display additional information.</p>
+
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with 3 slices, with one slice highlighted">
+                <figcaption>Pie chart composed of slices</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with 3 segments, with one segment highlighted, and a value in the hole">
+                <figcaption>Donut chart composed of curved bars, with additional information in the hole</figcaption>
+              </figure>
+            </div>
+ 
+            <p>Be aware that people are not as good at using area and angles to judge relative proportion as they are length or distance, so pie and donut charts, which rely on angles and area, are not as effective as linear charts like bar charts for accurate comparisons. Donut charts, because they rely more on arc length than area, may be more effective than pie charts.</p>
+
+            <p>Pie and donut charts use more space than some alternatives such percentage bar chart. However, they are well-known and easily interpreted, and their round shape is more distinct in a grid-based layout than a bar chart, so they are effective as centerpieces, especially when highlighting a single slice.</p>
+
+            <figure>
+              <img src="./assets/examples/piechart-category_color.svg" alt="Pie chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-pie_donut">Ideal use cases</h4>
+          <ul>
+            <li>Comparisons, proportions, and part-to-a-whole for datasets with 5 or fewer data points (including smaller values aggregated into an "other" category)</li>
+          </ul>
+
+          <h4 id="a11y-pie_donut">Accessibility considerations</h4>
+
+          <details id="pie_donut-donut_vs_pie">
+            <summary>Prefer donut charts to pie charts</summary>
+            
+            <p>Donut charts may be easier to interpret than pie charts. Generally, a donut chart should be used instead of a pie chart. TODO: cite study</p>
+
+            <div class="figures">
+              <figure>
+                <img src="." alt="Donut chart with 3 segments">
+                <figcaption>DO: Donut chart with 3 segments</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Pie chart with 3 slices">
+                <figcaption>AVOID: Pie chart with 3 slices</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <details id="pie_donut-restrict_slices">
+            <summary>Avoid using more than 5 slices</summary>
+            <p>Pie or donut charts should normally have no more than 5 slices. A larger number of slices makes judging angles difficult, and reduces the ability to accurately compare values.</p>
+
+            <p>In addition, a large number of slices leads to label collision, making the chart harder to read.</p>
+
+            <p>For larger data sets, consider using a percentage bar chart instead.</p>
+
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with 5 slices">
+                <figcaption>DO: Pie chart with a readily comprehensible number of slices</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with 4 slices">
+                <figcaption>DO: Donut chart with a readily comprehensible number of slices</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Pie chart with 10 slices">
+                <figcaption>AVOID: Pie chart with a large number of slices</figcaption>
+              </figure>
+              <figure class="dont">
+                <img src="." alt="Donut chart with 8 slices">
+                <figcaption>AVOID: Donut chart with a large number of segments</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <details id="pie_donut-direct-labeling">
+            <summary>Favor direct labeling instead of legends</summary>
+            <p>For pie or donut charts, place the category label outside the slice and the value in the slice. This reduces the cognitive load in associating each line with its category. Using legends with keys, rather than direct labeling, separates the representation (the line) from its referent, forcing the user to remember the color or symbol, or to actively refer back to the legend.</p>
+
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with direct labeling">
+                <figcaption>DO: Pie chart with labels on each slice for category and values</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with direct labeling">
+                <figcaption>DO: Donut chart with labels on each segment for category and values</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Pie chart with legend">
+                <figcaption>AVOID: Pie chart with separate legend and keys</figcaption>
+              </figure>
+              <figure class="dont">
+                <img src="." alt="Donut chart with legend">
+                <figcaption>AVOID: Donut chart with separate legend and keys</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <details id="pie_donut-value_percentage">
+            <summary>Consider adding value and percentage labels</summary>
+            <p>For pie or donut charts, consider adding a label for both the value and the percentage. This emphasizes the proportional nature of each slice, and makes comparison tasks easier.</p>
+            
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with labels for both value and percentage">
+                <figcaption>DO: Pie chart with labels on each slice for category, values, and percentage</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with labels for both value and percentage">
+                <figcaption>DO: Donut chart with labels on each segment for category, values, and percentage</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Pie chart with legend">
+                <figcaption>AVOID: Pie chart with labels on each slice only for category and values</figcaption>
+              </figure>
+              <figure class="dont">
+                <img src="." alt="Donut chart with legend">
+                <figcaption>AVOID: Donut chart with labels on each slice only for category and values</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <details id="pie_donut-order_values">
+            <summary>Sort slices from largest to smallest values</summary>
+            <p>Pie or donut charts should be sorted from largest to smallest values. This helps the reader to quickly understand the relative values for slices with similar values. It also aids screen reader users, who will know better what to anticipate when loooking for data sequentially.</p>
+            
+            <div class="figures">
+              <figure>
+                <img src="." alt="Pie chart with slices ordered largest to smallest">
+                <figcaption>DO: Pie chart with ordered and sorted slices</figcaption>
+              </figure>
+              <figure>
+                <img src="." alt="Donut chart with segments ordered largest to smallest">
+                <figcaption>DO: Donut chart with ordered and sorted segments</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Pie chart with slices in random order, where similar values are hard to distinguish">
+                <figcaption>AVOID: Pie chart with misordered slices</figcaption>
+              </figure>
+              <figure class="dont">
+                <img src="." alt="Donut chart with segments in random order, where patterns are hard to discover">
+                <figcaption>AVOID: Donut chart with misordered slices</figcaption>
+              </figure>
+            </div>
+
+            <p>The exception to this guidance is when the order of the slices is naturally fixed, such as time-series data or alphabetically ordered, or referenced elsewhere, such as when comparing the change of values in two or more pie charts or when the pie chart is paired with another chart or table where the order is fixed.</p>
+
+            <p>Note that there are cases where multiple comparative pie or donut charts may not be ordered the same way, but instead are ordered with the largest slice first in both charts. In this case, other signals like the label and color should be used consistently.</p>
+            
+            <div class="figures">
+              <figure>
+                <img src="." alt="Two pie charts with slices ordered the same way, regardless of value">
+                <figcaption>DO: Synchronize the slice order of two comparative pie charts</figcaption>
+              </figure>
+              <figure class="avoid">
+                <img src="." alt="Two pie charts with slices ordered in a different sequence">
+                <figcaption>AVOID: Unsynchronized comparative pie charts, except in rare cases</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <h4 id="variations-pie_donut">Variations</h4>
+
+          <section>
+            <h5 id="variations-pie-chart">Pie chart</h5>
+            <p></p>
+            <figure>
+              <img src="."
+                alt="">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="variations-donut-chart">Donut chart</h5>
+            <p></p>
+            <figure>
+              <img src="."
+                alt="">
+            </figure>
+          </section>
+
+          <!-- 
+          <section>
+            <h5 id="concentric-pie_donut">Concentric pie chart</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/piechart-multi_category_color.svg"
+                alt="">
+            </figure>
+          </section> 
+          -->
+        </article>
+
+
+
+        <article id="chart-gauge-article" class="chart_type" data-chart_type="gauge">
+          <h3 id="chart-gauge" data-toc_class="collapse">Gauge charts</h3>
+          <div>
+            <p></p>
+            <p>Gauge charts can have many different shapes, including a flat bar, but the skueomorphic half-circle shape is the easiest to identify and often the most visually distinct, which is suitable for real-time updates of data where the user may need to monitor the changes. Having a distinct appearance is useful to draw the eye, especially when there is only a single gauge chart on a display or dashboard; having multiple gauge charts can reduce the ease of finding critical updates quickly, since the eye needs to scan multiple visually-similar items for differences to distinguish them.</p>
+            <figure>
+              <img src="./assets/examples/gaugechart-category_color.svg" alt="Gauge chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-gauge">Ideal use cases</h4>
+          <ul>
+            <li></li>
+          </ul>
+
+          <h4 id="a11y-gauge">Accessibility considerations</h4>
+
+          <h4 id="variations-gauge">Variations</h4>
+
+          <section>
+            <h5 id="bar-gauge">Bar gauge</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/gaugechart-multi_category_color.svg"
+                alt="">
+            </figure>
+          </section>
+
+        </article>
+
+        <article id="chart-percentage_bar-article" class="chart_type" data-chart_type="percentage_bar">
+          <h3 id="chart-percentage_bar" data-toc_class="collapse">Percentage charts</h3>
+          <div>
+            <p>Percentage bar charts use a </p>
+            <p>Also known as a 100% chart, 100% bar chart, or 100% stacked bar chart … </p>
+            <figure>
+              <img src="./assets/examples/hundred-percent barchart-category_color.svg"
+                alt="Percentage bar chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-percentage-bar">Ideal use cases</h4>
+          <ul>
+            <li></li>
+          </ul>
+
+          <h4 id="a11y-percentage-bar">Accessibility considerations</h4>
+
+          <h4 id="variations-percentage-bar">Variations</h4>
+
+          <section>
+            <h5 id="stacked-percentage-bar">Stacked percentage bar</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/hundred-percent barchart-multi_category_color.svg"
+                alt="Stacked percentage bar chart with multiple colors for different categories">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="vertical-percentage-bar">Vertical percentage bar</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/hundred-percent barchart-multi_category_color.svg"
+                alt="Stacked percentage bar chart with multiple colors for different categories">
+            </figure>
+          </section>
+        </article>
+
+        <article id="chart-scatterplot-article" class="chart_type" data-chart_type="scatterplot">
+          <h3 id="chart-scatterplot" data-toc_class="collapse">Scatterplots</h3>
+          <div>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/scatterplotchart-category_color.svg"
+                alt="Scatterplot chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-scatterplot">Ideal use cases</h4>
+          <ul>
+            <li></li>
+          </ul>
+
+          <h4 id="a11y-scatterplot">Accessibility considerations</h4>
+
+          <h4 id="variations-scatterplot">Variations</h4>
+
+          <p>No significant variations.</p>
+          
+        </article>
+
+        <article id="chart-table-article" class="chart_type" data-chart_type="table">
+          <h3 id="chart-table" data-toc_class="collapse">Tables</h3>
+          <div>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/tablechart-category_color.svg" alt="Table chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-table">Ideal use cases</h4>
+          <ul>
+            <li></li>
+          </ul>
+
+          <h4 id="a11y-table">Accessibility considerations</h4>
+
+          <h4 id="variations-table">Variations</h4>
+
+          <section>
+            <h5 id="nested-table">Nested table</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/tablechart-multi_category_color.svg"
+                alt="">
+            </figure>
+          </section>
+
+          <section>
+            <h5 id="dashboard-table">Dashboard</h5>
+            <p></p>
+            <figure>
+              <img src="./assets/examples/tablechart-multi_category_color.svg"
+                alt="">
+            </figure>
+          </section>
+
+        </article>
+<!-- 
+        <article id="chart-dashboard-article" class="chart_type" data-chart_type="dashboard">
+          <h3 id="chart-dashboard" data-toc_class="collapse">Dashboards</h3>
+          <div>
+            <p>A dashboard is not a single type of chart, but a combination of two or more charts that show several pieces of information at once, usually (but not always) related to one another. A dashboard is useful for providing a high-level overview of a range of data, or for drilling into multiple aspects of the same dataset.</p>
+
+            <p>In practice, sometimes a dashboard may include one or more "cards" with a single datapoint displayed with a very large font size. This is usually a key numerical index, or a ratio of parts completed. <i><b>TODO:</b> show examples of large text cards</i></p>
+            <figure>
+              <img src="./assets/examples/dashboardchart-category_color.svg" alt="dashboard chart with single color for same category">
+            </figure>
+
+          </div>
+
+          <h4 id="ideal-use-cases-dashboard">Ideal use cases</h4>
+          <ul>
+            <li></li>
+          </ul>
+
+          <h4 id="a11y-dashboard">Accessibility considerations</h4>
+          <ul>
+            <li>colors and symbols should be consistently used across all different chart types
+            <p><i><b>TODO:</b> show examples of dashboard color usage</i></p>
+            </li>
+          </ul>
+
+          <h4 id="variations-dashboard">Variations</h4>
+
+        </article> -->
+
+
+      </div>
+
+      <div id="general-chart-guidance-group-div">
+        <h2 id="general-chart-guidance-group" data-toc_class="heading">General chart guidance</h2>
+
+        <article id="a11y-checklist-article" class="general">
+          <h3 id="a11y-checklist" data-toc_class="collapse">Accessibility checklist</h3>
+          <p><em>Add accessibility checklist items here.</em></p>
+
+          <p>True accessiblity is not a checklist, but checklists are useful to help highlight the most important or easiest tasks you can do to help guide you in making accessibility data visualizations.</p>
+
+          <ul id="a11y-checklist-list">
+            <li><input id="checklist-alt-text" type="checkbox"> <label for="checklist-alt-text">Always make sure your chart has appropriate <a href="#alt-text">alt text</a></label>.</li>
+            <li><input id="checklist-cvd" type="checkbox"> <label for="checklist-cvd">Check your colors for <a href="#color-vision-deficiency">color vision deficiency (“color blindness”)</a> issues</label>.</li>
+            <li><input id="checklist-contrast" type="checkbox"> <label for="checklist-contrast">Check your colors for <a href="#color-contrast">color contrast</a> issues</label>.</li>
+            <li><input id="checklist-color-meaning" type="checkbox"> <label for="checklist-color-meaning">Use an appropriate <a href="#color-pallete-meaning">colors pallete for your chart's meaning</a></label>.</li>              
+            <!-- <li><input id="checklist-_" type="checkbox"> <label for="checklist-_"> <a href="#">here</a></label>.</li> -->
+          </ul>
+  
+        </article>
+
+
+        <article id="data-article" class="general">
+          <h3 id="data" data-toc_class="collapse">Data</h3>
+
+          <p>Here are the most important accessibility text description considerations:</p>
+          <ul id="data-checklist-list">          
+            <li><input id="checklist-_data_" type="checkbox"> <label for="checklist-_data_"> <a href="#">here</a></label>.</li>
+          </ul>
+          
+          <p><em>Add general data considerations here.</em></p>
+
+          <blockquote class="draft">
+            <ul>
+              <li>Keep the data simple: i.e. x, y and 1 set of values. Unless its a key learning point to process a lot of
+                complex data then do not add more information or layers on top of this its too much for people to process
+                and will confuse. If you need to convey more do it by breaking it down into other data formats. This means
+                you may need two charts instead of one for example.</li>
+              <li>As a rule of thumb 7-10 data elements at most are best. Break it down wherever you can and avoiding
+                scrolling or losing headings off the screen.</li>
+              <li>Try to ensure the information is displayed in different or additional ways to enable understanding
+                wherever possible and appropriate (For example, data tables, or a written description of a graph or map, a
+                couple of maps instead of one complex one.)</li>
+            </ul>
+          </blockquote>
+<!-- 
+          <div>
+            <h4 id="examples-data">Examples</h4>  
+            <p><i><b>TODO:</b> add data examples</i></p>
+  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-data">data in line charts</h5>
+              <p><em>Add line-chart data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-data">data in bar charts</h5>
+              <p><em>Add bar-chart data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-data">data in pie/donut charts</h5>
+              <p><em>Add pie/donut chart data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-data">data in gauge</h5>
+              <p><em>Add gauge data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-data">data in percentage charts</h5>
+              <p><em>Add percentage chart data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-data">data in scatterplot</h5>
+              <p><em>Add scatterplot data considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-data">data in table</h5>
+              <p><em>Add table data considerations here.</em></p>
+            </section>  
+          </div>
+   -->
+        </article>
+
+
+        <article id="text-summaries-article" class="general">
+          <!-- <h3 id="text-descriptions-and-summaries" data-toc_class="collapse">Text descriptions and summaries</h3> -->
+          <h3 id="text-descriptions-and-summaries" data-toc_class="collapse">Text descriptions</h3>
+
+          <!-- <p>Here are the most important accessibility text description considerations:</p>
+          <ul id="text-checklist-list">          
+            <li><input id="checklist-_text_alt-text" type="checkbox"> <label for="checklist-_text_alt-text">Always make sure your chart has appropriate <a href="#alt-text">alt text</a></label>.</li>
+            <li><input id="checklist-_text_" type="checkbox"> <label for="checklist-_text_"> <a href="#">here</a></label>.</li>
+          </ul> -->
+          
+          
+          <p>Text descriptions fall into three categories: alt text, long descriptions, and captions</p>
+          <h4 id="alt-text">Alt text</h4>
+          <p>All images should have <em>alt text</em>, that is, text that provides a brief, cogent summary of what the
+            image displays. This is especially important for charts and diagrams.</p>
+          <p>At a minimum, the alt-text should contain:</p>
+          <ul>
+            <li>the <strong>type of the data visualization</strong>, such as "line chart", "bar chart", "pie chart", "flow
+              chart", "map", or "diagram"</li>
+            <li>the <strong>type of the data</strong>, typically what's described on the axis labels</li>
+            <li>the <strong>meaning of the data visualization</strong>, such as the overall trend, the most salient
+              (highest, lowest, average) values, or the manner in which the chart reinforces the content of the containing
+              article</li>
+          </ul>
+          <h4 id="summaries">Summaries: long descriptions and captions</h4>
+          <p>In addition to alt text, for more complex charts or diagrams, a longer text description should be provided
+            that describes each step or aspect of the visualization, and how it is connected to other steps or aspects</p>
+          <h5 id="long-descriptions">Long descriptions</h5>
+          <h6 id="explorable-data-or-alternate-forms">Explorable data or alternate forms</h6>
+          <p>If possible, the data itself should be in a structure, such as SVG or HTML, that can be navigated and
+            explored by screen reader users.</p>
+          <p>Ideally, the chart should also include another view of the data, such as a data table, or a link to download
+            the data in a spreadsheet format (such as CSV or Excel).</p>
+          <p>Optionally, the chart should also include citations or sources for the data.</p>
+          <h5 id="captions">Captions</h5>
+
+          <p><i><b>TODO:</b> provide examples for alt text and summaries</i></p>
+
+          <div>
+            <h4 id="examples-alt-text">Examples</h4>  
+            <p><i><b>TODO:</b> add text description examples</i></p>
+              
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-alt-text">Text description of line charts</h5>
+              <p><em>Add line-chart text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-alt-text">Text description of bar charts</h5>
+              <p><em>Add bar-chart text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-alt-text">Text description of  pie/donut charts</h5>
+              <p><em>Add pie/donut chart text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-alt-text">Text description of  gauge</h5>
+              <p><em>Add gauge text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-alt-text">Text description of  percentage charts</h5>
+              <p><em>Add percentage chart text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-alt-text">Text description of  scatterplot</h5>
+              <p><em>Add scatterplot text descriptions and summaries considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-alt-text">Text description of  table</h5>
+              <p><em>Add table text descriptions and summaries considerations here.</em></p>
+            </section>  
+          </div>
+        </article>
+
+        <article id="colors-article" class="general">
+          <h3 id="colors" data-toc_class="collapse">Colors</h3>
+          <p><em>Add general color considerations here.</em></p>
+
+          <p>Here are the most important accessibility color considerations:</p>
+          <ul id="color-checklist-list">          
+            <li><input id="checklist-_color_cvd" type="checkbox"> <label for="checklist-_color_cvd">Check your colors for <a href="#color-vision-deficiency">color vision deficiency (“color blindness”)</a> issues</label>.</li>
+            <li><input id="checklist-_color_contrast" type="checkbox"> <label for="checklist-_color_contrast">Check your colors for <a href="#color-contrast">color contrast</a> issues</label>.</li>
+            <li><input id="checklist-_color_color-meaning" type="checkbox"> <label for="checklist-_color_color-meaning">Use an appropriate <a href="#color-pallete-meaning">colors pallete for your chart's meaning</a></label>.</li> 
+            <!-- <li><input id="checklist-_color_" type="checkbox"> <label for="checklist-_"> <a href="#">here</a></label>.</li> -->
+          </ul>
+
+          <div>
+            <h4 id="color-vision-deficiency">Color vision deficiency</h4>
+            <p>Color vision deficiency (CVD), also known as “color blindness”, requires special consideration in charts.</p>
+            <p><em>add more decription, examples, and solutions here.</em></p>
+          </div>
+
+          <div>
+            <h4 id="color-contrast">Color contrast</h4>
+            <p>Disabilities with color contrast are separate from <a href="#color-vision-deficiency">CVD</a>. Poor contrast affects many people with low vision, and often people with more normal vision.</p>
+            <p><em>add more decription, examples, and solutions here.</em></p>
+          </div>
+
+          <div>
+            <h4 id="color-pallete-meaning">Color pallete conveys meaning</h4>
+            <p>In data visualization, color is not only aesthetic, but is used in specific ways, based on what the visualization is conveying.</p>
+            <p>There are three primary types of color pallete, each serving a different purpose: discrete, sequential, and diverging. Discrete color palletes show categorical (or <i>qualitative</i>) data, while sequential and diverging color palletes show numerical (or <i>quantitative</i>) data.</p>
+
+            <div id="discrete-color-pallete-section">
+              <h5 id="discrete_color_pallete">Discrete color palletes</h5>
+              <p><span>Discrete color palletes</span> have colors that are distinct from each other, and don't indicate a relationship between any two colors, to represent different items within a category, or different categories.</p>
+             
+              <img class="palette" src="./assets/images/discrete-color-pallete.svg" alt="Nine colors of different distinct hues">
+
+              <details>
+                <summary>Read more on discrete color palletes</summary>
+                <p><i><b>TODO:</b> add on discrete color palletes</i></p>
+
+                <h6 id="use_cases-discrete_color_pallete">When to use a discrete color pallete</h6>
+                <p></p>
+                
+              </details>
+              
+              <!-- <img class="palette" src="./assets/images/discrete-color-pallete.svg" alt="Nine colors of different distinct hues"> -->
+            </div>
+
+            <div id="sequential-color-pallete">
+              <h5 id="sequential_color_pallete">Sequential color palletes</h5>
+              <p><span>Sequential color palletes</span> have colors that are different shades of the same hue, and progress from one color to the next, to represent different items that have ordered numerical values, such as performance metrics.</p>
+             
+              <img class="palette" src="./assets/images/sequential-color-pallete.svg" alt="Five colors of same green hue, from light to dark">
+
+              <details>
+                <summary>Read more on sequential color palletes</summary>
+                <p><i><b>TODO:</b> add on sequential color palletes</i></p>
+
+                <h6 id="use_cases-sequential_color_pallete">When to use a sequential color pallete</h6>
+                <p></p>
+                
+              </details>
+              
+              <!-- <img class="palette" src="./assets/images/diverging-color-pallete.svg" alt="Nine colors of different distinct hues"> -->
+            </div>
+
+            <div id="diverging-color-pallete">
+              <h5 id="diverging_color_pallete">Diverging color palletes</h5>
+              <p><b>Diverging color palletes</b> have colors that start with a common color in the middle with shades of different hues progressing to each opposite end, and indicate position within a polarity of numerical data.</p>
+             
+              <img class="palette" src="./assets/images/diverging-color-pallete.svg" alt="Five colors interpolated between a red hue and a green hue">
+
+              <details>
+                <summary>Read more on diverging color palletes</summary>
+                <p><i><b>TODO:</b> add on diverging color palletes</i></p>
+
+                <h6 id="use_cases-diverging_color_pallete">When to use a diverging color pallete</h6>
+                <p></p>
+                
+              </details>
+              
+              <!-- <img class="palette" src="./assets/images/discrete-color-pallete.svg" alt="Nine colors of different distinct hues"> -->
+            </div>
+
+
+          <div>
+              <h5>Chromatic vs grayscale colors</h5>
+              <p><i><b>TODO:</b> describe difference and different uses of chromatic vs grayscale colors</i></p>
+
+              <img class="palette" src="./assets/grayscale-colors.svg" alt="Five colors of grays, from light to dark">
+
+            </div>
+            <p><em>add more decription, examples, and solutions here.</em></p>
+          </div>
+
+          <div>
+              <h5>Red and green</h5>
+              <p><i><b>TODO:</b> give advice on how to use red and green together</i></p>
+          </div>
+
+
+          <blockquote class="draft">
+            <ul>
+              <li>Colour palette should 1-5 colours ideally, 10 at most if really needed eg for diverse map data. - A finite
+                amount of colours consistently applied enables good colour recognition and decoding.</li>
+              <li>Avoid fatiguing / intense colours and combinations and vibrating colours like red on blue, bright pink on
+                green, red on green, black on red, and green on purple.</li>
+              <li>Do not use red and green in the same document/chart or data visualisation if at all possible.</li>
+              <li>Use contrasting colours to allow for information to be clearly seen.</li>
+              <li>If you need to use tints of the same colour or show a colour range for something like a heat map or
+                temperature chart for example try to make sure there is a 40% difference between them.</li>
+              <li>If using a light colour outline any data or elements that do not contrast well enough with the background,
+                or choose a darker colour.</li>
+            </ul>
+          </blockquote>
+          <!--  
+          <div>
+            <h4 id="examples-color">Examples</h4>  
+            <p><i><b>TODO:</b> add color examples</i></p>
+  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-colors">Colors in line charts</h5>
+              <p><em>Add line-chart color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-colors">Colors in bar charts</h5>
+              <p><em>Add bar-chart color considerations here.</em></p>
+              
+              <div class="figures">
+                <figure>
+                  <img src="./assets/examples/barchart-category_color.svg" alt="Bar chart with single color for same category">
+                  <figcaption><span class="lead">Do:</span> use a single color for the same category</figcaption>
+                </figure>
+                
+                <figure class="avoid">
+                  <img src="./assets/examples/barchart-category_mixed_color.svg" alt="Bar chart with different colors for same category">
+                  <figcaption><span class="lead">Don't:</span> use multiple colors for the same category</figcaption>
+                </figure>
+                
+                <figure class="avoid">
+                  <img src="./assets/examples/barchart-category_mixed_color.svg" alt="Bar chart with different colors for same category">
+                  <figcaption><span class="lead">Don't:</span> use multiple colors for the same category</figcaption>
+                </figure>
+              </div>
+              
+              <p><em>Add bar-chart color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-colors">Colors in pie/donut charts</h5>
+              <p><em>Add pie/donut chart color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-colors">Colors in gauge</h5>
+              <p><em>Add gauge color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-colors">Colors in percentage charts</h5>
+              <p><em>Add percentage chart color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-colors">Colors in scatterplot</h5>
+              <p><em>Add scatterplot color considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-colors">Colors in table</h5>
+              <p><em>Add table color considerations here.</em></p>
+            </section>  
+          </div>
+           -->
+        </article>
+
+
+        <article id="patterns-section" class="general">
+          <h3 id="patterns" data-toc_class="collapse">Patterns</h3>
+          <p><i><b>TODO:</b> talk about general use of patterns</i></p>
+
+          <p>Here are the most important accessibility pattern considerations:</p>
+          <ul id="pattern-checklist-list">          
+            <li><input id="checklist-_pattern_" type="checkbox"> <label for="checklist-_pattern_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+          <h4 id="avoid-patterns">Avoid patterns as differentiator</h4>
+          <p>Use solid colors for fill and lines, and avoid patterns such as cross-hatches, dots, or dashed lines. Instead, use
+            well-defined color combinations in(cludin grayscale) that are distinguishable by people with color
+            disabilities, use distinct symbols where appropriate (e.g. as data points on line charts or scatter plots), or
+            use different line thicknesses if necessary.</p>
+          <p><strong>Note:</strong> Earlier accessiblity advice sometimes encouraged the use of patterned fills or dashed
+            line patterns in data visualizations. This practice often makes charts more difficult to read, and
+            significantly increases cognitive load or some people with cognitive disabilities. In addition, patterns that
+            cross one another can produce visual effects that distort the data representation.</p>
+          <p><i><b>TODO:</b> provide good and bad examples</i></p>
+
+          <h4 id="patterns-for-meaning">Patterns for meaning</h4>
+          <p>An exception to this guidance is the limited use of patterned fills or strokes to indicate some qualitative
+            exception, such as missing data, uncertain data, or future projected data. Reserve the use of patterns for
+            this semantic data, rather than as a visual distinction.</p>
+
+          <blockquote class="draft">
+            <p><i><b>TODO:</b> Integrate these points:</i></p>
+
+            <ul>
+              <li>Pattern should be avoided if at all possible - its actually really hard for people to view, causes
+                cognitive overload very quickly and is actually not that easily discernible for a lot of people. This means
+                we need to rely more on contrast and labelling to resolve colour blindness issues.</li>
+              <li>Where pattern is used it should be minimised, contrast well, not be made up of glaring colours or colours
+                opposite each other on the colour wheel. Don’t use large patterns in small areas, or complex or clashing
+                patterns and colours..</li>
+              <li>The space between pattern elements should not be the same as the pattern element. The same goes for
+                patterned lines like dots and dashes. The space between dots or lines should not be the same size as the dot
+                or line. They can actually be hard for a lot of people to see.</li>
+              <li>Two similar patterns or line types should not be used in the same document, its too hard for people to
+                see. eg two dotted or dashed lines or patterns.</li>
+              <li>Keep colour choices and pattern choices, if using, consistent for the same types of data.</li>
+            </ul>
+          </blockquote>
+
+          <div>
+            <h4 id="examples-patterns">Examples</h4>  
+            <p><i><b>TODO:</b> add patterns examples</i></p>
+  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-patterns">Patterns in line charts</h5>
+              <p><em>Add line-chart patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-patterns">Patterns in bar charts</h5>
+              <p><em>Add bar-chart patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-patterns">Patterns in pie/donut charts</h5>
+              <p><em>Add pie/donut chart patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-patterns">Patterns in gauge</h5>
+              <p><em>Add gauge patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-patterns">Patterns in percentage charts</h5>
+              <p><em>Add percentage chart patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-patterns">Patterns in scatterplot</h5>
+              <p><em>Add scatterplot patterns considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-patterns">Patterns in table</h5>
+              <p><em>Add table patterns considerations here.</em></p>
+            </section> 
+          </div>
+           
+        </article>
+
+        <!-- 
+        <article id="symbols-section" class="general">
+          <h3 id="symbols" data-toc_class="collapse">Symbols</h3>
+
+          <p><i><b>TODO:</b> talk about symbols</i></p>
+
+          <p>Here are the most important accessibility symbol considerations:</p>
+          <ul id="symbol-checklist-list">          
+            <li><input id="checklist-_symbol_" type="checkbox"> <label for="checklist-_symbol_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+          <div>
+            <h4 id="examples-symbols">Examples</h4>  
+            <p><i><b>TODO:</b> add symbols examples</i></p>
+
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-symbols">Symbols in line charts</h5>
+              <p><em>Add line-chart symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-symbols">Symbols in bar charts</h5>
+              <p><em>Add bar-chart symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-symbols">Symbols in pie/donut charts</h5>
+              <p><em>Add pie/donut chart symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-symbols">Symbols in gauge</h5>
+              <p><em>Add gauge symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-symbols">Symbols in percentage charts</h5>
+              <p><em>Add percentage chart symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-symbols">Symbols in scatterplot</h5>
+              <p><em>Add scatterplot symbols considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-symbols">Symbols in table</h5>
+              <p><em>Add table symbols considerations here.</em></p>
+            </section>  
+          </div>           
+        </article> 
+        -->
+
+
+        <article id="tactiles-section" class="general">
+          <h3 id="tactiles" data-toc_class="collapse">Tactiles</h3>
+          <p><i><b>TODO:</b> talk about general use of tactiles</i></p>
+
+          <p>Here are the most important accessibility tactile considerations:</p>
+          <ul id="tactile-checklist-list">          
+            <li><input id="checklist-_tactile_" type="checkbox"> <label for="checklist-_tactile_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+          <h4 id="tactiles-print">Printed tactiles</h4>
+          <p><i><b>TODO:</b> talk about printed tactiles</i></p>
+
+          <h4 id="digital-tactile">Digital tactiles</h4>
+          <p><i><b>TODO:</b> talk about digital tactiles</i></p>
+
+          <!--           
+          <div>
+            <h4 id="examples-tactile">Examples</h4>
+            <p><i><b>TODO:</b> add tactiles examples</i></p>
+  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-tactiles">Tactiles for line charts</h5>
+              <p><em>Add line-chart tactiles considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-tactiles">Tactiles for bar charts</h5>
+              <p><em>Add bar-chart tactiles considerations here.</em></p>
+            </section>      
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-tactiles">Tactiles for pie/donut charts</h5>
+              <p><em>Add pie/donut chart tactiles considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-tactiles">Tactiles for gauge</h5>
+              <p><em>Add gauge tactiles considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-tactiles">Tactiles for percentage charts</h5>
+              <p><em>Add percentage chart tactiles considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-tactiles">Tactiles for scatterplot</h5>
+              <p><em>Add scatterplot tactiles considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-tactiles">Tactiles for table</h5>
+              <p><em>Add table tactiles considerations here.</em></p>
+            </section>  
+          </div> 
+          -->
+
+        </article>
+
+        <article id="fonts" class="general">
+          <h3 id="font-styles-and-sizes" data-toc_class="collapse">Font styles and sizes</h3>
+
+
+          <p>Here are the most important accessibility font and text considerations:</p>
+          <ul id="font-checklist-list">          
+            <li><input id="checklist-_fonts_" type="checkbox"> <label for="checklist-_fonts_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+
+          <h4 id="consistent-font-family">Consistent font family</h4>
+          <p>The font family used in charts and diagrams should be consistent with the text on the containing page.
+            We use the sans-serif typeface <strong>Open Sans</strong>; where Open Sans is not available, we use Arial. For serif fonts, we use the serif typeface <strong>Playfair Display</strong>.
+          </p>
+
+          <p>We suggest that your organization determines a single typeface (or one for sans-serif and one for serif) to use in all charts.</p>
+
+          <p class="todo"><em><b>TODO</b> Provide guidance on picking a font.</em></p>
+
+          <h4 id="consistent-font-styles">Consistent font styles</h4>
+          <p>Limit the number of colors and styles used for labels in your chart or diagram. Avoid bold or italic text,
+            unless it is intended to emphasize a particular feature. Text color should normally be distinct, contrasting,
+            neutral grayscale colors, such as graphite gray, ink black, or chalk white.</p>
+
+          <h4 id="hierarchical-font-sizes">Hierarchical font sizes</h4>
+          <p>As with any document, the size of text within a chart or diagram should reflect the hierarchical level of the
+            label. For example, the title of the chart should be largest, followed by the axis labels, followed by the
+            axis tick labels. At each level of hierarchy, the different labels should have a uniform size. For example,
+            the labels for the X and Y axis should be the same size, and the labels for the axis tick labels values on
+            both the X and Y axis should be the same (smaller) size.</p>
+          <p>Avoiding shrinking longer labels to fit, within the same hierarchical level. Instead, use a consistent font
+            size for that level that fits all labels (or use abbreviations where appropriate).</p>
+          <p>Other labels outside a strict hierarchy, such as value labels, legend labels, or annotations, should match
+            the closest appropriate font size (e.g. value labels should be the same size as axis tick labels).</p>
+          <p>Inconsistent font sizes can make it harder for the reader to construct a mental model of the structure of the
+            chart.</p>
+
+          <h4 id="font-display-size">Font display size</h4>
+          <p>Because images have their own internal font size, and because images can be displayed at arbitrary sizes,
+            care must be taken that the image display size maintains an appropriate minimum font size. The smallest font
+            size <em>as displayed in the chart image</em> should match the minimum font size specified in the your
+            style guide.</p>
+          <section class="examples large">
+            <figure class="readable_font">
+              <img src="./assets/examples/barchart-category_color.svg" alt="Bar chart displayed at a readable font size">
+              <figcaption><span class="lead">Do:</span> specify a display size for the chart image that makes the smallest
+                text readable</figcaption>
+            </figure>
+
+            <figure class="avoid unreadable_font">
+              <img src="./assets/examples/barchart-category_color.svg" alt="Bar chart displayed at an unreadably small font size">
+              <figcaption><span class="lead">Don't:</span> specify a display size for the chart image that makes the text
+                too small</figcaption>
+            </figure>
+          </section>
+          <p><strong>Note:</strong> For the purpose of this document, illustrative examples do not obey this font-size
+            guidance. This is purposeful, to emphasize the salient feature of the chart being described. Where the
+            understandability and perceivability of the data is important, use appropriate font sizes.</p>
+
+          <!-- 
+          <div>
+            <h4 id="examples-fonts">Examples</h4>  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-fonts">Fonts in line charts</h5>
+              <p><em>Add line-chart font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-fonts">Fonts in bar charts</h5>
+              <p><em>Add bar-chart font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-fonts">Fonts in pie/donut charts</h5>
+              <p><em>Add pie/donut chart font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-fonts">Fonts in gauge</h5>
+              <p><em>Add gauge font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-fonts">Fonts in percentage charts</h5>
+              <p><em>Add percentage chart font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-fonts">Fonts in scatterplot</h5>
+              <p><em>Add scatterplot font considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-fonts">Fonts in table</h5>
+              <p><em>Add table font considerations here.</em></p>
+            </section>
+          </div>
+          -->
+        </article> 
+
+        <article id="axes-labeling-group" class="general">
+
+          <p>Here are the most important accessibility axis considerations:</p>
+          <ul id="axis-checklist-list">          
+            <li><input id="checklist-_axis_" type="checkbox"> <label for="checklist-_axis_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+          <h3 id="axes-labeling" data-toc_class="collapse">Axes and labeling</h3>
+          <p>For cartesian (X/Y) charts, always display both X and Y axes, with clear labels for numerical axis.</p>
+          <h4 id="visual-clutter">Visual clutter</h4>
+          <p>Visual clutter is disorganization in the collection of elements, or any unneccessary visual elements that
+            don't directly contribute to the reader's ability to understand the information in a document or image. Visual
+            clutter contributes to extraneous cognitive load, and may reduce the reader's task performance.</p>
+          <figure class="quote">
+            <blockquote cite="http://web.mit.edu/rruth/www/Papers/RosenholtzEtAlCHI2005Clutter.pdf">
+              <p>“Clutter is the state in which excess items, or their representation or organization, lead to a degradation of performance at some task.”</p>
+            </blockquote>
+            <figcaption>—Rosenholtz et al., <cite>Feature Congestion: A Measure of Display Clutter</cite>, 2005</figcaption>
+          </figure>
+
+          <h4 id="axis-lines">Axis lines</h4>
+          <h5 id="axis-guide-lines-optional">Axis guide lines optional</h5>
+          <p>Independent axis (usually Y-axis) guide lines that extend the visual tick mark across the width of the chart
+            may help some readers correlate datapoint position (e.g. bar height) with a specific value. This is especially
+            true for younger readers who may draw an association with graph paper. Other readers may find such guide lines
+            to be distracting visual clutter. Inclusion of guide lines is optional, and both approaches are acceptable.
+          </p>
+
+          <h4 id="axis-labels">Axis labels</h4>
+          <h5 id="dont-hide-axis-lines-or-labels">Don't hide axis lines or labels</h5>
+          <p>Omitting or hiding axis lines or labels to reduce visual clutter reduces usability for many readers,
+            especially younger readers or those with some cognitive disabilities, and may cause misinterpretation of the
+            data. Always include axis lines, and always include axis labels for numeric axes. Axis labels for categorical
+            axes are optional, if the chart title includes a clear description of what's being measured (i.e. the category
+            type).</p>
+
+          <section class="examples two">
+            <figure>
+              <img src="./assets/examples/barchart-show_axes.svg" alt="Bar chart with both X and Y axis">
+              <figcaption><span class="lead">Do:</span> display both X and Y axes</figcaption>
+            </figure>
+
+            <figure>
+              <img src="./assets/examples/barchart-reduce_clutter.svg" alt="Bar chart with both X and Y axis">
+              <figcaption><span class="lead">Do:</span> reduce visual clutter</figcaption>
+            </figure>
+
+            <figure class="avoid">
+              <img src="./assets/examples/barchart-hide_axis.svg"
+                alt="Stacked bar chart with multiple colors for different categories">
+              <figcaption><span class="lead">Don't:</span> hide one of the axes</figcaption>
+            </figure>
+
+            <figure class="avoid">
+              <img src="./assets/examples/barchart-hide_axis_label.svg" alt="Bar chart with multiple colors for same category">
+              <figcaption><span class="lead">Don't:</span> omit the label for numerical axis</figcaption>
+            </figure>
+          </section>
+
+
+          <h4 id="direct-labeling">Direct labeling</h4>
+          <p>TODO</p>
+          <section class="examples">
+            <figure>
+              <img src="./assets/examples/direct-labeling-linechart.svg" alt="Line chart with direct labeling">
+              <figcaption><span class="lead">Do:</span> add a direct label to each line of a line chart</figcaption>
+            </figure>
+            <figure class="warning">
+              <img src="./assets/examples/legend-linechart.svg" alt="Line chart with legend">
+              <figcaption><span class="lead">Be cautious:</span> avoid using line charts with only labels in the legend
+              </figcaption>
+            </figure>
+          </section>
+
+          <h5 id="label-collision">Label collision</h5>
+          <p>With dynamically generated charts, there is a risk that labels will overlap, unless special care is taken. This is especially true with direct labels, in the case where datapoints converge (as with line charts or scatterplots) or have very small values (as with pie and donut charts).</p>
+          <p>Labels that overlap, collide, or are simply very close together are harder to read, and sometimes nearly impossible.</p>
+          <p>To overcome this, during the design phase charts should be tested with a range of values including extremes of values, to determine if there is high risk of label collision. If the labels would collide, you should use <a href="#leader-lines">leader lines:</a> or  <a href="#staggered-labels">staggered labels:</a>.</p>
+          <p id="leader-lines"><b>Leader lines:</b> One way to avoid label collision is to space the labels further from their referent datapoint, and a leader line should be drawn between the label and the target datapoint. This can be combines with a legend key to disambiguate which label belongs to which series.</p>
+          <p id="staggered-labels"><b>Staggered labels:</b> Another way to avoid label collision is to position the labels at different points rather than the end (for lines) or on opposite sides of clusters (for scatterplots). The position should be a point of wide separation, ideally near the end. Staggered labels don't work well for pie or donut charts.</p>
+          <p>Note that leader lines should normally be avoided in order to decrease chart visual complexity, but an exception should be made for avoiding label collision.</p>
+          <section class="examples">
+            <figure class="warning">
+              <img src="./assets/examples/overlap-linechart.svg" alt="Line chart with direct labeling and label collision">
+              <figcaption><span class="lead">Be cautious:</span> avoid label collision
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/examples/label-leader-lines-linechart.svg" alt="Line chart with widely spaced labels and leader lines">
+              <figcaption><span class="lead">Do:</span> add leader lines for label to avoid label collision</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/examples/staggered-labels-linechart.svg" alt="Line chart with stagggered labels">
+              <figcaption><span class="lead">Do:</span> add stagggered labels to avoid label collision</figcaption>
+            </figure>
+          </section>
+
+          <blockquote class="draft">
+            <h5 id="labelling-and-keys">Labelling and keys</h5>
+            <ul>
+              <li>Keep labelling consistently placed and outside of but close to the data element.</li>
+              <li>Always label everything if functionality allows. Keys are not an alternative, they should be used
+                as an additional tool where necessary.</li>
+              <li>Key items should be in a logical order and big enough to be legible (For example, 44px square minimum or
+                10mm square minimum for colours, patterns and symbols.)</li>
+              <li>If you have to use a key then make use of pattern and symbols. (This is especially critical if using a key
+                with more than two elements of data.)</li>
+            </ul>
+          </blockquote>
+
+          <!-- 
+          <div>
+            <h4 id="examples-axis-labels">Examples</h4>  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-axes">Axes in line charts</h5>
+              <p><em>Add line-chart axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-font">Axes in bar charts</h5>
+              <p><em>Add bar-chart axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-axes">Axes in pie/donut charts</h5>
+              <p><em>Add pie/donut chart axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-axes">Axes in gauges</h5>
+              <p><em>Add gauge axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-axes">Axes in percentage bar charts</h5>
+              <p><em>Add percentage bar chart axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-axes">Axes in scatterplots</h5>
+              <p><em>Add scatterplot axis considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-axes">Axes in tables</h5>
+              <p><em>Add table axis considerations here.</em></p>
+            </section>
+          </div>    
+          -->
+
+        </article>
+
+        <article id="layout-group" class="general">
+          <h2 id="layout" data-toc_class="collapse">Layout</h2>
+
+          <p>Here are the most important accessibility layout considerations:</p>
+          <ul id="layout-checklist-list">          
+            <li><input id="checklist-_layout_" type="checkbox"> <label for="checklist-_layout_"> <a href="#">here</a></label>.</li>
+          </ul>
+
+          <blockquote class="draft">
+            <ul>
+              <li>Give the item a title that appears before the data</li>
+              <li>Left align every text element if you can.</li>
+              <li>Try not to split text data and visual data. Data should be read and then viewed or vice versa rather than
+                splitting the data either side of a graph for example.</li>
+              <li>Try to ensure data can be viewed in a table with lines or equivalent so that the eye can track the row of
+                data more easily across the screen/page rather than having to try and match each piece across a row with
+                white space between.</li>
+              <li>Keep good white space between lines and blocks of data to enable legibility.</li>
+              <li>Use at least a minimum 1pt keyline everywhere, 2pt for patterned lines if possible.</li>
+              <li>Make sure any keylines or data on top of Graph paper contrast enough ie 70% and/or are thicker to be
+                distinguishable.</li>
+            </ul>
+          </blockquote>
+
+          <!--           
+          <div>
+            <h4 id="examples-layout">Examples</h4>  
+            <section data-toc_class="section" data-chart_type="line">
+              <h5 id="line-chart-layout">Layout with line charts</h5>
+              <p><em>Add line-chart layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="bar">
+              <h5 id="bar-chart-layout">Layout with bar charts</h5>
+              <p><em>Add bar-chart layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="pie_donut">
+              <h5 id="pie-donut-chart-layout">Layout with pie/donut charts</h5>
+              <p><em>Add pie/donut chart layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="gauge">
+              <h5 id="gauge-layout">Layout with gauges</h5>
+              <p><em>Add gauge layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="percentage_bar">
+              <h5 id="percentage_bar-chart-layout">Layout with percentage bar charts</h5>
+              <p><em>Add percentage bar chart layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="scatterplot">
+              <h5 id="scatterplot-layout">Layout with scatterplots</h5>
+              <p><em>Add scatterplot layout considerations here.</em></p>
+            </section>
+            <section data-toc_class="section" data-chart_type="table">
+              <h5 id="table-layout">Layout with tables</h5>
+              <p><em>Add table layout considerations here.</em></p>
+            </section>
+          </div> 
+          -->
+
+
+        </article>
+
+      </div>
+
+      <div id="more-information-group-div">
+        <h2 id="more-information-group" data-toc_class="heading">More information</h2>
+
+        <article>
+          <h3 id="further-guidance" data-toc_class="no_collapse">Further guidance</h3>
+          <ul>
+            <li><a href="https://support.microsoft.com/en-us/office/create-accessible-office-documents-868ecfcd-4f00-4224-b881-a65537a7c155">Microsoft accessible Office documents</a>: UK Schools Accessibility </li>
+          </ul>
+        </article>
+      
+        <article>
+          <h3 id="tools-and-technology" data-toc_class="no_collapse">Tools and technology</h3>
+          <ul>
+            <li><a href="https://support.apple.com/en-gb/guide/grapher/gcalb3dec608/mac">Grapher for Mac</a></li>
+            <li><a href="https://www.desmos.com/calculator">Graphing Calculator - Desmos</a></li>
+            <li><a href="https://www.desmos.com/geometry">Geometry Tool - Desmos</a></li>
+            <li><a href="https://www.desmos.com/accessibility#overview">Desmos accessibility</a></li>
+          </ul>
+        </article>
+      
+        <article>
+          <h3 id="research-references" data-toc_class="no_collapse">Research and references</h3>
+          <ul>
+            <!-- <li><a href="">Citation</a>: description</li> -->
+            <li>
+              <p class="reference" id="cite-semantic-colors">Sharon Lin, Julie Fortuna, Chinmay Kulkarni, Maureen Stone, and Jeffrey Heer. <time datetime="2013">2013</time>. <cite>Selecting semantically-resonant colors for data visualization</cite>. In Proceedings of the 15th Eurographics Conference on Visualization (EuroVis '13). The Eurographs Association &amp; John Wiley &amp; Sons, Ltd., Chichester, GBR, 401–410. (<a href="http://vis.stanford.edu/files/2013-SemanticColor-EuroVis.pdf" title="PDF: Selecting semantically-resonant colors for data visualization">PDF</a>)</p> 
+            </li>
+          </ul>
+
+          
+        </article>
+ 
+        <article>
+          <h3 id="contributors" data-toc_class="no_collapse">Contributors</h3>
+          <p>The following people have contributed substantially to this data visualization accessibility style guide. Feel free to contact those with email addresses for questions, comments, corrections, or contributions</p>
+          <ul>
+            <li>Emma Crampton, (former) Pearson Accessibility Product Content Manager.</li>
+            <li>Jo Moon Price, Pearson Brand Design Lead. <a href="mailto:Jo.Price@pearson.com">&lt;Jo.Price@pearson.com&gt;</a></li>
+            <li>Jennifer Ramirez, Pearson Accessibility Manager, Customer Experience. <a href="mailto:jennifer.ramirez1@pearson.com">&lt;jennifer.ramirez1@pearson.com&gt;</a></li>
+            <li>Clare Rose, (former) Pearson Accessible Product Development Specialist.</li>
+            <li>Doug Schepers, Fizz Studio. <a href="mailto:doug@fizz.studio">&lt;doug@fizz.studio&gt;</a></li>
+          </ul>
+
+          <p>The editor is Doug Schepers.</p>
+
+        </article>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

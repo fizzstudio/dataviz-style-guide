@@ -1,0 +1,28 @@
+<svg id="icon-marimekko_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      opacity: 0.6;
+    }
+    .c3 {
+      opacity: 0.4;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="26" y="64.589" width="29.265" height="27.617"/>
+    <rect class="c1 c2" x="26" y="49.089" width="29.265" height="15.777"/>
+    <rect class="c1 c3" x="26" y="33.549" width="29.265" height="15.671"/>
+    <rect class="c1" x="57.821" y="69.252" width="24.324" height="22.954"/>
+    <rect class="c1 c2" x="57.761" y="56.613" width="24.323" height="12.758"/>
+    <rect class="c1 c3" x="57.761" y="33.461" width="24.323" height="23.225"/>
+    <rect class="c1" x="84.699" y="75.352" width="17.863" height="16.854"/>
+    <rect class="c1 c2" x="84.699" y="61.712" width="17.863" height="14.319"/>
+    <rect class="c1 c3" x="84.699" y="33.354" width="17.863" height="28.381"/>
+  </g>
+</svg>

@@ -1,0 +1,282 @@
+<svg id="chart-bar" xmlns="http://www.w3.org/2000/svg" tabindex="0"
+  viewBox="0 0 500 500">
+  <title />
+  <defs> 
+    <g id="symbol_circle" width="10" height="10" viewBox="0 0 10 10" overflow="visible">
+      <path d="M0,-5 A5,5 0 1,1 0,5 A5,5 0 1,1 0,-5" stroke-width="3" />
+    </g>
+    <g id="symbol_square" width="10" height="10" viewBox="0 0 10 10" overflow="visible">
+      <path d="M-5,-5 H5 V5 H-5 Z" stroke-width="3" />
+    </g>
+    <g id="symbol_triangle_up" width="10" height="10" viewBox="0 0 10 10" overflow="visible">
+      <path d="M-5,3.33 H5 L0,-5.66 Z" stroke-width="3" />
+    </g>
+  </defs>
+  <rect id="fizz_chart_frame" fill="none" pointer-events="all" x="0" y="0" width="500" height="486" />
+  <style>
+    svg {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 15px
+    }
+
+    #fizz_chart_frame {
+      fill: none;
+      stroke: none
+    }
+
+    .y_axis_line {
+      fill: none;
+      stroke: hsl(0, 0%, 0%);
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .legend_label {
+      font-size: 15px;
+      text-anchor: start;
+      fill: hsl(0, 0%, 0%);
+      stroke: none;
+    }
+
+    .x_axis_line {
+      fill: none;
+      stroke: hsl(0, 0%, 0%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .axis_label {
+      text-anchor: middle;
+      fill: hsl(0, 0%, 0%);
+      stroke: none
+    }
+
+    .axis_label_y {
+      text-anchor: end;
+      fill: hsl(0, 0%, 0%);
+      stroke: none
+    }
+
+    .tickmark_y {
+      opacity: 0.2
+    }
+
+    .tickmark_y_0 {
+      fill: hsl(270, 50%, 50%);
+      stroke: hsl(270, 50%, 50%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .tick_group_y:hover,
+    .tick_group_y:hover .tickmark_y {
+      font-weight: bold;
+      opacity: 1
+    }
+
+    .tickmark_x {
+      opacity: 0.2
+    }
+
+    .tickmark_x_0 {
+      fill: hsl(270, 50%, 50%);
+      stroke: hsl(270, 50%, 50%);
+      opacity: 1;
+      stroke-width: 2px;
+      stroke-linecap: round
+    }
+
+    .radial_label_right {
+      text-anchor: start
+    }
+
+    .radial_label_left {
+      text-anchor: end
+    }
+
+    .datapoint_background {
+      fill: none;
+      stroke: none;
+      pointer-events: all;
+      outline: none
+    }
+
+    .data_line {
+      fill: none;
+      stroke: hsl(270, 50%, 50%);
+      stroke-width: 3px;
+      stroke-linecap: round
+    }
+
+    .data_area {
+      stroke: hsl(270, 50%, 50%);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      fill: none
+    }
+
+    .data_area_background {
+      stroke: none;
+      fill: hsl(270, 50%, 50%);
+      fill-opacity: 0.8
+    }
+
+    .trendline {
+      stroke: red;
+      stroke-width: 3px;
+      fill: none
+    }
+
+    .center_label tspan.subtext {
+      font-size: 2rem;
+      text-anchor: middle
+    }
+
+    .chart_title {
+      font-size: 18px;
+      text-anchor: middle;
+      fill: black;
+    }
+
+    .science {
+      fill: hsl(12, 69%, 35%);
+      stroke: hsl(12, 69%, 35%);
+    }
+
+    .science .data_line {
+      fill: none;
+      stroke: hsl(12, 69%, 35%);
+    }
+
+    .math {
+      fill: hsl(75, 43%, 45%);
+      stroke: hsl(75, 43%, 45%);
+    }
+
+    .math .data_line {
+      fill: none;
+      stroke: hsl(75, 43%, 45%);
+    }
+
+    .english {
+      fill: hsl(225, 30%, 52%);
+      stroke: hsl(225, 30%, 52%);
+    }
+
+    .english .data_line {
+      fill: none;
+      stroke: hsl(225, 30%, 52%);
+    }
+  </style>
+  <g tabindex="0"><text class="chart_title" transform="translate(250.00,29.40)">Student Enrollment per Subject by Semester</text>
+    <g id="x-axis" data-axistype="category" tabindex="-1" transform="translate(77.40,446.00)">
+      <path id="x_Semester_line-2" class="x_axis_line" d="M-10,0 H407.6" />
+      <title class="axis_label" style="font-size:15px" transform="translate(202,39)">Semester</title>
+      <g transform="translate(71,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Fall</text></g>
+      <g transform="translate(204,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Spring</text></g>
+      <g transform="translate(337,0)" class="tick_group_x"><text class="axis_label" transform="translate(0,16)"
+          style="font-size:13px">Summer</text></g>
+    </g>
+    <g id="y-axis" data-axistype="numeric" tabindex="-1" transform="translate(77.40,43.00)">
+      <path id="y_Science_Math_english_line-2" class="y_axis_line" d="M0,403 V0" />
+      <g transform="translate(0,403.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">0</text>
+        <use href="#x_Semester_line-2" class="tickmark_y_0" />
+      </g>
+      <g transform="translate(0,322.40)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">50</text>
+        <use href="#x_Semester_line-2" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,241.80)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">100</text>
+        <use href="#x_Semester_line-2" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,161.20)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">150</text>
+        <use href="#x_Semester_line-2" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,80.60)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">200</text>
+        <use href="#x_Semester_line-2" class="tickmark_y" />
+      </g>
+      <g transform="translate(0,0.00)" class="tick_group_y"><text class="axis_label_y" transform="translate(-13,4)"
+          style="font-size:13px">250</text>
+        <use href="#x_Semester_line-2" class="tickmark_y" />
+      </g><text class="axis_label" style="font-size:15px" transform="translate(-44.4,201.5) rotate(-90)">Student Enrollment</text>
+    </g>
+    <g role="dataset" transform="translate(77.4,43)">
+      <g id="datapoint-x_Fall-2">
+        <g tabindex="0" class="datapoint mark series_0 science" transform="translate(70.93,0)">
+          <path d="M0,91.54 L66.53,165.41" class="data_line" />
+          <use id="LineChart_science_x_Fall2_datapoint" href="#symbol_circle"
+            y="91.54" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_1 math" transform="translate(70.93,0)">
+          <path d="M0,329.23 L66.53,179.06" class="data_line" />
+          <use id="LineChart_math_x_Fall2_datapoint" href="#symbol_square"
+            y="329.23" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_2 english" transform="translate(70.93,0)">
+          <path d="M0,273.02 L66.53,228.85" class="data_line" />
+          <use id="LineChart_english_x_Fall2_datapoint" href="#symbol_triangle_up"
+            y="273.02" width="10" height="10" />
+        </g>
+      </g>
+      <g id="datapoint-x_Spring-2">
+        <g tabindex="0" class="datapoint mark series_0 science" transform="translate(203.80,0)">
+          <path d="M-66.53,165.41 L0,239.29 L66.53,169.43"
+            class="data_line" />
+          <use id="LineChart_science_x_Spring2_datapoint" href="#symbol_circle"
+            y="239.29" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_1 math" transform="translate(203.80,0)">
+          <path d="M-66.53,179.06 L0,28.90 L66.53,127.67"
+            class="data_line" />
+          <use id="LineChart_math_x_Spring2_datapoint" href="#symbol_square"
+            y="28.90" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_2 english" transform="translate(203.80,0)">
+          <path d="M-66.53,228.85 L0,184.69 L66.53,276.23" class="data_line" />
+          <use id="LineChart_english_x_Spring2_datapoint" href="#symbol_triangle_up"
+            y="184.69" width="10" height="10" />
+        </g>
+      </g>
+      <g id="datapoint-x_Summer-2">
+        <g tabindex="0" class="datapoint mark series_0 science" transform="translate(336.67,0)">
+          <path d="M-66.53,169.43 L0,99.57" class="data_line" />
+          <use id="LineChart_science_x_Summer2_datapoint" href="#symbol_circle"
+            y="99.57" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_1 math" transform="translate(336.67,0)">
+          <path d="M-66.53,127.67 L0,226.44" class="data_line" />
+          <use id="LineChart_math_x_Summer2_datapoint" href="#symbol_square"
+            y="226.44" width="10" height="10" />
+        </g>
+        <g tabindex="0" class="datapoint mark series_2 english" transform="translate(336.67,0)">
+          <path d="M-66.53,276.23 L0,367.77" class="data_line" />
+          <use id="LineChart_english_x_Summer2_datapoint" href="#symbol_triangle_up"
+            y="367.77" width="10" height="10" />
+        </g>
+      </g>
+    </g>
+
+    <g id="legend" transform="translate(120,485)">
+      <g id="legend-science" transform="translate(50,0)">
+        <use class="science" href="#symbol_circle" width="10" height="10" />
+        <text class="legend_label" x="10" y="5">science</text>    
+      </g>
+      <g id="legend-math" transform="translate(150,0)">
+        <use class="math" href="#symbol_square" width="10" height="10" />
+        <text class="legend_label" x="10" y="5">math</text>    
+      </g>
+      <g id="legend-english" transform="translate(250,0)">
+        <use class="english" href="#symbol_triangle_up" width="10" height="10" />
+        <text class="legend_label" x="10" y="5">english</text>    
+      </g>  
+    </g>
+  </g>
+</svg>

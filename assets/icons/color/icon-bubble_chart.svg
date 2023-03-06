@@ -1,0 +1,26 @@
+<svg id="icon-bubble_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+  </style>
+  <g>
+    <circle class="bg" cx="65" cy="65" r="64"/>
+    <g>
+      <circle class="c1" cx="69.633" cy="58.058" r="10.644"/>
+      <circle class="c1" cx="47.421" cy="76.903" r="5.932"/>
+      <circle class="c1" cx="89.773" cy="73.313" r="5.259"/>
+      <circle class="c1" cx="91.793" cy="41.676" r="3.912"/>
+      <polyline class="c2" points="29.874,32.927 29.874,94.848 102.354,94.848"/>
+    </g>
+  </g>
+</svg>

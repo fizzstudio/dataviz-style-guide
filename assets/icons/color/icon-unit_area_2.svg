@@ -1,0 +1,28 @@
+<svg id="icon-unit_area_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <g>
+   <circle class="bg" cx="65" cy="65" r="64"/>
+  </g>
+  <g>
+    <circle class="c1" cx="28.3" cy="80.5" r="6.1"/>
+    <circle class="c1" cx="28.3" cy="65" r="6.1"/>
+    <circle class="c1" cx="43.9" cy="65" r="6.1"/>
+    <circle class="c1" cx="43.9" cy="80.5" r="6.1"/>
+    <circle class="c1" cx="70.5" cy="80.5" r="6.1"/>
+    <circle class="c1" cx="70.5" cy="65" r="6.1"/>
+    <circle class="c1" cx="86.1" cy="65" r="6.1"/>
+    <circle class="c1" cx="70.5" cy="49.5" r="6.1"/>
+    <circle class="c1" cx="86.1" cy="49.5" r="6.1"/>
+    <circle class="c1" cx="86.1" cy="80.5" r="6.1"/>
+    <circle class="c1" cx="101.7" cy="65" r="6.1"/>
+    <circle class="c1" cx="101.7" cy="49.5" r="6.1"/>
+    <circle class="c1" cx="101.7" cy="80.5" r="6.1"/>
+  </g>
+</svg>

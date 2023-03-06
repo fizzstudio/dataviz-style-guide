@@ -1,0 +1,19 @@
+<svg id="icon-demers_cartogram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <rect class="c1" x="21.8" y="45.6" width="34.1" height="34.1"/>
+  <rect class="c1" x="59.2" y="48.3" width="20.9" height="20.9"/>
+  <rect class="c1" x="58.7" y="71.9" width="13.2" height="13.2"/>
+  <rect class="c1" x="44.6" y="82.8" width="11.3" height="11.3"/>
+  <rect class="c1" x="74.5" y="71.3" width="15.8" height="15.8"/>
+  <rect class="c1" x="87.6" y="89.5" width="7.8" height="7.8"/>
+  <rect class="c1" x="96.2" y="37.9" width="7.8" height="7.8"/>
+  <rect class="c1" x="82.5" y="47.8" width="21.4" height="21.4"/>
+</svg>

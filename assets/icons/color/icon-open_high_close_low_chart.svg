@@ -1,0 +1,37 @@
+<svg id="icon-open_high_close_low_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+    <circle class="bg" cx="65" cy="65" r="64"/>
+    <g>
+      <rect class="c1" x="27.294" y="75.373" width="2.378" height="18.408"/>
+      <rect class="c1" x="24.279" y="77.234" width="3.384" height="2.205"/>
+      <rect class="c1" x="29.081" y="89.968" width="3.383" height="2.205"/>
+      <rect class="c1" x="33.402" y="86.057" width="3.383" height="2.207"/>
+      <rect class="c1" x="38.547" y="63.89" width="3.383" height="2.206"/>
+      <rect class="c1" x="43.21" y="68.339" width="3.384" height="2.206"/>
+      <rect class="c1" x="48.081" y="74.936" width="3.384" height="2.205"/>
+      <rect class="c1" x="46.134" y="67.396" width="2.377" height="11.504"/>
+      <rect class="c1" x="36.577" y="63.279" width="2.378" height="26.999"/>
+      <rect class="c1" x="63.948" y="40.724" width="3.383" height="2.206"/>
+      <rect class="c1" x="69.093" y="57.754" width="3.384" height="2.206"/>
+      <rect class="c1" x="67.124" y="37.51" width="2.378" height="26.998"/>
+      <rect class="c1" x="75.654" y="54.222" width="3.384" height="2.207"/>
+      <rect class="c1" x="80.799" y="76.723" width="3.385" height="2.205"/>
+      <rect class="c1" x="78.83" y="53.055" width="2.378" height="26.997"/>
+      <rect class="c1" x="97.191" y="72.783" width="3.385" height="2.207"/>
+      <rect class="c1" x="102.338" y="87.46" width="3.385" height="2.207"/>
+      <rect class="c1" x="100.366" y="71.615" width="2.381" height="18.867"/>
+      <rect class="c1" x="52.791" y="66.496" width="3.384" height="2.205"/>
+      <rect class="c1" x="86.469" y="72.835" width="3.385" height="2.206"/>
+      <rect class="c1" x="91.34" y="79.27" width="3.385" height="2.207"/>
+      <rect class="c1" x="89.393" y="69.973" width="2.379" height="11.504"/>
+      <rect class="c1" x="57.935" y="30.144" width="3.384" height="2.206"/>
+      <rect class="c1" x="55.965" y="26.261" width="2.377" height="48.882"/>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg id="icon-bullet_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      opacity: 0.3;
+      fill: #FFFFFF;
+    }
+    .c3 {
+      opacity: 0.6;
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <rect class="c3" x="28.917" y="36.109" width="27.165" height="15.507"/>
+      <rect class="c2" x="56.082" y="36.109" width="45.018" height="15.507"/>
+      <rect class="c1" x="65.437" y="38.362" width="2.625" height="11"/>
+      <rect class="c1" x="28.917" y="42.117" width="18.962" height="3.5"/>
+    </g>
+    <g>
+      <rect class="c2" x="84.967" y="79.076" width="16.133" height="15.506"/>
+      <rect class="c3" x="28.882" y="79.076" width="56.085" height="15.506"/>
+      <rect class="c1" x="72.297" y="81.257" width="2.624" height="11"/>
+      <rect class="c1" x="28.901" y="85.008" width="35.66" height="3.5"/>
+    </g>
+    <g>
+      <rect class="c2" x="69.559" y="57.594" width="31.541" height="15.502"/>
+      <rect class="c3" x="28.882" y="57.594" width="40.677" height="15.502"/>
+      <rect class="c1" x="90.467" y="59.591" width="2.625" height="11.001"/>
+      <rect class="c1" x="28.882" y="63.596" width="50.744" height="3.5"/>
+    </g>
+  </g>
+</svg>

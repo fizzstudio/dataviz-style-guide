@@ -1,0 +1,22 @@
+<svg id="icon-renko_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="27.5" y="78.1" width="8.3" height="17.4"/>
+    <rect class="c1" x="35.9" y="60.7" width="8.3" height="17.4"/>
+    <rect class="c1" x="44.2" y="43.4" width="8.3" height="17.4"/>
+    <rect class="c1" x="52.5" y="26" width="8.3" height="17.4"/>
+    <rect class="c1" x="77.5" y="43.4" width="8.3" height="17.4"/>
+    <path class="c1" d="M67.6,44.8v14.4h-5.1V44.8H67.6 M69.2,43.4h-8.3v17.4h8.3V43.4L69.2,43.4z"/>
+    <path class="c1" d="M75.9,62.2v14.4h-5.1V62.2H75.9 M77.5,60.7h-8.3v17.4h8.3V60.7L77.5,60.7z"/>
+    <path class="c1" d="M92.5,62.2v14.4h-5.1V62.2H92.5 M94.1,60.7h-8.3v17.4h8.3V60.7L94.1,60.7z"/>
+    <path class="c1" d="M100.9,79.6V94h-5.1V79.6H100.9 M102.5,78.1h-8.3v17.4h8.3V78.1L102.5,78.1z"/>
+  </g>
+</svg>

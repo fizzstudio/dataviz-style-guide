@@ -1,0 +1,30 @@
+<svg id="icon-distribution" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g>
+    <circle class="c1" cx="39.667" cy="76.493" r="5"/>
+    <circle class="c1" cx="40.668" cy="100" r="5"/>
+    <circle class="c1" cx="51.668" cy="80.333" r="5"/>
+    <circle class="c1" cx="61.335" cy="95" r="5"/>
+    <circle class="c1" cx="56.668" cy="114.667" r="5"/>
+    <circle class="c1" cx="40.002" cy="113" r="5"/>
+    <circle class="c1" cx="76.335" cy="74.667" r="5"/>
+    <circle class="c1" cx="54.002" cy="53.333" r="5"/>
+    <circle class="c1" cx="82.668" cy="107" r="5"/>
+    <circle class="c1" cx="74.002" cy="87.333" r="5"/>
+    <circle class="c1" cx="65.335" cy="78" r="5"/>
+    <circle class="c1" cx="30.002" cy="89.333" r="5"/>
+    <circle class="c1" cx="55.335" cy="67.333" r="5"/>
+    <circle class="c1" cx="76.335" cy="59.667" r="5"/>
+    <circle class="c1" cx="121.332" cy="80.33" r="5"/>
+    <circle class="c1" cx="135.998" cy="83.997" r="5"/>
+    <circle class="c1" cx="127.332" cy="97.997" r="5"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg id="icon-part_to_whole" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: blue;
+      opacity: 0.5;
+    }
+    .c3 {
+      fill: red;
+      opacity: 0.8;
+    }
+  </style>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g>
+    <path class="c1" d="M48,54 Q48,48 54,48 H116 Q122,48 122,54 V116 Q122,122 116,122 H85 V85 H48 Z"/>
+    <path class="c1" d="M85,122 V85 H48 V116 Q48,122 54,122 Z" transform="translate(-8,8)"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg id="icon-span_chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <rect class="c1" x="25.481" y="32.475" width="78.259" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="25.481" y="43.249" width="78.259" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="25.481" y="54.021" width="78.259" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="26.26" y="64.792" width="78.26" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="26.26" y="75.564" width="78.26" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="26.26" y="86.335" width="78.26" height="0.25"/>
+    </g>
+    <g>
+      <rect class="c1" x="26.26" y="97.107" width="78.26" height="0.25"/>
+    </g>
+    <rect class="c1" x="26.26" y="60.444" width="10.707" height="15.248"/>
+    <rect class="c1" x="93.715" y="69.501" width="10.706" height="10.865"/>
+    <rect class="c1" x="76.852" y="60.444" width="10.707" height="7.363"/>
+    <rect class="c1" x="59.988" y="70.08" width="10.706" height="24.006"/>
+    <rect class="c1" x="43.125" y="44.091" width="10.706" height="40.067"/>
+  </g>
+</svg>

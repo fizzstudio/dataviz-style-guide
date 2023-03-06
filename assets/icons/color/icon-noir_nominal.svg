@@ -1,0 +1,25 @@
+<svg id="icon-noir_nominal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(207, 100%, 17%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: #FFFFFF;
+      font-family: Verdana, sans-serif;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <circle class="c1" transform="translate(75,40)" r="8"/>
+      <polygon class="c1" transform="translate(45,62)" points="0,-7 9,8 -9,8"/>
+      <rect class="c1" transform="translate(85,68)" x="-8" y="-8" width="16" height="16"/>
+    </g>
+    <text class="c2" x="65" y="108">named</text>
+  </g>
+</svg>

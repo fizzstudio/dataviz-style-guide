@@ -1,0 +1,31 @@
+<svg id="icon-comparisons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 170">
+  <style>
+    .bg {
+      fill: hsl(312, 100%, 31%);
+    }
+    .c1 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 4.5px;
+    }
+    .c2 {
+      fill: url('#diagonal_stripe');
+      stroke: #FFFFFF;
+      stroke-width: 4.5px;
+    }
+    .c4 {
+      stroke: #FFFFFF;
+      stroke-width: 1.6px;
+    }
+  </style>
+  <defs>
+    <pattern id="diagonal_stripe" width="4" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line class="c4" x1="3.5" y="0" x2="3.5" y2="10"/>
+    </pattern>
+  </defs>
+  <circle class="bg" cx="85" cy="85" r="84.5"/>
+  <g>
+    <rect class="c1" x="28" y="59.5" width="51" height="51" rx="1" ry="1"/>
+    <rect class="c2" x="91" y="59.5" width="51" height="51" rx="1" ry="1"/>
+  </g>
+</svg>

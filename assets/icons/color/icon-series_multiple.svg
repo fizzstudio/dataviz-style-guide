@@ -1,0 +1,38 @@
+<svg id="icon-series_multiple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(145, 100%, 26%);
+    }
+    .c1 {
+      fill: none;
+      stroke: #FFFFFF;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+    .c2 {
+      fill: #FFFFFF;
+    }
+    .c3 {
+      fill: #FFFFFF;
+      opacity: 0.5;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <g>
+      <rect class="c2" x="40.8" y="76" width="13.2" height="16"/>
+      <rect class="c3" x="40.8" y="44" width="13.2" height="32"/>
+    </g>
+    <g>
+      <rect class="c2" x="59.7" y="51" width="13.2" height="41"/>
+      <rect class="c3" x="59.7" y="35" width="13.2" height="16"/>
+    </g>
+    <g>
+      <rect class="c2" x="78.5" y="63" width="13.2" height="29"/>
+      <rect class="c3" x="78.5" y="40" width="13.2" height="23"/>
+    </g>
+    <polyline class="c1" points="32.5,32.5 32.5,97.5 97.5,97.5"/>
+  </g>
+</svg>

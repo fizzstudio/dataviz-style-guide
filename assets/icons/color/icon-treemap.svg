@@ -1,0 +1,35 @@
+<svg id="icon-treemap" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g>
+    <rect class="c1" x="31.224" y="34.482" width="19.455" height="18.552"/>
+    <rect class="c1" x="80.582" y="34.482" width="18.193" height="22.263"/>
+    <rect class="c1" x="80.582" y="58.785" width="18.193" height="4.268"/>
+    <rect class="c1" x="80.582" y="79.748" width="11.709" height="15.77"/>
+    <rect class="c1" x="80.582" y="64.907" width="4.504" height="12.8"/>
+    <rect class="c1" x="87.066" y="64.907" width="4.865" height="12.8"/>
+    <rect class="c1" x="94.271" y="64.907" width="4.144" height="12.8"/>
+    <rect class="c1" x="94.271" y="88.745" width="4.144" height="6.585"/>
+    <rect class="c1" x="94.271" y="80.025" width="4.144" height="6.586"/>
+    <rect class="c1" x="52.841" y="34.482" width="25.579" height="28.569"/>
+    <rect class="c1" x="52.841" y="64.905" width="14.411" height="17.623"/>
+    <rect class="c1" x="69.055" y="64.905" width="9.366" height="17.623"/>
+    <rect class="c1" x="69.055" y="91.062" width="9.366" height="4.267"/>
+    <rect class="c1" x="69.055" y="84.755" width="9.366" height="4.638"/>
+    <rect class="c1" x="52.841" y="84.479" width="6.846" height="10.76"/>
+    <rect class="c1" x="61.667" y="84.479" width="5.585" height="10.76"/>
+    <rect class="c1" x="31.224" y="76.777" width="8.646" height="18.553"/>
+    <rect class="c1" x="31.224" y="55.306" width="19.455" height="8.533"/>
+    <rect class="c1" x="31.224" y="66.02" width="8.646" height="8.533"/>
+    <rect class="c1" x="42.393" y="66.111" width="8.646" height="8.533"/>
+    <rect class="c1" x="42.393" y="90.32" width="8.646" height="5.01"/>
+    <rect class="c1" x="42.393" y="76.918" width="8.646" height="11.13"/>
+  </g>
+</svg>

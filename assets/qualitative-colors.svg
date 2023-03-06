@@ -1,0 +1,78 @@
+<svg id="pearson-color-palette" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 25">
+  <style>
+    text {
+      font-family: "Open Sans Light", "Open Sans", "Open Sans Regular", Arial, sans-serif;
+      font-size: 11px;
+    }
+
+    text.heading {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    text.tone {
+      text-anchor: end;
+    }
+
+
+    .qualitative_0 {
+      fill: hsl(42, 100%, 55%);
+    }
+
+    .qualitative_1 {
+      fill: hsl(63, 88%, 46%);
+    }
+
+    .qualitative_2 {
+      fill: hsl(182, 67%, 75%);
+    }
+
+    .qualitative_3 {
+      fill: hsl(358, 100%, 73%);
+    }
+
+    .qualitative_4 {
+      fill: hsl(78, 100%, 37%);
+    }
+
+    .qualitative_5 {
+      fill: hsl(176, 82%, 38%);
+    }
+
+    .qualitative_6 {
+      fill: hsl(312, 100%, 31%);
+    }
+
+    .qualitative_7 {
+      fill: hsl(145, 100%, 26%);
+    }
+
+    .qualitative_8 {
+      fill: hsl(207, 100%, 17%);
+    }
+
+
+    .bg {
+      fill: white;
+    }  
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+
+  <g id="qualitative" transform="translate(55,5)">
+    <text class="tone" x="0" y="15">qualitative</text>
+    <g transform="translate(5,0)">
+      <g>
+        <rect class="qualitative_0" x="0" y="0" width="16" height="16" />
+        <rect class="qualitative_1" x="21" y="0" width="16" height="16" />
+        <rect class="qualitative_2" x="42" y="0" width="16" height="16" />
+        <rect class="qualitative_3" x="63" y="0" width="16" height="16" />
+        <rect class="qualitative_4" x="84" y="0" width="16" height="16" /> 
+        <rect class="qualitative_5" x="105" y="0" width="16" height="16" /> 
+        <rect class="qualitative_6" x="126" y="0" width="16" height="16" /> 
+        <rect class="qualitative_7" x="147" y="0" width="16" height="16" /> 
+        <rect class="qualitative_8" x="168" y="0" width="16" height="16" /> 
+      </g> 
+    </g>
+  </g>
+
+</svg>

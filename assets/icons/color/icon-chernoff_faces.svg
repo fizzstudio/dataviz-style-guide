@@ -1,0 +1,46 @@
+<svg id="icon-chernoff_faces" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130">
+  <style>
+    .bg {
+      fill: hsl(280, 84%, 31%);
+    }
+    .c1 {
+      fill: #FFFFFF;
+    }
+    .c2 {
+      fill: #FFFFFF;
+      opacity: 0.5;
+    }
+    .c4 {
+      fill: none;
+      stroke: hsl(280, 84%, 31%);
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <circle class="bg" cx="65" cy="65" r="64"/>
+  <g id="Layer_2">
+    <g id="face_1">
+      <ellipse class="c2" cx="39.5" cy="64.333" rx="23.5" ry="24"/>
+      <ellipse class="c1" cx="30.433" cy="59" rx="4.75" ry="4.708"/>
+      <ellipse class="c1" cx="48.125" cy="59" rx="4.75" ry="4.708"/>
+      <circle class="bg" cx="32.393" cy="59" r="1.5"/>
+      <circle class="bg" cx="50.063" cy="59" r="1.5"/>
+      <line class="c4" x1="25.486" y1="52.087" x2="34.299" y2="48.756"/>
+      <line class="c4" x1="53.911" y1="52.146" x2="45.097" y2="48.815"/>
+      <line class="c4" x1="29.488" y1="76.666" x2="49.512" y2="76.666"/>
+      <polygon class="c4" points="36.468,70.586 39.5,60.404 42.532,70.586 	"/>
+    </g>
+    <g id="face_2">
+      <ellipse class="c2" cx="91.041" cy="62.667" rx="20.5" ry="29"/>
+      <ellipse class="c1" cx="83.416" cy="55.5" rx="4.75" ry="5.875"/>
+      <ellipse class="c1" cx="98.666" cy="55.5" rx="4.75" ry="5.875"/>
+      <circle class="bg" cx="81.751" cy="55.917" r="1.5"/>
+      <circle class="bg" cx="97.084" cy="55.917" r="1.5"/>
+      <polygon class="c4" points="88.01,69.55 91.041,62.978 94.072,69.55 	"/>
+      <path class="c4" d="M78.25,46.569 c0,0,5-4.667,10,0"/>
+      <path class="c4" d="M93.584,46.569 c0,0,5-4.667,10,0"/>
+      <path class="c4" d="M100.543,75.842 c0,0-9.502,8.867-19.004,0"/> 
+    </g>
+  </g>
+</svg>
